@@ -11,6 +11,3 @@
 
 - Cấu hình DB trong file commons/env.php
 
-Toàn bán Rau Toàn
-
-hehheheh addd cc

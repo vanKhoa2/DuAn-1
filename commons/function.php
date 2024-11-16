@@ -21,3 +21,12 @@ function connectDB() {
         echo ("Connection failed: " . $e->getMessage());
     }
 }
+v
+
+function deleteFile($file){
+    $pathDelete = PATH_ROOT .$file;
+    if (file_exists($pathDelete)){
+        unlink($pathDelete);
+    }
+}
+

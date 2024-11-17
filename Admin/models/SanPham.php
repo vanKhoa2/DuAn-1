@@ -56,13 +56,13 @@ class SanPham
         }
     }
 
-    public function editSanPham($id,$ten_san_pham,$gia_san_pham,$gia_khuyen_mai,$so_luong,$ngay_nhap,$danh_muc_id,$trang_thai,$mo_ta,$file_anh){
+    public function editSanPham($id,$ten_san_pham,$gia_san_pham,$gia_khuyen_mai,$so_luong,$ngay_nhap,$danh_muc_id,$trang_thai,$mo_ta,$new_file){
         try {
             $sql = 'UPDATE san_phams SET ten_san_pham=:ten_san_pham,
                                         gia_san_pham=:gia_san_pham,
                                         gia_khuyen_mai=:gia_khuyen_mai,
-                                        so_luong=:ngay_nhap,
-                                        ngay_nhap=:so_luong,
+                                        so_luong=:so_luong,
+                                        ngay_nhap=:ngay_nhap,
                                         danh_muc_id=:danh_muc_id,
                                         trang_thai=:trang_thai,
                                         mo_ta=:mo_ta,
@@ -79,7 +79,7 @@ class SanPham
                                             ':danh_muc_id'=> $danh_muc_id,
                                             ':trang_thai'=> $trang_thai,
                                             ':mo_ta'=> $mo_ta,
-                                            ':hinh_anh'=> $file_anh,
+                                            ':hinh_anh'=> $new_file,
                                             ':id'=>$id
                                         ]);
             return true;

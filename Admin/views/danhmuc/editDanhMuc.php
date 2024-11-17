@@ -41,7 +41,7 @@
               <form action="<?php echo BASE_URL . '?act=post-edit-danh-muc' ?>" method="POST">
                 <div class="card-body">
                   <div class="form-group">
-                    <input type="text" name="id" value="<?= $danhMuc['ten_danh_muc'] ?>" hidden>
+                    <input type="text" name="id" value="<?= $danhMuc['id'] ?>" hidden>
                     <label >Tên Danh Mục</label>
                     <input type="text" class="form-control" name="ten_danh_muc" value="<?= $danhMuc['ten_danh_muc'] ?>" >
                     <?php if(isset($error['ten_danh_muc'])){ ?>

@@ -34,7 +34,7 @@
           <div class="col-12">
           <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Sửa Sản Phẩm <?php echo $sanPham['ten_san_pham'] ?></h3>
+                <h3 class="card-title">Sửa Sản Phẩm</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->

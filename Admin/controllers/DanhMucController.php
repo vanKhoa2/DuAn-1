@@ -22,7 +22,7 @@ class DanhMucController
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
             $ten_danh_muc = $_POST['ten_danh_muc'];
             $mo_ta = $_POST['mo_ta'];
-
+            
             $error = [];
             if(empty($ten_danh_muc)){
                 $error['ten_danh_muc'] = "Tên danh mục không được bỏ trống";
@@ -56,7 +56,7 @@ class DanhMucController
                 $error['ten_danh_muc'] = "Tên danh mục không được bỏ trống";
             }
             if(empty($error)){
-               $this->modelDanhMuc->EditDanhMuc($id,$ten_danh_muc,$mo_ta);
+               $this->modelDanhMuc->EditDanhMuc($ten_danh_muc,$mo_ta,$id);
                header('location:./?act=/');
             }
             else {

@@ -40,7 +40,7 @@ class DanhMuc
         }
     }
 
-    public function EditDanhMuc($id,$ten_danh_muc,$mo_ta){
+    public function EditDanhMuc($ten_danh_muc,$mo_ta,$id){
         try {
             $sql = 'UPDATE danh_mucs SET ten_danh_muc = ?, mo_ta = ?  WHERE id = ?';
             $stmt = $this->conn->prepare($sql);

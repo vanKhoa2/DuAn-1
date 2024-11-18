@@ -37,7 +37,7 @@
 
 
         <li class="nav-item">
-          <a href="<?= BASE_URL . '?act=/' ?>" class="nav-link">
+          <a href="<?= BASE_URL_ADMIN . '?act=/' ?>" class="nav-link">
             <i class="nav-icon fas fa-th"></i>
             <p>
               Danh Mục Sản Phẩm
@@ -47,7 +47,7 @@
         </li>
 
         <li class="nav-item">
-          <a href="<?= BASE_URL . '?act=san-pham' ?>" class="nav-link">
+          <a href="<?= BASE_URL_ADMIN . '?act=san-pham' ?>" class="nav-link">
             <i class="nav-icon fas fa-shoe-prints"></i>
             <p>
               Sản Phẩm
@@ -58,7 +58,7 @@
 
 
         <li class="nav-item">
-          <a href="<?= BASE_URL . '?act=san-pham' ?>" class="nav-link">
+          <a href="<?= BASE_URL_ADMIN . '?act=tai-khoan' ?>" class="nav-link">
           <i class="fas fa-users"></i>
             <p>
                Tài Khoản
@@ -68,8 +68,8 @@
         </li>
 
         <li class="nav-item">
-          <a href="<?= BASE_URL . '?act=san-pham' ?>" class="nav-link">
-          <i class="fas fa-users"></i>
+          <a href="<?= BASE_URL_ADMIN . '?act=binh-luan' ?>" class="nav-link">
+          <i class="fas fa-comments"></i>
             <p>
                Bình Luận
             

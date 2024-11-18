@@ -34,7 +34,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <a href="<?= BASE_URL . '?act=form-add-san-pham' ?>"><button class="btn btn-success">Thêm Sản Phẩm</button></a>
+                <a href="<?= BASE_URL_ADMIN . '?act=form-add-san-pham' ?>"><button class="btn btn-success">Thêm Sản Phẩm</button></a>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -64,8 +64,8 @@
                       <td><?php echo $sanPham['ten_danh_muc'] ;?></td>
                       <td><?php echo $sanPham['trang_thai'] == 1 ? 'Còn Hàng':'Hết Hàng' ;?></td>
                       <td>
-                        <a href="<?= BASE_URL . '?act=form-edit-san-pham&id_san_pham='.$sanPham['id'] ?>"><button class="btn btn-warning">Sửa</button></a>
-                        <a href="<?= BASE_URL . '?act=delete-san-pham&id_san_pham='.$sanPham['id'] ?>"><button class="btn btn-danger">Xóa</button></a>
+                        <a href="<?= BASE_URL_ADMIN . '?act=form-edit-san-pham&id_san_pham='.$sanPham['id'] ?>"><button class="btn btn-warning">Sửa</button></a>
+                        <a href="<?= BASE_URL_ADMIN . '?act=delete-san-pham&id_san_pham='.$sanPham['id'] ?>"><button class="btn btn-danger">Xóa</button></a>
                       </td>
                     </tr>
                     <?php endforeach ?>

@@ -38,7 +38,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form action="<?php echo BASE_URL . '?act=post-add-danh-muc' ?>" method="POST">
+              <form action="<?php echo BASE_URL_ADMIN . '?act=post-add-danh-muc' ?>" method="POST">
                 <div class="card-body">
                   <div class="form-group">
                     <label >Tên Danh Mục</label>

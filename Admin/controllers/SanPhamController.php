@@ -66,11 +66,11 @@ class SanPhamController
 
             if(empty($error)){
                $this->modelSanPham->insertSanPham($ten_san_pham,$gia_san_pham,$gia_khuyen_mai,$so_luong,$ngay_nhap,$danh_muc_id,$trang_thai,$mo_ta,$file_anh);
-               header("location:" . BASE_URL .'/?act=san-pham');
+               header("location:" . BASE_URL_ADMIN .'/?act=san-pham');
             }
             else {
                 $_SESSION['flash'] = true;
-                header('location:'.BASE_URL.'?act=form-add-san-pham');
+                header('location:'.BASE_URL_ADMIN.'?act=form-add-san-pham');
             }
 
         }
@@ -137,18 +137,19 @@ class SanPhamController
                 $new_file = $old_file ;
             }
             if(empty($error)){
-               $this->modelSanPham->editSanPham($id,$ten_san_pham,$gia_san_pham,$gia_khuyen_mai,$so_luong,$ngay_nhap,$danh_muc_id,$trang_thai,$mo_ta,$new_file);
-               header("location:" . BASE_URL .'/?act=san-pham');
-            }
-            else {
-                $_SESSION['flash'] = true;
-                header('location:'.BASE_URL.'?act=form-edit-san-pham');
-            }
+                $this->modelSanPham->editSanPham($id,$ten_san_pham,$gia_san_pham,$gia_khuyen_mai,$so_luong,$ngay_nhap,$danh_muc_id,$trang_thai,$mo_ta,$new_file);
+                header("location:" . BASE_URL_ADMIN .'./?act=san-pham');
+             }
+             else {
+                 $_SESSION['flash'] = true;
+                 header('location:'.BASE_URL_ADMIN.'?act=form-edit-san-pham');
+             }
 
         }
     }
     
 
+    
     public function formEditSanPham(){
 
         $id_san_pham = $_GET['id_san_pham'];
@@ -162,7 +163,7 @@ class SanPhamController
     public function deleteSanPham(){
         $id = $_GET['id_san_pham'];
         if($this->modelSanPham->deleteSanPham($id)){
-            header('location:'.BASE_URL .'./?act=san-pham');
+            header('location:'.BASE_URL_ADMIN .'./?act=san-pham');
         }
     }
     

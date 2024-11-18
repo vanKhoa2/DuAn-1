@@ -38,7 +38,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form action="<?php echo BASE_URL . '?act=post-edit-san-pham' ?>" method="POST" enctype="multipart/form-data">
+              <form action="<?php echo BASE_URL_ADMIN . '?act=post-edit-san-pham' ?>" method="POST" enctype="multipart/form-data">
                 <div class=" card-body">
                   <div class="form-group">
                      <input type="text" name="id_san_pham" value="<?php echo $sanPham['id'] ?>" hidden>               

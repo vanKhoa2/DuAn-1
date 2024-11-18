@@ -15,12 +15,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Quản Lí Danh Mục</h1>
+            <h1>Quản Lí Sản Phẩm</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Quản Lí Danh Mục Sản Phẩm</li>
+              <li class="breadcrumb-item active">Quản Lí Sản Phẩm</li>
             </ol>
           </div>
         </div>
@@ -38,7 +38,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form action="<?php echo BASE_URL . '?act=post-add-san-pham' ?>" method="POST" enctype="multipart/form-data">
+              <form action="<?php echo BASE_URL_ADMIN . '?act=post-add-san-pham' ?>" method="POST" enctype="multipart/form-data">
                 <div class=" card-body">
                   <div class="form-group">
                     <label >Tên Sản Phẩm</label>

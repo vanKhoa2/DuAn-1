@@ -38,7 +38,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form action="<?php echo BASE_URL . '?act=post-edit-danh-muc' ?>" method="POST">
+              <form action="<?php echo BASE_URL_ADMIN . '?act=post-edit-danh-muc' ?>" method="POST">
                 <div class="card-body">
                   <div class="form-group">
                     <input type="text" name="id" value="<?= $danhMuc['id'] ?>" hidden>

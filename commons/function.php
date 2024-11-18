@@ -21,12 +21,29 @@ function connectDB() {
         echo ("Connection failed: " . $e->getMessage());
     }
 }
-v
 
+
+function uploadFile($file,$foder_upload){
+    $pathStorage = $foder_upload . '_' .time().'_'.$file['name'];
+    $form = $file['tmp_name'];
+    $to = PATH_ROOT . $pathStorage;
+    if(move_uploaded_file($form,$to)){
+        return $pathStorage;
+    }
+    return null;
+}
 function deleteFile($file){
-    $pathDelete = PATH_ROOT .$file;
-    if (file_exists($pathDelete)){
+    $pathDelete = PATH_ROOT . $file;
+    if(file_exists($pathDelete)){
         unlink($pathDelete);
     }
 }
+
+ function deleteSessionError(){
+    if(isset($_SESSION['flast'])){
+        unset($_SESSION['flast']);
+        session_unset();
+        session_destroy();
+    }
+ }
 

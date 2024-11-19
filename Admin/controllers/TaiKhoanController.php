@@ -8,7 +8,7 @@ class TaiKhoanController
     {
         $this->modelTaiKhoan = new TaiKhoan();
     }
-<<<<<<< HEAD
+
     
     public function getAllTaiKhoan(){
 
@@ -77,24 +77,6 @@ class TaiKhoanController
 
         }
     }
-    
-}
-=======
-
-    public function getAllTaiKhoan()
-    {
-        $listTaiKhoan = $this->modelTaiKhoan->getAllTaiKhoan();
-        require_once './views/sanpham/listTaiKhoan.php';
-    }
-
-    // public function deleteSanPham(){
-    //     $id = $_GET['id_san_pham'];
-    //     if($this->modelSanPham->deleteSanPham($id)){
-    //         header('location:'.BASE_URL .'./?act=san-pham');
-    //     }
-    // }
-
-
 
     public function formLogin()
     {
@@ -105,12 +87,20 @@ class TaiKhoanController
     public function login()
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $email = $_POST['email'];
-            $password = $_POST['password'];
+            $email =trim($_POST['email']); 
+            $password =trim( $_POST['password']);
+
+            if (empty($email) || empty($password)) {
+                $_SESSION['error'] = "Email và mật khẩu không được để trống.";
+                $_SESSION['flash'] = true;
+                header("Location:" . BASE_URL_ADMIN . '?act=login-admin');
+                exit();
+            }
 
             // var_dump($password); die;
 
             $user = $this->modelTaiKhoan->checkLogin($email, $password);
+            // var_dump($user);die;
 
            
             if ($user) {
@@ -128,4 +118,4 @@ class TaiKhoanController
         }
     }
 }
->>>>>>> a494f278bf2ff04e9f8ec3cf1dbf5206a6c27d21
+

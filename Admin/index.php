@@ -35,8 +35,8 @@ match ($act) {
     'form-edit-san-pham' => (new SanPhamController())->formEditSanPham(),
     'post-edit-san-pham' => (new SanPhamController())->postEditSanPham(),
     'delete-san-pham' => (new SanPhamController())->deleteSanPham(),
-    // Route Danh Mục
-    
+   
+    // Route Danh Mục  
     'post-add-danh-muc' => (new DanhMucController())->postAddDanhMuc(), 
     'form-add-danh-muc' => (new DanhMucController())->formAddDanhMuc(), 
     'post-edit-danh-muc' => (new DanhMucController())->postEditDanhMuc(), 
@@ -52,4 +52,9 @@ match ($act) {
     // 'post-edit-tai-khoan' => (new TaiKhoanController())->postEdidTaiKhoan(),
     'delete-tai-khoan' => (new TaiKhoanController())->deleteTaiKhoan(),
     // Route Giỏ Hàng, Đơn Hàng
+
+
+    //route auth
+    'login-admin' => (new TaiKhoanController())->formLogin(),
+    'check-login-admin' => (new TaiKhoanController())->login(),
 };

@@ -46,4 +46,3 @@ function deleteFile($file){
         session_destroy();
     }
  }
-

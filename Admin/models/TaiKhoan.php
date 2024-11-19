@@ -1,14 +1,16 @@
-<?php 
+<?php
 
 class TaiKhoan
 {
     public $conn;
 
-    public function __construct() { // Hàm khởi tạo kết nối đối tượng
+    public function __construct()
+    { // Hàm khởi tạo kết nối đối tượng
         $this->conn = connectDB();
     }
-    
-    public function getAllTaiKhoan(){
+
+    public function getAllTaiKhoan()
+    {
         try {
             $sql = 'SELECT tai_khoans.*,chuc_vus.ten_chuc_vu
             FROM tai_khoans
@@ -21,6 +23,7 @@ class TaiKhoan
         }
     }
 
+<<<<<<< HEAD
     public function getAllChucVu(){
         try {
             $sql = 'SELECT * FROM chuc_vus ';
@@ -35,6 +38,10 @@ class TaiKhoan
     
 
     public function deleteTaiKhoan($id){
+=======
+    public function deleteTaiKhoan($id)
+    {
+>>>>>>> a494f278bf2ff04e9f8ec3cf1dbf5206a6c27d21
         try {
             $sql = 'DELETE FROM tai_khoans WHERE id = ?';
             $stmt = $this->conn->prepare($sql);
@@ -44,6 +51,7 @@ class TaiKhoan
             //throw $th;
         }
     }
+<<<<<<< HEAD
     public function insertTaiKhoan($ho_ten,$email,$ngay_sinh,$so_dien_thoai,$dia_chi,$mat_khau,$chuc_vu_id,$gioi_tinh,$file_anh){
         try {
             $sql = 'INSERT INTO tai_khoans (ho_ten,email,ngay_sinh,so_dien_thoai,dia_chi,mat_khau,chuc_vu_id,gioi_tinh,anh_dai_dien) VALUES (?,?,?,?,?,?,?,?,?)';
@@ -87,3 +95,37 @@ class TaiKhoan
         }
     }
 }
+=======
+
+
+    public function checkLogin($email, $mat_khau)
+    {
+        try {
+            $sql = "SELECT * FROM tai_khoans WHERE  email = :email";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute(['email' => $email]);
+            $user = $stmt->fetch();
+
+
+            if ($user && password_verify($mat_khau, $user['mat_khau'])) {
+                //   var_dump('abbs');die;
+                if ($user['chuc_vu_id'] == 1) {
+                    if ($user['trang_thai'] == 1) {
+                        return true;
+                    }else {
+                        return 'Tài Khoản bị cấm';
+                    }
+                } else {
+                    return 'Tài khoản không có quyền đăng nhập';
+                }
+            }else{
+                return 'Bạn nhập sai thông tin  mật khẩu hoặc  tài khoản';
+            }
+        } catch (Exception $e) {
+            echo "lỗi" . $e->getMessage();
+            return false;
+        }
+    }
+    
+}
+>>>>>>> a494f278bf2ff04e9f8ec3cf1dbf5206a6c27d21

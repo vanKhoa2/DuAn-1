@@ -15,12 +15,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Thêm Sản Phẩm</h1>
+            <h1>Sửa Sản Phẩm <?php echo $sanPham['ten_san_pham'] ?></h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Thêm Sản Phẩm</li>
+              <li class="breadcrumb-item active">Quản Lí Danh Mục Sản Phẩm</li>
             </ol>
           </div>
         </div>
@@ -34,15 +34,17 @@
           <div class="col-12">
           <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Thêm Sản Phẩm</h3>
+                <h3 class="card-title">Sửa Sản Phẩm</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form action="<?php echo BASE_URL_ADMIN . '?act=post-add-san-pham' ?>" method="POST" enctype="multipart/form-data">
+              <form action="<?php echo BASE_URL_ADMIN . '?act=post-edit-san-pham' ?>" method="POST" enctype="multipart/form-data">
                 <div class=" card-body">
                   <div class="form-group">
+                     <input type="text" name="id_san_pham" value="<?php echo $sanPham['id'] ?>" hidden>               
+
                     <label >Tên Sản Phẩm</label>
-                    <input type="text" class="form-control" name="ten_san_pham" placeholder="Hãy nhập tên sản phẩm">
+                    <input type="text" class="form-control" name="ten_san_pham" value="<?php echo $sanPham['ten_san_pham'] ?>" >
                     <?php if(isset($error['ten_san_pham'])){ ?>
                      <p class="text-danger"><?= $error['ten_san_pham']?></p>
                    <?php } ?>
@@ -50,7 +52,7 @@
 
                   <div class="form-group">
                     <label >Giá Sản Phẩm</label>
-                    <input type="text" class="form-control" name="gia_san_pham" placeholder="Hãy nhập tên sản phẩm">
+                    <input type="text" class="form-control" name="gia_san_pham" value="<?php echo $sanPham['gia_san_pham'] ?>">
                     <?php if(isset($error['gia_san_pham'])){ ?>
                      <p class="text-danger"><?= $error['gia_san_pham']?></p>
                    <?php } ?>
@@ -58,7 +60,7 @@
                   
                   <div class="form-group">
                     <label >Giá Khuyến Mãi</label>
-                    <input type="text" class="form-control" name="gia_khuyen_mai" placeholder="Hãy nhập tên sản phẩm">
+                    <input type="text" class="form-control" name="gia_khuyen_mai" value="<?php echo $sanPham['gia_khuyen_mai'] ?>">
                     <?php if(isset($error['gia_khuyen_mai'])){ ?>
                      <p class="text-danger"><?= $error['gia_khuyen_mai']?></p>
                    <?php } ?>
@@ -72,7 +74,7 @@
 
                   <div class="form-group">
                     <label >Số Lượng</label>
-                    <input type="number" class="form-control" name="so_luong" placeholder="Hãy nhập tên sản phẩm">
+                    <input type="number" class="form-control" name="so_luong" value="<?php echo $sanPham['so_luong'] ?>">
                     <?php if(isset($error['so_luong'])){ ?>
                      <p class="text-danger"><?= $error['so_luong']?></p>
                    <?php } ?>
@@ -80,7 +82,7 @@
 
                   <div class="form-group">
                     <label >Ngày Nhập</label>
-                    <input type="date" class="form-control" name="ngay_nhap" placeholder="Hãy nhập tên sản phẩm">
+                    <input type="date" class="form-control" name="ngay_nhap"  value="<?php echo $sanPham['ngay_nhap'] ?>">
                     <?php if(isset($error['ngay_nhap'])){ ?>
                      <p class="text-danger"><?= $error['ngay_nhap']?></p>
                    <?php } ?>
@@ -89,9 +91,8 @@
                   <div class="form-group">
                     <label >Danh Mục</label>
                     <select class="form-control" name="danh_muc_id" id="exampleFormControlSelect1">
-                      <option>Chọn Danh Mục Sản Phẩm</option>
                       <?php foreach ($listDanhMuc as $danhMuc): ?>
-                        <option value="<?php echo $danhMuc['id']?>"><?php echo $danhMuc['ten_danh_muc']?></option>
+                        <option <?= $danhMuc['id'] == $sanPham['danh_muc_id'] ? 'Selected':  ''  ?> value="<?php echo $danhMuc['id']?>"><?php echo $danhMuc['ten_danh_muc']?></option>
                         <?php endforeach; ?>
                 
                     </select>
@@ -103,7 +104,7 @@
 
                   <div class="form-group">
                     <label >Mô Tả</label>
-                    <textarea type="text" class="form-control" name="mo_ta" placeholder="Hãy nhập mô tả"></textarea>
+                    <textarea type="text" class="form-control" name="mo_ta" value="<?php echo $sanPham['mo_ta'] ?>" placeholder="Hãy nhập mô tả"></textarea>
 
                   </div>
 

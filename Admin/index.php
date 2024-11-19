@@ -46,10 +46,10 @@ match ($act) {
     'binh_luan' => (new BinhLuanController())->getAllBinhLuan(),
     // Route Tài Khoản
     'tai-khoan' => (new TaiKhoanController())->getAllTaiKhoan(),
-    // 'form-add-san-pham' => (new SanPhamController())->formAddSanPham(),
-    // 'post-add-san-pham' => (new SanPhamController())->postAddSanPham(),
-    // 'form-edit-san-pham' => (new SanPhamController())->formEditSanPham(),
-    // 'post-edit-san-pham' => (new SanPhamController())->postEditSanPham(),
-    // 'delete-san-pham' => (new SanPhamController())->deleteSanPham(),
+    'form-add-tai-khoan' => (new TaiKhoanController())->formAddTaiKhoan(),
+    'post-add-tai-khoan' => (new TaiKhoanController())->postAddTaiKhoan(),
+    // 'form-edit-tai-khoan' => (new TaiKhoanController())->formEdidTaiKhoan(),
+    // 'post-edit-tai-khoan' => (new TaiKhoanController())->postEdidTaiKhoan(),
+    'delete-tai-khoan' => (new TaiKhoanController())->deleteTaiKhoan(),
     // Route Giỏ Hàng, Đơn Hàng
 };

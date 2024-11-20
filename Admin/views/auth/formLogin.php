@@ -117,14 +117,18 @@
         <!-- /.login-logo -->
         <div class="card card-outline card-primary">
             <div class="card-header text-center">
-                <a href="../../index2.html" class="h1">SHOP BÁN GIÀY</a>
+                <a href="<?= BASE_URL ?>" class="h1">SHOP BÁN GIÀY</a>
             </div>
             <div class="card-body">
-                <p class="login-box-msg">Vui lòng đăng nhập</p>
+                <?php if (isset($_SESSION['errors'])) { ?>
+                    <p class="text-danger text-center"><?= $_SESSION['errors'] ?></p>
+                <?php } else { ?>
+                    <p class="login-box-msg">Vui lòng đăng nhập</p>
+                <?php } ?>
 
-                <form action="<?= BASE_URL_ADMIN .'?act=check-login-admin'  ?>" method="post">
+                <form action="<?= BASE_URL_ADMIN . '?act=check-login-admin'  ?>" method="POST">
                     <div class="input-group mb-3">
-                        <input type="email" class="form-control" placeholder="Email" name="email">
+                        <input type="email" name="email" class="form-control" placeholder="Email">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
@@ -132,7 +136,7 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="password" class="form-control" placeholder="Password" name="password">
+                        <input type="password" name="password" class="form-control" placeholder="Password">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-lock"></span>
@@ -140,20 +144,15 @@
                         </div>
                     </div>
                     <div class="row">
-                       
+
                         <!-- /.col -->
                         <div class="col-12">
-                            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                            <button type="submit" class="btn btn-primary btn-block">Đăng Nhập</button>
                         </div>
                         <!-- /.col -->
                     </div>
                 </form>
                 <!-- /.social-auth-links -->
-
-                <p class="mb-1">
-                    <a href="#">Quên  mật khẩu</a>
-                </p>
-                
             </div>
             <!-- /.card-body -->
         </div>

@@ -95,36 +95,33 @@ class TaiKhoan
         }
     }
 
-
-
-
-
-    public function checkLogin($email, $mat_khau)   
+    public function checkLogin($email, $mat_khau)
     {
-  
         try {
-            $sql = "SELECT * FROM tai_khoans WHERE  email = :email";
+            $sql = "SELECT * FROM tai_khoans WHERE email = :email";
             $stmt = $this->conn->prepare($sql);
-            $stmt->execute(['email' => $email]);
+            $stmt->execute([':email' => $email]);
             $user = $stmt->fetch();
 
-
-            if ($user && password_verify($mat_khau, $user['mat_khau'])) {
-                //   var_dump($user);die;
-                if ($user['chuc_vu_id'] == 1) {
-                    if ($user['trang_thai'] == 1) {
-                        return true;
+            if ($user) {
+                if (password_verify($mat_khau, $user['mat_khau'])) {
+                    if ($user['chuc_vu_id'] == 1 && $user['trang_thai'] == 1) {
+                        return $user['email'];
                     } else {
-                        return 'Tài Khoản bị cấm';
+                        return 'Tài khoản bị cấm';
                     }
                 } else {
-                    return 'Tài khoản không có quyền đăng nhập';
+                    return 'Mật khẩu không chính xác';
+                }
+            } elseif ($user && $mat_khau == $user['mat_khau']) {
+                if ($user['chuc_vu_id'] == 2) { // KHACH HANG
+                    return "Tài khoản không có quyền đăng nhập admin";
                 }
             } else {
-                return 'Bạn nhập sai thông tin  mật khẩu hoặc  tài khoản';
+                return 'Vui lòng kiểm tra lại thông tin đăng nhập';
             }
         } catch (Exception $e) {
-            echo "lỗi" . $e->getMessage();
+            echo "Lỗi: " . $e->getMessage();
             return false;
         }
     }

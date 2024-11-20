@@ -9,34 +9,38 @@ class TaiKhoanController
         $this->modelTaiKhoan = new TaiKhoan();
     }
 
-    
-    public function getAllTaiKhoan(){
+
+    public function getAllTaiKhoan()
+    {
 
         $listTaiKhoan = $this->modelTaiKhoan->getAllTaiKhoan();
-       
-         require_once './views/taikhoan/listTaiKhoan.php';
+
+        require_once './views/taikhoan/listTaiKhoan.php';
     }
 
-    
 
-    public function deleteTaiKhoan(){
+
+    public function deleteTaiKhoan()
+    {
         $id = $_GET['id_tai_khoan'];
-        if($this->modelTaiKhoan->deleteTaiKhoan($id)){
-            header('location:'.BASE_URL_ADMIN .'./?act=tai-khoan');
+        if ($this->modelTaiKhoan->deleteTaiKhoan($id)) {
+            header('location:' . BASE_URL_ADMIN . './?act=tai-khoan');
         }
     }
 
-    public function formAddTaiKhoan(){
+    public function formAddTaiKhoan()
+    {
         $listChucVu = $this->modelTaiKhoan->getAllChucVu();
-         require_once './views/taikhoan/addTaiKhoan.php';
-         deleteSessionError();
+        require_once './views/taikhoan/addTaiKhoan.php';
+        deleteSessionError();
     }
-    
-    public function postAddTaiKhoan(){
-        if($_SERVER['REQUEST_METHOD'] == 'POST'){
-             
-            $ho_ten = $_POST['ho_ten'] ;
-            $email= $_POST['email'];
+
+    public function postAddTaiKhoan()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+            $ho_ten = $_POST['ho_ten'];
+            $email = $_POST['email'];
             $ngay_sinh = $_POST['ngay_sinh'];
             $hinh_anh = $_FILES['hinh_anh'];
             $so_dien_thoai = $_POST['so_dien_thoai'];
@@ -45,77 +49,78 @@ class TaiKhoanController
             $gioi_tinh = $_POST['gioi_tinh'];
             $chuc_vu_id = $_POST['chuc_vu_id'];
 
-            $file_anh = uploadFile($hinh_anh,'./images/');
-            
+            $file_anh = uploadFile($hinh_anh, './images/');
+
             $error = [];
-            if(empty($ho_ten)){
+            if (empty($ho_ten)) {
                 $error['ho_ten'] = "Tên sản phẩm không được bỏ trống";
             }
-            if(empty($email)){
+            if (empty($email)) {
                 $error['email'] = "Giá sản phẩm không được bỏ trống";
             }
-            if(empty($ngay_sinh)){
+            if (empty($ngay_sinh)) {
                 $error['ngay_sinh'] = "Giá khuyến mãi sản phẩm không được bỏ trống";
             }
-            if(empty($so_dien_thoai)){
+            if (empty($so_dien_thoai)) {
                 $error['so_dien_thoai'] = "Số lượng sản phẩm không được bỏ trống";
             }
-            if(empty($gioi_tinh)){
+            if (empty($gioi_tinh)) {
                 $error['gioi_tinh'] = "Ngày nhập sản phẩm không được bỏ trống";
             }
-         
+
             $_SESSION['Error'] = $error;
 
-            if(empty($error)){
-               $this->modelTaiKhoan->insertTaiKhoan($ho_ten,$email,$ngay_sinh,$so_dien_thoai,$dia_chi,$mat_khau,$chuc_vu_id,$gioi_tinh,$file_anh);
-               header("location:" . BASE_URL_ADMIN .'/?act=tai-khoan');
-            }
-            else {
+            if (empty($error)) {
+                $this->modelTaiKhoan->insertTaiKhoan($ho_ten, $email, $ngay_sinh, $so_dien_thoai, $dia_chi, $mat_khau, $chuc_vu_id, $gioi_tinh, $file_anh);
+                header("location:" . BASE_URL_ADMIN . '/?act=tai-khoan');
+            } else {
                 $_SESSION['flash'] = true;
-                header('location:'.BASE_URL_ADMIN.'?act=form-add-tai-khoan');
+                header('location:' . BASE_URL_ADMIN . '?act=form-add-tai-khoan');
             }
-
         }
     }
 
     public function formLogin()
     {
+        // if (isset($_SESSION['user_admin'])) {
+        //     header('Location:' . BASE_URL_ADMIN);
+        //     exit();
+        // }
         require_once './views/auth/formLogin.php';
-
         deleteSessionError();
     }
+
+    // Xử lý đăng nhập
     public function login()
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $email =trim($_POST['email']); 
-            $password =trim( $_POST['password']);
+            $email = $_POST['email'];
+            $password = $_POST['password'];
 
-            if (empty($email) || empty($password)) {
-                $_SESSION['error'] = "Email và mật khẩu không được để trống.";
-                $_SESSION['flash'] = true;
-                header("Location:" . BASE_URL_ADMIN . '?act=login-admin');
-                exit();
-            }
-
-            // var_dump($password); die;
-
+            // Kiểm tra thông tin người dùng từ database
             $user = $this->modelTaiKhoan->checkLogin($email, $password);
-            // var_dump($user);die;
 
-           
             if ($user) {
-
+                // Đăng nhập thành công
                 $_SESSION['user_admin'] = $user;
-                header("Location: " . BASE_URL_ADMIN );
+                header("Location: " . BASE_URL_ADMIN);
                 exit();
             } else {
+                // Đăng nhập thất bại
                 $_SESSION['error'] = $user;
-                $_SESSION['flash']  = true;
-
-                header("Location:" . BASE_URL_ADMIN . '?act=login-admin');
+                $_SESSION['flash'] = true;
+                header("Location: " . BASE_URL_ADMIN . '?act=login-admin');
                 exit();
             }
         }
     }
-}
 
+    // Đăng xuất
+    public function logout()
+    {
+        if (isset($_SESSION['user_admin'])) {
+            unset($_SESSION['user_admin']);
+            header('Location:' . BASE_URL_ADMIN . '?act=login-admin');
+        }
+    }
+}

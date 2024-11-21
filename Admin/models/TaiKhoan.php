@@ -27,8 +27,6 @@ class TaiKhoan
 
     public function getAllChucVu()
     {
-    public function getAllChucVu()
-    {
         try {
             $sql = 'SELECT * FROM chuc_vus';
             $stmt = $this->conn->prepare($sql);

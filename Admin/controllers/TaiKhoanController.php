@@ -8,7 +8,6 @@ class TaiKhoanController
     {
         $this->modelTaiKhoan = new TaiKhoan();
     }
-<<<<<<< HEAD
     
     public function getAllTaiKhoan(){
 
@@ -113,7 +112,7 @@ class TaiKhoanController
                 exit();
             } else {
                 // Đăng nhập thất bại
-                $_SESSION['error'] = $user;
+                $_SESSION['errors'] = $user;
                 $_SESSION['flash'] = true;
                 header("Location: " . BASE_URL_ADMIN . '?act=login-admin');
                 exit();

@@ -17,5 +17,6 @@ $act = $_GET['act'] ?? '/';
 
 match ($act) {
     // Trang chủ
+    'form-dang-ky' =>(new )
     
 };

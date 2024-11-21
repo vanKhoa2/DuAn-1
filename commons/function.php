@@ -45,4 +45,10 @@ function deleteFile($file){
         session_unset();
         session_destroy();
     }
- }
+}
+function checkLoginAdmin(){
+    if (!isset($_SESSION['user_admin'])) {
+        require_once './views/auth/formLogin.php';
+        exit();
+    }
+}

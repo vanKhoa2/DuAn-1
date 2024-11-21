@@ -20,6 +20,9 @@ require_once './models/TaiKhoan.php';
 
 // Route
 $act = $_GET['act'] ?? '/';
+if ($act !== 'login-admin' && $act !== 'check-login-admin' && $act !== 'logout-admin') {
+    checkLoginAdmin();
+}
 
 // Để bảo bảo tính chất chỉ gọi 1 hàm Controller để xử lý request thì mình sử dụng match
 
@@ -57,4 +60,5 @@ match ($act) {
     //route auth
     'login-admin' => (new TaiKhoanController())->formLogin(),
     'check-login-admin' => (new TaiKhoanController())->login(),
+    'logout-admin' => (new TaiKhoanController())->logout(),
 };

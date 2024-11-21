@@ -27,6 +27,8 @@ class TaiKhoan
 
     public function getAllChucVu()
     {
+    public function getAllChucVu()
+    {
         try {
             $sql = 'SELECT * FROM chuc_vus';
             $stmt = $this->conn->prepare($sql);
@@ -106,21 +108,25 @@ class TaiKhoan
             $stmt->execute([':email' => $email]);
             $user = $stmt->fetch();
 
-            if ($user && password_verify($mat_khau, $user['mat_khau'])) {
-                if ($user['chuc_vu_id'] == 1) {
-                    if ($user['trang_thai'] == 1) {
-                        return true;
+            if ($user) {
+                if (password_verify($mat_khau, $user['mat_khau'])) {
+                    if ($user['chuc_vu_id'] == 1 && $user['trang_thai'] == 1) {
+                        return $user['email'];
                     } else {
                         return 'Tài khoản bị cấm';
                     }
                 } else {
-                    return 'Tài khoản không có quyền đăng nhập';
+                    return 'Mật khẩu không chính xác';
+                }
+            } elseif ($user && $mat_khau == $user['mat_khau']) {
+                if ($user['chuc_vu_id'] == 2) { // KHACH HANG
+                    return "Tài khoản không có quyền đăng nhập admin";
                 }
             } else {
-                return 'Sai mật khẩu hoặc tài khoản';
+                return 'Vui lòng kiểm tra lại thông tin đăng nhập';
             }
-        } catch (\Exception $e) {
-            // Xử lý lỗi
+        } catch (Exception $e) {
+            echo "Lỗi: " . $e->getMessage();
             return false;
         }
     }

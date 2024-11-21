@@ -116,13 +116,21 @@ class TaiKhoan
                 } else {
                     return 'Mật khẩu không chính xác';
                 }
-            } elseif ($user && $mat_khau == $user['mat_khau']) {
-                if ($user['chuc_vu_id'] == 2) { // KHACH HANG
-                    return "Tài khoản không có quyền đăng nhập admin";
-                }
-            } else {
+            } else{
                 return 'Vui lòng kiểm tra lại thông tin đăng nhập';
+
             }
+            
+            
+            
+            
+            // elseif ($user && $mat_khau == $user['mat_khau']) {
+            //     if ($user['chuc_vu_id'] == 2) { // KHACH HANG
+            //         return "Tài khoản không có quyền đăng nhập admin";
+            //     }
+            // } else {
+            //     return 'Vui lòng kiểm tra lại thông tin đăng nhập';
+            // }
         } catch (Exception $e) {
             echo "Lỗi: " . $e->getMessage();
             return false;

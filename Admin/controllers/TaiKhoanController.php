@@ -99,15 +99,16 @@ class TaiKhoanController
 
             // Kiểm tra thông tin người dùng từ database
             $user = $this->modelTaiKhoan->checkLogin($email, $password);
-
-            if ($user) {
+            // var_dump($user);
+            // die();
+            if ($user && $user == $email) {
                 // Đăng nhập thành công
                 $_SESSION['user_admin'] = $user;
                 header("Location: " . BASE_URL_ADMIN);
                 exit();
             } else {
                 // Đăng nhập thất bại
-                $_SESSION['error'] = $user;
+                $_SESSION['errors'] = $user;
                 $_SESSION['flash'] = true;
                 header("Location: " . BASE_URL_ADMIN . '?act=login-admin');
                 exit();

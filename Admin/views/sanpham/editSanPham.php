@@ -38,10 +38,10 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form action="<?php echo BASE_URL_ADMIN . '?act=post-edit-san-pham' ?>" method="POST" enctype="multipart/form-data">
+              <form action="<?php echo BASE_URL_ADMIN . '?act=post-edit-san-pham&id_san_pham='?> <?php echo $sanPham['id']?>" method="POST" enctype="multipart/form-data">
                 <div class=" card-body">
                   <div class="form-group">
-                     <input type="text" name="id_san_pham" value="<?php echo $sanPham['id'] ?>" hidden>               
+                     <input type="text" name="id_sp" value="<?php echo $sanPham['id'] ?>" hidden>               
 
                     <label >Tên Sản Phẩm</label>
                     <input type="text" class="form-control" name="ten_san_pham" value="<?php echo $sanPham['ten_san_pham'] ?>" >

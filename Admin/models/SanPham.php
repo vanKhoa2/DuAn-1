@@ -22,11 +22,11 @@ class SanPham
     }
 
       
-    public function getDetailSanPham($id){
+    public function getDetailSanPham($id_san_pham){
         try {
             $sql = 'SELECT * FROM san_phams WHERE id=? ';
             $stmt = $this->conn->prepare($sql);
-            $stmt->execute([$id]);
+            $stmt->execute([$id_san_pham]);
             return $stmt->fetch();
         } catch (\Throwable $th) {
             //throw $th;
@@ -56,7 +56,7 @@ class SanPham
         }
     }
 
-    public function editSanPham($id,$ten_san_pham,$gia_san_pham,$gia_khuyen_mai,$so_luong,$ngay_nhap,$danh_muc_id,$trang_thai,$mo_ta,$new_file){
+    public function editSanPham($ten_san_pham,$gia_san_pham,$gia_khuyen_mai,$so_luong,$ngay_nhap,$danh_muc_id,$trang_thai,$mo_ta,$new_file,$id){
         try {
             $sql = 'UPDATE san_phams SET ten_san_pham=:ten_san_pham,
                                         gia_san_pham=:gia_san_pham,

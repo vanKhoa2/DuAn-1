@@ -15,12 +15,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Quản lí bình luận</h1>
+            <h1>Quản Lí Danh Sách Đơn Hàng</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Quản Lí Các Bình Luận</li>
+              <li class="breadcrumb-item active">Quản Lí Danh Sách Đơn Hàng</li>
             </ol>
           </div>
         </div>
@@ -34,7 +34,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <a href="<?= BASE_URL . '?act=form-add-danh-muc' ?>"><button class="btn btn-success">Thêm Danh Mục</button></a>
+                <a href="<?= BASE_URL_ADMIN . '?act=form-add-san-pham' ?>"><button class="btn btn-success">Thêm Đơn Hàng</button></a>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -43,21 +43,36 @@
 
                   <tr>
                     <th>STT</th>
-                    <th>Tên Danh Mục</th>
-                    <th>Mô tả</th>
+                    <th>Mã Đơn Hàng</th>
+                    <th>Tên Người Nhận</th>
+                    <th>Email</th>
+                    <th>SĐT</th>
+                    <th>Địa Chỉ</th>
+                    <th>Ngày Đặt</th>
+                    <th>Tổng Tiền</th>
+                    <th>Ghi Chú</th>
+                    <th>Trạng Thái</th>
                     <th>Thao Tác</th>
                 
                   </tr>
                   </thead>
                   <tbody>
-                    <?php foreach ($listDanhMuc as $key => $danhMuc): ?>
+                    <?php foreach ( $listDonHang as $key => $donHang): ?>
                     <tr>
                       <td><?php echo $key+1 ?></td>
-                      <td><?php echo $danhMuc['ten_danh_muc']; ?></td>
-                      <td><?php echo $danhMuc['mo_ta'] ;?></td>
+                      <td><?php echo $donHang['ma_don_hang'] ;?></td>
+                      <td><?php echo $donHang['ten_nguoi_nhan'] ;?></td>
+                      <td><?php echo $donHang['email_nguoi_nhan'] ;?></td>
+                      <td><?php echo $donHang['sdt_nguoi_nhan'] ;?></td>
+                      <td><?php echo $donHang['dia_chi_nguoi_nhan	'] ;?></td>
+                      <td><?php echo $donHang['ngay_dat'] ;?></td>
+                      <td><?php echo $donHang['tong_tien'] ;?></td>
+                      <td><?php echo $donHang['ghi_chu'] ;?></td>
+
+                      <td><?php echo $donHang['ten_trang_thai']?></td>
                       <td>
-                        <a href="<?= BASE_URL . '?act=form-edit-danh-muc&id_danh_muc='.$danhMuc['id'] ?>"><button class="btn btn-warning">Sửa</button></a>
-                        <a href="<?= BASE_URL . '?act=delete-danh-muc&id_danh_muc='.$danhMuc['id'] ?>"><button class="btn btn-danger">Xóa</button></a>
+                        <a href="<?= BASE_URL_ADMIN . '?act=form-edit-san-pham&id_san_pham='.$donHang['id'] ?>"><button class="btn btn-warning">Sửa</button></a>
+                        <a href="<?= BASE_URL_ADMIN . '?act=delete-san-pham&id_san_pham='.$donHang['id'] ?>"><button class="btn btn-danger">Xóa</button></a>
                       </td>
                     </tr>
                     <?php endforeach ?>

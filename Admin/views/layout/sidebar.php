@@ -77,6 +77,17 @@
           </a>
         </li>
 
+        <li class="nav-item">
+          <a href="<?= BASE_URL_ADMIN . '?act=don-hang' ?>" class="nav-link">
+          <i class="far fa-list-alt"></i>
+            <p>
+               Đơn Hàng
+            
+            </p>
+          </a>
+        </li>
+
+
 
       </ul>
     </nav>

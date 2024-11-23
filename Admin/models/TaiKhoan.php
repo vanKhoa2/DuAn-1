@@ -104,7 +104,7 @@ class TaiKhoan
             $user = $stmt->fetch();
 
             if ($user) {
-                if (password_verify($mat_khau, $user['mat_khau'])) {
+                if ($mat_khau && $user['mat_khau']) {
                     if ($user['chuc_vu_id'] == 1 && $user['trang_thai'] == 1) {
                         return $user['email'];
                     } else {
@@ -116,18 +116,7 @@ class TaiKhoan
             } else{
                 return 'Vui lòng kiểm tra lại thông tin đăng nhập';
 
-            }
-            
-            
-            
-            
-            // elseif ($user && $mat_khau == $user['mat_khau']) {
-            //     if ($user['chuc_vu_id'] == 2) { // KHACH HANG
-            //         return "Tài khoản không có quyền đăng nhập admin";
-            //     }
-            // } else {
-            //     return 'Vui lòng kiểm tra lại thông tin đăng nhập';
-            // }
+            }           
         } catch (Exception $e) {
             echo "Lỗi: " . $e->getMessage();
             return false;

@@ -34,7 +34,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <a href="<?= BASE_URL_ADMIN . '?act=form-add-san-pham' ?>"><button class="btn btn-success">Thêm Đơn Hàng</button></a>
+                <a href="<?= BASE_URL_ADMIN . '?act=form-add-don-hang' ?>"><button class="btn btn-success">Thêm Đơn Hàng</button></a>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -64,15 +64,15 @@
                       <td><?php echo $donHang['ten_nguoi_nhan'] ;?></td>
                       <td><?php echo $donHang['email_nguoi_nhan'] ;?></td>
                       <td><?php echo $donHang['sdt_nguoi_nhan'] ;?></td>
-                      <td><?php echo $donHang['dia_chi_nguoi_nhan	'] ;?></td>
+                      <td><?php echo $donHang['dia_chi_nguoi_nhan'] ;?></td>
                       <td><?php echo $donHang['ngay_dat'] ;?></td>
                       <td><?php echo $donHang['tong_tien'] ;?></td>
                       <td><?php echo $donHang['ghi_chu'] ;?></td>
 
                       <td><?php echo $donHang['ten_trang_thai']?></td>
                       <td>
-                        <a href="<?= BASE_URL_ADMIN . '?act=form-edit-san-pham&id_san_pham='.$donHang['id'] ?>"><button class="btn btn-warning">Sửa</button></a>
-                        <a href="<?= BASE_URL_ADMIN . '?act=delete-san-pham&id_san_pham='.$donHang['id'] ?>"><button class="btn btn-danger">Xóa</button></a>
+                        <a href="<?= BASE_URL_ADMIN . '?act=form-edit-don-hang&id_san_pham='.$donHang['id'] ?>"><button class="btn btn-warning">Sửa</button></a>
+                        
                       </td>
                     </tr>
                     <?php endforeach ?>

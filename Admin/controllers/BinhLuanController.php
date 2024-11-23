@@ -12,6 +12,7 @@ class BinhLuanController
     }
     
     public function getAllBinhLuan() {
+        $listBinhLuan = $this->modelBinhLuan->getAllBinhLuan();
          require_once "./views/binhluan/listBinhLuan.php";
     }
 }

@@ -43,21 +43,26 @@
 
                   <tr>
                     <th>STT</th>
-                    <th>Tên Danh Mục</th>
-                    <th>Mô tả</th>
+                    <th>Tên Sản Phẩm</th>
+                    <th>Tài Khoản</th>
+                    <th>Nội Dung</th>
+                    <th>Ngày Đăng</th>
                     <th>Thao Tác</th>
                 
                   </tr>
                   </thead>
                   <tbody>
-                    <?php foreach ($listDanhMuc as $key => $danhMuc): ?>
+                    <?php foreach ($listBinhLuan as $key => $BinhLuan): ?>
                     <tr>
                       <td><?php echo $key+1 ?></td>
-                      <td><?php echo $danhMuc['ten_danh_muc']; ?></td>
-                      <td><?php echo $danhMuc['mo_ta'] ;?></td>
+                      <td><?php echo $BinhLuan['ten_san_pham']; ?></td>
+                      <td><?php echo $BinhLuan['ho_ten']; ?></td>
+                      <td><?php echo $BinhLuan['noi_dung']; ?></td>
+                      <td><?php echo $BinhLuan['ngay_dang'] ;?></td>
+
                       <td>
-                        <a href="<?= BASE_URL . '?act=form-edit-danh-muc&id_danh_muc='.$danhMuc['id'] ?>"><button class="btn btn-warning">Sửa</button></a>
-                        <a href="<?= BASE_URL . '?act=delete-danh-muc&id_danh_muc='.$danhMuc['id'] ?>"><button class="btn btn-danger">Xóa</button></a>
+                        <a href="<?= BASE_URL . '?act=form-edit-binh_luan&idbinh_luanc='.$BinhLuan['id'] ?>"><button class="btn btn-warning">Sửa</button></a>
+                        <a href="<?= BASE_URL . '?act=delete-binh_luan&id_binh_luan='.$BinhLuan['id'] ?>"><button class="btn btn-danger">Xóa</button></a>
                       </td>
                     </tr>
                     <?php endforeach ?>

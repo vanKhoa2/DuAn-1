@@ -9,6 +9,7 @@ require_once './controllers/SanPhamController.php';
 require_once './controllers/DanhMucController.php';
 require_once './controllers/TaiKhoanController.php';
 require_once './controllers/DonHangController.php';
+require_once './controllers/BinhLuanController.php';
 
 
 // Require toàn bộ file Models
@@ -16,7 +17,7 @@ require_once './models/SanPham.php';
 require_once './models/DanhMuc.php';
 require_once './models/TaiKhoan.php';
 require_once './models/DonHang.php';
-// require_once './models/SanPham.php';
+require_once './models/BinhLuan.php';
 
 
 // Route
@@ -39,6 +40,7 @@ match ($act) {
     'form-edit-san-pham' => (new SanPhamController())->formEditSanPham(),
     'post-edit-san-pham' => (new SanPhamController())->postEditSanPham(),
     'delete-san-pham' => (new SanPhamController())->deleteSanPham(),
+    'views-san-pham' => (new SanPhamController())->viewsSanPham(),
    
     // Route Danh Mục  
     'post-add-danh-muc' => (new DanhMucController())->postAddDanhMuc(), 
@@ -47,7 +49,7 @@ match ($act) {
     'form-edit-danh-muc' => (new DanhMucController())->formEditDanhMuc(), 
     'delete-danh-muc' => (new DanhMucController())->deleteDanhMuc(), 
     // Route Bình Luận
-    // 'binh_luan' => (new BinhLuanController())->getAllBinhLuan(),
+    'binh-luan' => (new BinhLuanController())->getAllBinhLuan(),
     // Route Tài Khoản
     'tai-khoan' => (new TaiKhoanController())->getAllTaiKhoan(),
     'form-add-tai-khoan' => (new TaiKhoanController())->formAddTaiKhoan(),

@@ -50,7 +50,7 @@
                     <th>Số Điện Thoại</th>
                     <th>Giới Tính</th>
                     <th>Địa Chỉ</th>
-                    <th>Mật Khẩu</th>
+
                     <th>Chức Vụ</th>
                     <th>Thao Tác</th>
                 
@@ -67,11 +67,11 @@
                       <td><?php echo $taiKhoan['so_dien_thoai'] ;?></td>
                       <td><?php echo $taiKhoan['gioi_tinh'] == 1 ? 'Nam':'Nữ'?></td>
                       <td><?php echo $taiKhoan['dia_chi'] ;?></td>
-                      <td><?php echo $taiKhoan['mat_khau'] ;?></td>
+    
                       <td><?php echo $taiKhoan['ten_chuc_vu'] ;?></td>
                       <td>
                         <a href="<?= BASE_URL_ADMIN . '?act=form-edit-tai-khoan&id_tai_khoan='.$taiKhoan['id'] ?>"><button class="btn btn-warning">Sửa</button></a>
-                        <a href="<?= BASE_URL_ADMIN . '?act=delete-tai-khoan&id_tai_khoan='.$taiKhoan['id'] ?>"><button class="btn btn-danger">Xóa</button></a>
+                        <a href="<?= BASE_URL_ADMIN . '?act=delete-tai-khoan&id_tai_khoan='.$taiKhoan['id'] ?>"><button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button></a>
                       </td>
                     </tr>
                     <?php endforeach ?>

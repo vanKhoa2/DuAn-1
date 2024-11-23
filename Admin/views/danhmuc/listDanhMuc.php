@@ -56,8 +56,8 @@
                       <td><?php echo $danhMuc['ten_danh_muc']; ?></td>
                       <td><?php echo $danhMuc['mo_ta'] ;?></td>
                       <td>
-                        <a href="<?= BASE_URL_ADMIN . '?act=form-edit-danh-muc&id_danh_muc='.$danhMuc['id'] ?>"><button class="btn btn-warning">Sửa</button></a>
-                        <a href="<?= BASE_URL_ADMIN . '?act=delete-danh-muc&id_danh_muc='.$danhMuc['id'] ?>"><button class="btn btn-danger">Xóa</button></a>
+                        <a href="<?= BASE_URL_ADMIN . '?act=form-edit-danh-muc&id_danh_muc='.$danhMuc['id'] ?>"><button class="btn btn-warning"><i class="fas fa-cog"></i></button></a>
+                        <a href="<?= BASE_URL_ADMIN . '?act=delete-danh-muc&id_danh_muc='.$danhMuc['id'] ?>"><button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button></a>
                       </td>
                     </tr>
                     <?php endforeach ?>

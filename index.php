@@ -26,6 +26,10 @@ match ($act) {
     '/' => (new HomeController()) ->home(),
 
 
+    //San Pham
+    'chi-tiet-san-pham' =>(new HomeController())->chiTietSanPham(),
+
+
 
 
 

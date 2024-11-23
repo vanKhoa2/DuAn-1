@@ -43,14 +43,12 @@
 
                   <tr>
                     <th>STT</th>
-                    <th>Họ Và Tên</th>
-                    <th>Avatar</th>
+                    <th>Họ Và Tên</th>                   
                     <th>Ngày Sinh</th>
                     <th>Email</th>
                     <th>Số Điện Thoại</th>
                     <th>Giới Tính</th>
                     <th>Địa Chỉ</th>
-
                     <th>Chức Vụ</th>
                     <th>Thao Tác</th>
                 
@@ -61,7 +59,6 @@
                     <tr>
                       <td><?php echo $key+1 ?></td>
                       <td><?php echo $taiKhoan['ho_ten']; ?></td>
-                      <td><?php echo $taiKhoan['anh_dai_dien'] ;?></td>
                       <td><?php echo $taiKhoan['ngay_sinh'] ;?></td>
                       <td><?php echo $taiKhoan['email'] ;?></td>
                       <td><?php echo $taiKhoan['so_dien_thoai'] ;?></td>
@@ -73,7 +70,7 @@
                         <a href="<?= BASE_URL_ADMIN . '?act=form-edit-tai-khoan&id_tai_khoan='.$taiKhoan['id'] ?>"><button class="btn btn-warning">Sửa</button></a>
                         <a href="<?= BASE_URL_ADMIN . '?act=delete-tai-khoan&id_tai_khoan='.$taiKhoan['id'] ?>"><button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button></a>
                       </td>
-                    </tr>
+                    </tr> 
                     <?php endforeach ?>
                   </tbody>
                    

@@ -30,7 +30,9 @@ match ($act) {
 
 
     //San Pham
+    'list-san-pham' => (new HomeController())->listSanPham(),
     'chi-tiet-san-pham' =>(new HomeController())->chiTietSanPham(),
+
     //route  Client
      
     'form-login' =>(new TaiKhoanControllerClient())->formLogin(),
@@ -41,4 +43,5 @@ match ($act) {
     
     
     'logout' => (new TaiKhoanControllerClient())->logoutClient(),
+    
 };

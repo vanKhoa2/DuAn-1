@@ -32,27 +32,19 @@
                         <div class="row">
                             <div class="col-lg-5">
                                 <div class="product-large-slider">
-                                    <?php foreach ($listAnhSanPham as $key => $anhSanPham) { ?>
+                                    
                                         <div class="pro-large-img">
-                                            <img src="<?= BASE_URL . $anhSanPham['link_hinh_anh'] ?>" alt="product-details" />
+                                            <img src="<?= BASE_URL . $sanPham['hinh_anh'] ?>" alt="product-details" />
                                         </div>
-                                    <?php } ?>
+                        
 
                                 </div>
-                                <div class="pro-nav slick-row-10 slick-arrow-style">
-                                    <?php foreach ($listAnhSanPham as $key => $anhSanPham) { ?>
-                                        <div class="pro-large-img">
-                                            <img src="<?= BASE_URL . $anhSanPham['link_hinh_anh'] ?>" alt="product-details" />
-                                        </div>
-                                    <?php } ?>                                 
-                                </div>
+                               
                             </div>
                             <div class="col-lg-7">
                                 <div class="product-details-des">
-                                    <div class="manufacturer-name">
-                                        <a href="product-details.html">HasTech</a>
-                                    </div>
-                                    <h3 class="product-name">Handmade Golden Necklace Full Family Package</h3>
+    
+                                    <h3 class="product-name"><?=$sanPham['ten_san_pham']?></h3>
                                     <div class="ratings d-flex">
                                         <span><i class="fa fa-star-o"></i></span>
                                         <span><i class="fa fa-star-o"></i></span>
@@ -64,19 +56,11 @@
                                         </div>
                                     </div>
                                     <div class="price-box">
-                                        <span class="price-regular">$70.00</span>
-                                        <span class="price-old"><del>$90.00</del></span>
+                                        <span class="price-regular"><?php echo $sanPham['gia_khuyen_mai'] ?></span>
+                                        <span class="price-old"><del><?php echo $sanPham['gia_san_pham'] ?></del></span>
                                     </div>
-                                    <h5 class="offer-text"><strong>Hurry up</strong>! offer ends in:</h5>
-                                    <div class="product-countdown" data-countdown="2022/12/20"></div>
-                                    <div class="availability">
-                                        <i class="fa fa-check-circle"></i>
-                                        <span>200 in stock</span>
-                                    </div>
-                                    <p class="pro-desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                                        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-                                        voluptua. Phasellus id nisi quis justo tempus mollis sed et dui. In hac
-                                        habitasse platea dictumst.</p>
+           
+                                    <p class="pro-desc"><?php echo $sanPham['mo_ta'] ?></p>
                                     <div class="quantity-cart-box d-flex align-items-center">
                                         <h6 class="option-title">qty:</h6>
                                         <div class="quantity">

@@ -13,9 +13,10 @@ class HomeController
         $listSanPham = $this->modelSanPham->getAllSanPham();
         require_once './views/home.php';
     }
-    public function trangChu()
-    {
-        echo " day la trang chu cua toi";
+    
+    function listSanPham(){
+        
+        require_once './views/sanpham.php';
     }
 
     public function chiTietSanPham(){
@@ -26,7 +27,6 @@ class HomeController
         $listAnhSanPham = $this->modelSanPham->getListAnhSanPham($id);
         $listBinhLuan = $this->modelSanPham->getBinhLuanFromSanPham($id);
         $listSanPhamCungDanhMuc = $this->modelSanPham->getListSanPhamdDanhMuc($sanPham['id'], $sanPham['danh_muc_id']);
-        // var_dump($listSanPhamCungDanhMuc);die();
 
         if (isset($sanPham)) {
             require_once './views/detailSanPham.php';

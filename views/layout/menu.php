@@ -29,7 +29,7 @@
                                        
                                         <li><a href="blog-left-sidebar.html">Sản phẩm <i class="fa fa-angle-down"></i></a>
                                             <ul class="dropdown">
-                                                <li><a href="blog-left-sidebar.html">blog left sidebar</a></li>
+                                                <!-- <li><a href="blog-left-sidebar.html">blog left sidebar</a></li>
                                                 <li><a href="blog-list-left-sidebar.html">blog list left sidebar</a></li>
                                                 <li><a href="blog-right-sidebar.html">blog right sidebar</a></li>
                                                 <li><a href="blog-list-right-sidebar.html">blog list right sidebar</a></li>
@@ -38,7 +38,7 @@
                                                 <li><a href="blog-details-left-sidebar.html">blog details left sidebar</a></li>
                                                 <li><a href="blog-details-audio.html">blog details audio</a></li>
                                                 <li><a href="blog-details-video.html">blog details video</a></li>
-                                                <li><a href="blog-details-image.html">blog details image</a></li>
+                                                <li><a href="blog-details-image.html">blog details image</a></li> -->
                                             </ul>
                                         </li>
                                         <li><a href="<?=BASE_URL.'?act=gioi-thieu'?>">Giới thiệu</a></li>

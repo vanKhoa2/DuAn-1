@@ -44,5 +44,7 @@ match ($act) {
     'form-dang-ky' =>(new TaiKhoanControllerClient())->formDangKy(),
     'dang-ky' =>(new TaiKhoanControllerClient())->dangKy(),
 
+    'logout' =>(new TaiKhoanControllerClient())->logoutClient()
+
 
 };

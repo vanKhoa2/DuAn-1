@@ -30,7 +30,10 @@
                     <div class="col-lg-12">
                         <div class="login-reg-form-wrap">
                             <h5 class="text-center">Đăng nhập</h5>
+<<<<<<< HEAD
                            
+=======
+>>>>>>> 11514804e0ca0e4e56d7eb24df8232adf855815c
                             <form action="<?= BASE_URL . '?act=check-login' ?>" method="post">
                                 <div class="single-input-item">
                                     <input type="email"name="email" placeholder="Email or Username" required />

@@ -30,21 +30,20 @@ match ($act) {
 
 
     //San Pham
+    'list-san-pham' => (new HomeController())->listSanPham(),
     'chi-tiet-san-pham' =>(new HomeController())->chiTietSanPham(),
 
-
-
-
-
     //route  Client
-
+     
     'form-login' =>(new TaiKhoanControllerClient())->formLogin(),
     'check-login' =>(new TaiKhoanControllerClient())->postLogin(),
     
     'form-dang-ky' =>(new TaiKhoanControllerClient())->formDangKy(),
     'dang-ky' =>(new TaiKhoanControllerClient())->dangKy(),
 
+
     'logout' =>(new TaiKhoanControllerClient())->logoutClient()
 
 
 };
+

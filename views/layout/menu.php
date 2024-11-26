@@ -87,8 +87,6 @@
 
                                                   <li><a href="<?= BASE_URL . '?act=quan-ly-tai-khoan' ?>">Tài khoản</a></li>
                                                   <li><a href="<?= BASE_URL . '?act=quen-mat-khau' ?>">Quên mật khẩu</a></li>
-
-                                                  <li><a href="<?= BASE_URL_ADMIN ?>">Đăng nhập Admin</a></li>
                                                   <li><a href="<?= BASE_URL . '?act=logout' ?>">Đăng xuất</a></li>
                                               <?php } ?>
                                         </ul>

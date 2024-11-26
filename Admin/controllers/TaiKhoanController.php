@@ -48,7 +48,7 @@ class TaiKhoanController
             
             $error = [];
             if(empty($ho_ten)){
-                $error['ho_ten'] = "Tên sản phẩm không được bỏ trống";
+                $error['ho_ten'] = "Họ Tên";
             }
             if (empty($email)) {
                 $error['email'] = "Email không được bỏ trống";

@@ -61,10 +61,11 @@ class TaiKhoan
     public function addTaiKhoan($ho_ten, $email, $so_dien_thoai, $gioi_tinh, $dia_chi, $mat_khau, $chuc_vu)
     {
         try {
-            $sql = 'INSERT INTO tai_khoans (ho_ten, email, so_dien_thoai, dia_chi, mat_khau, chuc_vu_id, gioi_tinh,)
+            
+            $sql = 'INSERT INTO tai_khoans (ho_ten, email, so_dien_thoai,gioi_tinh, dia_chi, mat_khau, chuc_vu_id )
                     VALUES (?, ?, ?, ?, ?, ?, ?)';
             $stmt = $this->conn->prepare($sql);
-            $stmt->execute([$ho_ten, $email, $so_dien_thoai, $dia_chi, $mat_khau, $chuc_vu, $gioi_tinh]);
+            $stmt->execute([$ho_ten, $email, $so_dien_thoai, $gioi_tinh, $dia_chi, $mat_khau, $chuc_vu]);
             return true;
         } catch (\Throwable $th) {
             // Xử lý lỗi

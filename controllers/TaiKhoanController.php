@@ -71,7 +71,6 @@ class TaiKhoanControllerClient
     { {
 
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                // Lấy ra dl
                 $ho_ten = $_POST['ho_ten'] ?? '';
               
                 $email = $_POST['email'] ?? '';
@@ -99,9 +98,7 @@ class TaiKhoanControllerClient
                 if (empty($ho_ten)) {
                     $errors['ho_ten'] = 'Họ tên không được để trống';
                 }
-                if (empty($ngay_sinh)) {
-                    $errors['ngay_sinh'] = 'Ngày sinh không được để trống';
-                }
+   
                 if (empty($email)) {
                     $errors['email'] = 'Email không được để trống';
                 }
@@ -120,12 +117,12 @@ class TaiKhoanControllerClient
                 //   var_dump($_SESSION['errors']);die();
                 // Nếu k có lỗi thì thêm sản phẩm
                 if (empty($errors)) {
-                    $tai_khoan = $this->modelTaiKhoan->addTaiKhoan($ho_ten, $email, $so_dien_thoai, $gioi_tinh, $dia_chi, $mat_khau, $chuc_vu);
-                    // var_dump($tai_khoan);
-                    // die();
+
+                
+                
+                     $this->modelTaiKhoan->addTaiKhoan($ho_ten, $email, $so_dien_thoai, $gioi_tinh, $dia_chi, $mat_khau, $chuc_vu);
+                      
                     $_SESSION['thongBao'] = 'Đăng kí thành công. Vui lòng đăng nhập để mua hàng và bình luận';
-                    var_dump($_SESSION['thongBao']);
-                    die();
 
                     header("Location: " . BASE_URL . '?act=form-dang-ky');
 
@@ -144,4 +141,12 @@ class TaiKhoanControllerClient
             }
         }
     }
+    public function logoutClient()
+    {
+        if (isset($_SESSION['user_client'])) {
+            unset($_SESSION['user_client']);
+            header('Location:' . BASE_URL . '?act=form-login');
+        }
+    }
+    
 }

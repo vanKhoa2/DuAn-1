@@ -1,49 +1,7 @@
 <?php require_once 'layout/header.php' ?>
 <?php require_once 'layout/menu.php' ?>
 <main>
-    <!-- hero slider area start -->
-    <!-- <section class="hero-slider-area">
-        <div class="container custom-container p-0">
-            <div class="hero-slider-active-4 slick-dot-style">
-                <div class="slider-item">
-                    <a href="shop.html">
-                        <figure class="slider-thumb">
-                            <img src="assets/img/banner/banner2.jpg" alt="">
-                        </figure>
-                        <div class="slider-item-content">
-                            <h2>new collection</h2>
-                            <h3>Jewelry 2024</h3>
-                            <div class="btn btn-text">shop now</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="slider-item">
-                    <a href="shop.html">
-                        <figure class="slider-thumb">
-                            <img src="assets/img/banner/banner1.webp" alt="" style="width: 100%;">
-                        </figure>
-                        <div class="slider-item-content">
-                            <h2>top collection</h2>
-                            <h3>Jewelry 2022</h3>
-                            <div class="btn btn-text">shop now</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="slider-item">
-                    <a href="shop.html">
-                        <figure class="slider-thumb">
-                            <img src="assets/img/banner/banner3.webp" alt="">
-                        </figure>
-                        <div class="slider-item-content">
-                            <h2>best collection</h2>
-                            <h3>Jewelry 2022</h3>
-                            <div class="btn btn-text">shop now</div>
-                        </div>
-                    </a>
-                </div>             
-            </div>
-        </div>
-    </section> -->
+
     <section class="slider-area">
         <div class="hero-slider-active slick-arrow-style slick-arrow-style_hero slick-dot-style">
             <!-- single slider item start -->
@@ -299,7 +257,7 @@
                                     <div class="product-label new">
                                         <span>Mới</span>
                                     </div>
-                                    
+
                                 </div>
                                 <div class="button-group">
                                     <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="pe-7s-like"></i></a>
@@ -312,7 +270,7 @@
                             </figure>
                             <div class="product-caption">
                                 <div class="product-identity">
-                                   
+
                                 </div>
                                 <h6 class="product-name">
                                     <a href="product-details.html">Perfect Diamond Jewelry</a>
@@ -334,7 +292,7 @@
                                         <span>Mới</span>
                                     </div>
                                     <div class="product-label discount">
-                                        
+
                                     </div>
                                 </div>
                                 <div class="button-group">
@@ -348,7 +306,7 @@
                             </figure>
                             <div class="product-caption">
                                 <div class="product-identity">
-                                    
+
                                 </div>
                                 <h6 class="product-name">
                                     <a href="product-details.html">Perfect Diamond Jewelry</a>
@@ -359,15 +317,15 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- product item end -->
 
                         <!-- product item start -->
                         <div class="product-item">
                             <figure class="product-thumb">
-                                <a href="product-details.html">
-                                    <img class="pri-img" src="assets/img/product/product-2.jpg" alt="product">
-                                    <img class="sec-img" src="assets/img/product/product-17.jpg" alt="product">
+                                <a href="<?= BASE_URL . '?act=chi-tiet-san-pham&id_san_pham='  . $sanPham['id'] ?>">
+                                    <img class="pri-img" src="<?= BASE_URL . $sanPham['hinh_anh'] ?>" alt="product">
+                                    <img class="sec-img" src="<?= BASE_URL . $sanPham['hinh_anh'] ?>" alt="product">
                                 </a>
                                 <div class="product-badge">
                                     <div class="product-label new">
@@ -388,7 +346,7 @@
                             </figure>
                             <div class="product-caption">
                                 <div class="product-identity">
-                                   
+
                                 </div>
                                 <h6 class="product-name">
                                     <a href="product-details.html">Handmade Golden Necklace</a>
@@ -404,9 +362,9 @@
                         <!-- product item start -->
                         <div class="product-item">
                             <figure class="product-thumb">
-                                <a href="product-details.html">
-                                    <img class="pri-img" src="assets/img/product/product-3.jpg" alt="product">
-                                    <img class="sec-img" src="assets/img/product/product-16.jpg" alt="product">
+                                <a href="<?= BASE_URL . '?act=chi-tiet-san-pham&id_san_pham='  . $sanPham['id'] ?>">
+                                    <img class="pri-img" src="<?= BASE_URL . $sanPham['hinh_anh'] ?>" alt="product">
+                                    <img class="sec-img" src="<?= BASE_URL . $sanPham['hinh_anh'] ?>" alt="product">
                                 </a>
                                 <div class="product-badge">
                                     <div class="product-label new">
@@ -423,7 +381,7 @@
                                 </div>
                             </figure>
                             <div class="product-caption">
-                                
+
                                 <h6 class="product-name">
                                     <a href="product-details.html">Perfect Diamond Jewelry</a>
                                 </h6>
@@ -438,9 +396,9 @@
                         <!-- product item start -->
                         <div class="product-item">
                             <figure class="product-thumb">
-                                <a href="product-details.html">
-                                    <img class="pri-img" src="assets/img/product/product-4.jpg" alt="product">
-                                    <img class="sec-img" src="assets/img/product/product-15.jpg" alt="product">
+                                <a href="<?= BASE_URL . '?act=chi-tiet-san-pham&id_san_pham='  . $sanPham['id'] ?>">
+                                    <img class="pri-img" src="<?= BASE_URL . $sanPham['hinh_anh'] ?>" alt="product">
+                                    <img class="sec-img" src="<?= BASE_URL . $sanPham['hinh_anh'] ?>" alt="product">
                                 </a>
                                 <div class="product-badge">
                                     <div class="product-label new">
@@ -460,7 +418,7 @@
                                 </div>
                             </figure>
                             <div class="product-caption">
-                               
+
                                 <h6 class="product-name">
                                     <a href="product-details.html">Diamond Exclusive Ornament</a>
                                 </h6>
@@ -475,9 +433,9 @@
                         <!-- product item start -->
                         <div class="product-item">
                             <figure class="product-thumb">
-                                <a href="product-details.html">
-                                    <img class="pri-img" src="assets/img/product/product-5.jpg" alt="product">
-                                    <img class="sec-img" src="assets/img/product/product-14.jpg" alt="product">
+                                <a href="<?= BASE_URL . '?act=chi-tiet-san-pham&id_san_pham='  . $sanPham['id'] ?>">
+                                    <img class="pri-img" src="<?= BASE_URL . $sanPham['hinh_anh'] ?>" alt="product">
+                                    <img class="sec-img" src="<?= BASE_URL . $sanPham['hinh_anh'] ?>" alt="product">
                                 </a>
                                 <div class="product-badge">
                                     <div class="product-label new">
@@ -498,7 +456,7 @@
                             </figure>
                             <div class="product-caption">
                                 <div class="product-identity">
-                                   
+
                                 </div>
                                 <h6 class="product-name">
                                     <a href="product-details.html">Citygold Exclusive Ring</a>

@@ -1,3 +1,8 @@
+<?php
+require_once "layout/header.php";
+require_once "layout/menu.php";
+?>
+
 <main>
         <!-- breadcrumb area start -->
         <div class="breadcrumb-area">
@@ -410,3 +415,5 @@
         </div>
         <!-- checkout main wrapper end -->
     </main>
+
+    <?php require_once "layout/footer.php" ?>  

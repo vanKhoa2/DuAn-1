@@ -19,6 +19,8 @@ require_once './controllers/TaiKhoanController.php';
 // Require toàn bộ file Models
 require_once './models/SanPham.php';
 require_once './models/TaiKhoan.php';
+require_once './models/CheckOut.php';
+require_once './models/Cart.php';
 // Route
 $act = $_GET['act'] ?? '/';
 
@@ -32,7 +34,6 @@ match ($act) {
     //San Pham
     'list-san-pham' => (new HomeController())->listSanPham(),
     'chi-tiet-san-pham' =>(new HomeController())->chiTietSanPham(),
-
     //route  Client
      
     'form-login' =>(new TaiKhoanControllerClient())->formLogin(),
@@ -43,5 +44,6 @@ match ($act) {
     
     
     'logout' => (new TaiKhoanControllerClient())->logoutClient(),
-    
+    // Route thanh toán , giỏ hàng
+    'check-out' (new CheckOutController())->CheckOut(),
 };

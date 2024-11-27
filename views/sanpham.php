@@ -1,4 +1,7 @@
-<?php require_once 'layout/header.php' ?>
+<?php
+require_once "layout/header.php";
+require_once "layout/menu.php";
+?>
 
 <main>
         <!-- breadcrumb area start -->
@@ -48,7 +51,7 @@
                                 <h5 class="sidebar-title">price</h5>
                                 <div class="sidebar-body">
                                     <div class="price-range-wrap">
-                                        <div class="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" data-min="1" data-max="1000"><div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 0%; width: 100%;"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span></div>
+                                        <div class="price-range" data-min="1" data-max="1000"></div>
                                         <div class="range-slider">
                                             <form action="#" class="d-flex align-items-center justify-content-between">
                                                 <div class="price-input">
@@ -199,8 +202,8 @@
                                     <div class="col-lg-7 col-md-6 order-2 order-md-1">
                                         <div class="top-bar-left">
                                             <div class="product-view-mode">
-                                                <a class="active" href="#" data-target="grid-view" data-bs-toggle="tooltip" title="" data-bs-original-title="Grid View" aria-label="Grid View"><i class="fa fa-th"></i></a>
-                                                <a href="#" data-target="list-view" data-bs-toggle="tooltip" title="" data-bs-original-title="List View" aria-label="List View"><i class="fa fa-list"></i></a>
+                                                <a class="active" href="#" data-target="grid-view" data-bs-toggle="tooltip" title="Grid View"><i class="fa fa-th"></i></a>
+                                                <a href="#" data-target="list-view" data-bs-toggle="tooltip" title="List View"><i class="fa fa-list"></i></a>
                                             </div>
                                             <div class="product-amount">
                                                 <p>Showing 1–16 of 21 results</p>
@@ -211,7 +214,7 @@
                                         <div class="top-bar-right">
                                             <div class="product-short">
                                                 <p>Sort By : </p>
-                                                <select class="nice-select" name="sortby" style="display: none;">
+                                                <select class="nice-select" name="sortby">
                                                     <option value="trending">Relevance</option>
                                                     <option value="sales">Name (A - Z)</option>
                                                     <option value="sales">Name (Z - A)</option>
@@ -219,7 +222,7 @@
                                                     <option value="date">Rating (Lowest)</option>
                                                     <option value="price-asc">Model (A - Z)</option>
                                                     <option value="price-asc">Model (Z - A)</option>
-                                                </select><div class="nice-select" tabindex="0"><span class="current">Relevance</span><ul class="list"><li data-value="trending" class="option selected focus">Relevance</li><li data-value="sales" class="option">Name (A - Z)</li><li data-value="sales" class="option">Name (Z - A)</li><li data-value="rating" class="option">Price (Low &gt; High)</li><li data-value="date" class="option">Rating (Lowest)</li><li data-value="price-asc" class="option">Model (A - Z)</li><li data-value="price-asc" class="option">Model (Z - A)</li></ul></div>
+                                                </select>
                                             </div>
                                         </div>
                                     </div>
@@ -247,9 +250,9 @@
                                                 </div>
                                             </div>
                                             <div class="button-group">
-                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to wishlist" aria-label="Add to wishlist"><i class="pe-7s-like"></i></a>
-                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to Compare" aria-label="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Quick View" aria-label="Quick View"><i class="pe-7s-search"></i></span></a>
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="pe-7s-like"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="pe-7s-search"></i></span></a>
                                             </div>
                                             <div class="cart-hover">
                                                 <button class="btn btn-cart">add to cart</button>
@@ -300,9 +303,9 @@
                                                 </div>
                                             </div>
                                             <div class="button-group">
-                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to wishlist" aria-label="Add to wishlist"><i class="pe-7s-like"></i></a>
-                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to Compare" aria-label="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Quick View" aria-label="Quick View"><i class="pe-7s-search"></i></span></a>
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="pe-7s-like"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="pe-7s-search"></i></span></a>
                                             </div>
                                             <div class="cart-hover">
                                                 <button class="btn btn-cart">add to cart</button>
@@ -359,9 +362,9 @@
                                                 </div>
                                             </div>
                                             <div class="button-group">
-                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to wishlist" aria-label="Add to wishlist"><i class="pe-7s-like"></i></a>
-                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to Compare" aria-label="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Quick View" aria-label="Quick View"><i class="pe-7s-search"></i></span></a>
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="pe-7s-like"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="pe-7s-search"></i></span></a>
                                             </div>
                                             <div class="cart-hover">
                                                 <button class="btn btn-cart">add to cart</button>
@@ -412,9 +415,9 @@
                                                 </div>
                                             </div>
                                             <div class="button-group">
-                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to wishlist" aria-label="Add to wishlist"><i class="pe-7s-like"></i></a>
-                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to Compare" aria-label="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Quick View" aria-label="Quick View"><i class="pe-7s-search"></i></span></a>
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="pe-7s-like"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="pe-7s-search"></i></span></a>
                                             </div>
                                             <div class="cart-hover">
                                                 <button class="btn btn-cart">add to cart</button>
@@ -471,9 +474,9 @@
                                                 </div>
                                             </div>
                                             <div class="button-group">
-                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to wishlist" aria-label="Add to wishlist"><i class="pe-7s-like"></i></a>
-                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to Compare" aria-label="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Quick View" aria-label="Quick View"><i class="pe-7s-search"></i></span></a>
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="pe-7s-like"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="pe-7s-search"></i></span></a>
                                             </div>
                                             <div class="cart-hover">
                                                 <button class="btn btn-cart">add to cart</button>
@@ -524,9 +527,9 @@
                                                 </div>
                                             </div>
                                             <div class="button-group">
-                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to wishlist" aria-label="Add to wishlist"><i class="pe-7s-like"></i></a>
-                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to Compare" aria-label="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Quick View" aria-label="Quick View"><i class="pe-7s-search"></i></span></a>
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="pe-7s-like"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="pe-7s-search"></i></span></a>
                                             </div>
                                             <div class="cart-hover">
                                                 <button class="btn btn-cart">add to cart</button>
@@ -583,9 +586,9 @@
                                                 </div>
                                             </div>
                                             <div class="button-group">
-                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to wishlist" aria-label="Add to wishlist"><i class="pe-7s-like"></i></a>
-                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to Compare" aria-label="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Quick View" aria-label="Quick View"><i class="pe-7s-search"></i></span></a>
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="pe-7s-like"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="pe-7s-search"></i></span></a>
                                             </div>
                                             <div class="cart-hover">
                                                 <button class="btn btn-cart">add to cart</button>
@@ -636,9 +639,9 @@
                                                 </div>
                                             </div>
                                             <div class="button-group">
-                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to wishlist" aria-label="Add to wishlist"><i class="pe-7s-like"></i></a>
-                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to Compare" aria-label="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Quick View" aria-label="Quick View"><i class="pe-7s-search"></i></span></a>
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="pe-7s-like"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="pe-7s-search"></i></span></a>
                                             </div>
                                             <div class="cart-hover">
                                                 <button class="btn btn-cart">add to cart</button>
@@ -695,9 +698,9 @@
                                                 </div>
                                             </div>
                                             <div class="button-group">
-                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to wishlist" aria-label="Add to wishlist"><i class="pe-7s-like"></i></a>
-                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to Compare" aria-label="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Quick View" aria-label="Quick View"><i class="pe-7s-search"></i></span></a>
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="pe-7s-like"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="pe-7s-search"></i></span></a>
                                             </div>
                                             <div class="cart-hover">
                                                 <button class="btn btn-cart">add to cart</button>
@@ -748,9 +751,9 @@
                                                 </div>
                                             </div>
                                             <div class="button-group">
-                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to wishlist" aria-label="Add to wishlist"><i class="pe-7s-like"></i></a>
-                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to Compare" aria-label="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Quick View" aria-label="Quick View"><i class="pe-7s-search"></i></span></a>
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="pe-7s-like"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="pe-7s-search"></i></span></a>
                                             </div>
                                             <div class="cart-hover">
                                                 <button class="btn btn-cart">add to cart</button>
@@ -807,9 +810,9 @@
                                                 </div>
                                             </div>
                                             <div class="button-group">
-                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to wishlist" aria-label="Add to wishlist"><i class="pe-7s-like"></i></a>
-                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to Compare" aria-label="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Quick View" aria-label="Quick View"><i class="pe-7s-search"></i></span></a>
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="pe-7s-like"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="pe-7s-search"></i></span></a>
                                             </div>
                                             <div class="cart-hover">
                                                 <button class="btn btn-cart">add to cart</button>
@@ -860,9 +863,9 @@
                                                 </div>
                                             </div>
                                             <div class="button-group">
-                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to wishlist" aria-label="Add to wishlist"><i class="pe-7s-like"></i></a>
-                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to Compare" aria-label="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Quick View" aria-label="Quick View"><i class="pe-7s-search"></i></span></a>
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="pe-7s-like"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="pe-7s-search"></i></span></a>
                                             </div>
                                             <div class="cart-hover">
                                                 <button class="btn btn-cart">add to cart</button>
@@ -919,9 +922,9 @@
                                                 </div>
                                             </div>
                                             <div class="button-group">
-                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to wishlist" aria-label="Add to wishlist"><i class="pe-7s-like"></i></a>
-                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to Compare" aria-label="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Quick View" aria-label="Quick View"><i class="pe-7s-search"></i></span></a>
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="pe-7s-like"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="pe-7s-search"></i></span></a>
                                             </div>
                                             <div class="cart-hover">
                                                 <button class="btn btn-cart">add to cart</button>
@@ -972,9 +975,9 @@
                                                 </div>
                                             </div>
                                             <div class="button-group">
-                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to wishlist" aria-label="Add to wishlist"><i class="pe-7s-like"></i></a>
-                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to Compare" aria-label="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Quick View" aria-label="Quick View"><i class="pe-7s-search"></i></span></a>
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="pe-7s-like"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="pe-7s-search"></i></span></a>
                                             </div>
                                             <div class="cart-hover">
                                                 <button class="btn btn-cart">add to cart</button>
@@ -1031,9 +1034,9 @@
                                                 </div>
                                             </div>
                                             <div class="button-group">
-                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to wishlist" aria-label="Add to wishlist"><i class="pe-7s-like"></i></a>
-                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to Compare" aria-label="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Quick View" aria-label="Quick View"><i class="pe-7s-search"></i></span></a>
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="pe-7s-like"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="pe-7s-search"></i></span></a>
                                             </div>
                                             <div class="cart-hover">
                                                 <button class="btn btn-cart">add to cart</button>
@@ -1084,9 +1087,9 @@
                                                 </div>
                                             </div>
                                             <div class="button-group">
-                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to wishlist" aria-label="Add to wishlist"><i class="pe-7s-like"></i></a>
-                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to Compare" aria-label="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Quick View" aria-label="Quick View"><i class="pe-7s-search"></i></span></a>
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="pe-7s-like"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="pe-7s-search"></i></span></a>
                                             </div>
                                             <div class="cart-hover">
                                                 <button class="btn btn-cart">add to cart</button>
@@ -1143,9 +1146,9 @@
                                                 </div>
                                             </div>
                                             <div class="button-group">
-                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to wishlist" aria-label="Add to wishlist"><i class="pe-7s-like"></i></a>
-                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to Compare" aria-label="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Quick View" aria-label="Quick View"><i class="pe-7s-search"></i></span></a>
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="pe-7s-like"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="pe-7s-search"></i></span></a>
                                             </div>
                                             <div class="cart-hover">
                                                 <button class="btn btn-cart">add to cart</button>
@@ -1196,9 +1199,9 @@
                                                 </div>
                                             </div>
                                             <div class="button-group">
-                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to wishlist" aria-label="Add to wishlist"><i class="pe-7s-like"></i></a>
-                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to Compare" aria-label="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Quick View" aria-label="Quick View"><i class="pe-7s-search"></i></span></a>
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="pe-7s-like"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="pe-7s-search"></i></span></a>
                                             </div>
                                             <div class="cart-hover">
                                                 <button class="btn btn-cart">add to cart</button>
@@ -1255,9 +1258,9 @@
                                                 </div>
                                             </div>
                                             <div class="button-group">
-                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to wishlist" aria-label="Add to wishlist"><i class="pe-7s-like"></i></a>
-                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to Compare" aria-label="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Quick View" aria-label="Quick View"><i class="pe-7s-search"></i></span></a>
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="pe-7s-like"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="pe-7s-search"></i></span></a>
                                             </div>
                                             <div class="cart-hover">
                                                 <button class="btn btn-cart">add to cart</button>
@@ -1308,9 +1311,9 @@
                                                 </div>
                                             </div>
                                             <div class="button-group">
-                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to wishlist" aria-label="Add to wishlist"><i class="pe-7s-like"></i></a>
-                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to Compare" aria-label="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Quick View" aria-label="Quick View"><i class="pe-7s-search"></i></span></a>
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="pe-7s-like"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="pe-7s-search"></i></span></a>
                                             </div>
                                             <div class="cart-hover">
                                                 <button class="btn btn-cart">add to cart</button>
@@ -1367,9 +1370,9 @@
                                                 </div>
                                             </div>
                                             <div class="button-group">
-                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to wishlist" aria-label="Add to wishlist"><i class="pe-7s-like"></i></a>
-                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to Compare" aria-label="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Quick View" aria-label="Quick View"><i class="pe-7s-search"></i></span></a>
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="pe-7s-like"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="pe-7s-search"></i></span></a>
                                             </div>
                                             <div class="cart-hover">
                                                 <button class="btn btn-cart">add to cart</button>
@@ -1420,9 +1423,9 @@
                                                 </div>
                                             </div>
                                             <div class="button-group">
-                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to wishlist" aria-label="Add to wishlist"><i class="pe-7s-like"></i></a>
-                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to Compare" aria-label="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Quick View" aria-label="Quick View"><i class="pe-7s-search"></i></span></a>
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="pe-7s-like"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="pe-7s-search"></i></span></a>
                                             </div>
                                             <div class="cart-hover">
                                                 <button class="btn btn-cart">add to cart</button>
@@ -1479,9 +1482,9 @@
                                                 </div>
                                             </div>
                                             <div class="button-group">
-                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to wishlist" aria-label="Add to wishlist"><i class="pe-7s-like"></i></a>
-                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to Compare" aria-label="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Quick View" aria-label="Quick View"><i class="pe-7s-search"></i></span></a>
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="pe-7s-like"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="pe-7s-search"></i></span></a>
                                             </div>
                                             <div class="cart-hover">
                                                 <button class="btn btn-cart">add to cart</button>
@@ -1532,9 +1535,9 @@
                                                 </div>
                                             </div>
                                             <div class="button-group">
-                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to wishlist" aria-label="Add to wishlist"><i class="pe-7s-like"></i></a>
-                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to Compare" aria-label="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Quick View" aria-label="Quick View"><i class="pe-7s-search"></i></span></a>
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="pe-7s-like"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="pe-7s-search"></i></span></a>
                                             </div>
                                             <div class="cart-hover">
                                                 <button class="btn btn-cart">add to cart</button>
@@ -1591,9 +1594,9 @@
                                                 </div>
                                             </div>
                                             <div class="button-group">
-                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to wishlist" aria-label="Add to wishlist"><i class="pe-7s-like"></i></a>
-                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to Compare" aria-label="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Quick View" aria-label="Quick View"><i class="pe-7s-search"></i></span></a>
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="pe-7s-like"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="pe-7s-search"></i></span></a>
                                             </div>
                                             <div class="cart-hover">
                                                 <button class="btn btn-cart">add to cart</button>
@@ -1644,9 +1647,9 @@
                                                 </div>
                                             </div>
                                             <div class="button-group">
-                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to wishlist" aria-label="Add to wishlist"><i class="pe-7s-like"></i></a>
-                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to Compare" aria-label="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Quick View" aria-label="Quick View"><i class="pe-7s-search"></i></span></a>
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="pe-7s-like"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="pe-7s-search"></i></span></a>
                                             </div>
                                             <div class="cart-hover">
                                                 <button class="btn btn-cart">add to cart</button>
@@ -1703,9 +1706,9 @@
                                                 </div>
                                             </div>
                                             <div class="button-group">
-                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to wishlist" aria-label="Add to wishlist"><i class="pe-7s-like"></i></a>
-                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to Compare" aria-label="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Quick View" aria-label="Quick View"><i class="pe-7s-search"></i></span></a>
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="pe-7s-like"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="pe-7s-search"></i></span></a>
                                             </div>
                                             <div class="cart-hover">
                                                 <button class="btn btn-cart">add to cart</button>
@@ -1756,9 +1759,9 @@
                                                 </div>
                                             </div>
                                             <div class="button-group">
-                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to wishlist" aria-label="Add to wishlist"><i class="pe-7s-like"></i></a>
-                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to Compare" aria-label="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Quick View" aria-label="Quick View"><i class="pe-7s-search"></i></span></a>
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="pe-7s-like"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="pe-7s-search"></i></span></a>
                                             </div>
                                             <div class="cart-hover">
                                                 <button class="btn btn-cart">add to cart</button>
@@ -1815,9 +1818,9 @@
                                                 </div>
                                             </div>
                                             <div class="button-group">
-                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to wishlist" aria-label="Add to wishlist"><i class="pe-7s-like"></i></a>
-                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to Compare" aria-label="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Quick View" aria-label="Quick View"><i class="pe-7s-search"></i></span></a>
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="pe-7s-like"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="pe-7s-search"></i></span></a>
                                             </div>
                                             <div class="cart-hover">
                                                 <button class="btn btn-cart">add to cart</button>
@@ -1868,9 +1871,9 @@
                                                 </div>
                                             </div>
                                             <div class="button-group">
-                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to wishlist" aria-label="Add to wishlist"><i class="pe-7s-like"></i></a>
-                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Add to Compare" aria-label="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="" data-bs-original-title="Quick View" aria-label="Quick View"><i class="pe-7s-search"></i></span></a>
+                                                <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"><i class="pe-7s-like"></i></a>
+                                                <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="pe-7s-refresh-2"></i></a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="pe-7s-search"></i></span></a>
                                             </div>
                                             <div class="cart-hover">
                                                 <button class="btn btn-cart">add to cart</button>
@@ -1932,4 +1935,4 @@
         <!-- page main wrapper end -->
     </main>
 
-    <?php require_once 'layout/footer.php' ?>
+    <?php require_once "layout/footer.php" ?>  

@@ -9,28 +9,13 @@
                     <div class="row align-items-center">
                         <div class="col-lg-6">
                             <div class="welcome-message">
-                                <p>Welcome to Corano Jewelry online store</p>
+                                <p>Chào Mừng Các Bạn Đến Với Shop Giày A</p>
                             </div>
                         </div>
                         <div class="col-lg-6 text-right">
                             <div class="header-top-settings">
                                 <ul class="nav align-items-center justify-content-end">
-                                    <li class="curreny-wrap">
-                                        $ Currency
-                                        <i class="fa fa-angle-down"></i>
-                                        <ul class="dropdown-list curreny-list">
-                                            <li><a href="#">$ USD</a></li>
-                                            <li><a href="#">€ EURO</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="language">
-                                        <img src="assets/img/icon/en.png" alt="flag"> English
-                                        <i class="fa fa-angle-down"></i>
-                                        <ul class="dropdown-list">
-                                            <li><a href="#"><img src="assets/img/icon/en.png" alt="flag"> english</a></li>
-                                            <li><a href="#"><img src="assets/img/icon/fr.png" alt="flag"> french</a></li>
-                                        </ul>
-                                    </li>
+                                   
                                 </ul>
                             </div>
                         </div>
@@ -61,17 +46,10 @@
                                     <!-- main menu navbar start -->
                                     <nav class="desktop-menu">
                                         <ul>
-                                            <li class="active"><a href="index.html">Home <i class="fa fa-angle-down"></i></a>
-                                                <ul class="dropdown">
-                                                    <li><a href="index.html">Home version 01</a></li>
-                                                    <li><a href="index-2.html">Home version 02</a></li>
-                                                    <li><a href="index-3.html">Home version 03</a></li>
-                                                    <li><a href="index-4.html">Home version 04</a></li>
-                                                    <li><a href="index-5.html">Home version 05</a></li>
-                                                    <li><a href="index-6.html">Home version 06</a></li>
-                                                </ul>
+                                            <li class="active"><a href="<?php echo BASE_URL ."?act=/"?>">Trang Chủ</a>
+                                              
                                             </li>
-                                            <li class="position-static"><a href="#">pages <i class="fa fa-angle-down"></i></a>
+                                            <li class="position-static"><a href="<?php echo BASE_URL . "?act=list-san-pham" ?>">Sản Phẩm <i class="fa fa-angle-down"></i></a>
                                                 <ul class="megamenu dropdown">
                                                     <li class="mega-title"><span>column 01</span>
                                                         <ul>

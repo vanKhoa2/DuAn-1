@@ -9,7 +9,8 @@ class HomeController
         $this->modelSanPham = new SanPham();
     }
     public  function home()
-    {
+    {   
+        $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
         $listSanPham = $this->modelSanPham->getAllSanPham();
         require_once './views/home.php';
     }

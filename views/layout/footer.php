@@ -13,25 +13,27 @@
                         <div class="widget-item">
                             <div class="widget-title">
                                 <div class="widget-logo">
-                                    <a href="index.html">
-                                        <img src="assets/img/logo/logo.png" alt="brand logo">
-                                    </a>
+                                    <!-- <a href="index.html">
+                                        <img src="assets/img/logo/logo-adidas.webp" alt="brand logo">
+                                    </a> -->
+                                    <h3 style="color: crimson;">DUAN1_NHOM2</h3>
+
                                 </div>
                             </div>
                             <div class="widget-body">
-                                <p>We are a team of designers and developers that create high quality wordpress, shopify, Opencart </p>
+                                <p>Chúng tôi thiết kế và phát triển các giải pháp website chuyên nghiệp, mang đến chất lượng và hiệu quả cho mọi dự án.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="widget-item">
-                            <h6 class="widget-title">Contact Us</h6>
+                            <h6 class="widget-title">Liên hệ với chúng tôi</h6>
                             <div class="widget-body">
                                 <address class="contact-block">
                                     <ul>
-                                        <li><i class="pe-7s-home"></i> 4710-4890 Breckinridge USA</li>
-                                        <li><i class="pe-7s-mail"></i> <a href="mailto:demo@plazathemes.com">demo@yourdomain.com </a></li>
-                                        <li><i class="pe-7s-call"></i> <a href="tel:(012)800456789987">(012) 800 456 789-987</a></li>
+                                        <li><i class="pe-7s-home"></i>Cao đẳng FPT</li>
+                                        <li><i class="pe-7s-mail"></i> <a href="mailto:demo@plazathemes.com">nhom2adidas@domain.com </a></li>
+                                        <li><i class="pe-7s-call"></i> <a href="tel:(012)800456789987">(034) 123 456 789</a></li>
                                     </ul>
                                 </address>
                             </div>
@@ -39,22 +41,22 @@
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="widget-item">
-                            <h6 class="widget-title">Information</h6>
+                            <h6 class="widget-title">Thông tin</h6>
                             <div class="widget-body">
                                 <ul class="info-list">
-                                    <li><a href="#">about us</a></li>
-                                    <li><a href="#">Delivery Information</a></li>
-                                    <li><a href="#">privet policy</a></li>
-                                    <li><a href="#">Terms & Conditions</a></li>
-                                    <li><a href="#">contact us</a></li>
-                                    <li><a href="#">site map</a></li>
+                                    <li><a href="#">về chúng tôi</a></li>
+                                    <li><a href="#">chính sách riêng tư</a></li>
+                                    <li><a href="#">Thông tin giao hàng</a></li>
+                                    <li><a href="#">Điều khoản & Điều kiện</a></li>
+                                    <li><a href="#">liên hệ & chúng tôi</a></li>
+                                    <li><a href="#">bản đồ trang web</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="widget-item">
-                            <h6 class="widget-title">Follow Us</h6>
+                            <h6 class="widget-title">Theo dõi chúng tôi</h6>
                             <div class="widget-body social-link">
                                 <a href="#"><i class="fa fa-facebook"></i></a>
                                 <a href="#"><i class="fa fa-twitter"></i></a>
@@ -67,10 +69,10 @@
                 <div class="row align-items-center mt-20">
                     <div class="col-md-6">
                         <div class="newsletter-wrapper">
-                            <h6 class="widget-title-text">Signup for newsletter</h6>
+                            <h6 class="widget-title-text">Đăng ký </h6>
                             <form class="newsletter-inner" id="mc-form">
-                                <input type="email" class="news-field" id="mc-email" autocomplete="off" placeholder="Enter your email address">
-                                <button class="news-btn" id="mc-submit">Subscribe</button>
+                                <input type="email" class="news-field" id="mc-email" autocomplete="off" placeholder="Nhập địa chỉ email của bạn">
+                                <button class="news-btn" id="mc-submit">Đăng ký </button>
                             </form>
                             <!-- mail-chimp-alerts Start -->
                             <div class="mailchimp-alerts">
@@ -94,7 +96,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="copyright-text text-center">
-                            <p>&copy; 2022 <b>Corano</b> Made with <i class="fa fa-heart text-danger"></i> by <a href="https://hasthemes.com/"><b>HasThemes</b></a></p>
+                            <p>&copy; 2024 <b>Adidas</b>  Được tạo <i class="fa fa-heart text-danger"></i> bởi <a href="http://localhost/DuAn-1/#"><b>Nhom2_adidas</b></a></p>
                         </div>
                     </div>
                 </div>

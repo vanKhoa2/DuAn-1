@@ -30,6 +30,10 @@
                     <div class="col-lg-12">
                         <div class="login-reg-form-wrap">
                             <h5 class="text-center">Đăng nhập</h5>
+<<<<<<< HEAD
+                           
+=======
+>>>>>>> 11514804e0ca0e4e56d7eb24df8232adf855815c
                             <form action="<?= BASE_URL . '?act=check-login' ?>" method="post">
                                 <div class="single-input-item">
                                     <input type="email"name="email" placeholder="Email or Username" required />
@@ -45,7 +49,7 @@
                                                 <label class="custom-control-label" for="rememberMe">Remember Me</label>
                                             </div>
                                         </div>
-                                        <a href="<?=BASE_URL .'?act=quen-mat-khau'?>" class="forget-pwd">Quên mật khẩu</a>
+                                        <a href="" class="forget-pwd">Quên mật khẩu</a>
                                     </div>
                                 </div>
                                 <div class="single-input-item">

@@ -9,15 +9,12 @@ require_once "layout/menu.php";
             <div class="hero-slider-active slick-arrow-style slick-arrow-style_hero slick-dot-style">
                 <!-- single slider item start -->
                 <div class="hero-single-slide hero-overlay">
-                    <div class="hero-slider-item bg-img" data-bg="assets/img/slider/home1-slide2.jpg">
+                    <div class="hero-slider-item bg-img" data-bg="assets/img/banner/banner2.jpg">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="hero-slider-content slide-1">
-                                        <h2 class="slide-title">Family Jewelry <span>Collection</span></h2>
-                                        <h4 class="slide-desc">Designer Jewelry Necklaces-Bracelets-Earings</h4>
-                                        <a href="shop.html" class="btn btn-hero">Read More</a>
-                                    </div>
+                                   </div>
                                 </div>
                             </div>
                         </div>
@@ -27,14 +24,12 @@ require_once "layout/menu.php";
 
                 <!-- single slider item start -->
                 <div class="hero-single-slide hero-overlay">
-                    <div class="hero-slider-item bg-img" data-bg="assets/img/slider/home1-slide3.jpg">
+                    <div class="hero-slider-item bg-img" data-bg="assets/img/banner/banner6.jpg">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="hero-slider-content slide-2 float-md-end float-none">
-                                        <h2 class="slide-title">Diamonds Jewelry<span>Collection</span></h2>
-                                        <h4 class="slide-desc">Shukra Yogam & Silver Power Silver Saving Schemes.</h4>
-                                        <a href="shop.html" class="btn btn-hero">Read More</a>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -45,14 +40,12 @@ require_once "layout/menu.php";
 
                 <!-- single slider item start -->
                 <div class="hero-single-slide hero-overlay">
-                    <div class="hero-slider-item bg-img" data-bg="assets/img/slider/home1-slide1.jpg">
+                    <div class="hero-slider-item bg-img" data-bg="assets/img/banner/banner5.png">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="hero-slider-content slide-3">
-                                        <h2 class="slide-title">Grace Designer<span>Jewelry</span></h2>
-                                        <h4 class="slide-desc">Rings, Occasion Pieces, Pandora & More.</h4>
-                                        <a href="shop.html" class="btn btn-hero">Read More</a>
+                                       
                                     </div>
                                 </div>
                             </div>
@@ -70,7 +63,8 @@ require_once "layout/menu.php";
                 <div class="row">
                     <div class="col-12">
                         <div class="twitter-feed-content text-center">
-                            <p>Check out "Corano - Multipurpose eCommerce Bootstrap 5 template" on #Envato by @<a href="#">Corano</a> #Themeforest <a href="http://1.envato.market/9LbxW">http://1.envato.market/9LbxW</a></p>
+                            <p>"Khám phá giày adidas chính hãng, phong cách đỉnh cao, phù hợp mọi hoạt động. Trải nghiệm ngay tại <a href="http://localhost/DuAn-1/#"><b>NHOM2_ADIDAS</b></a>"
+                             </p>
                         </div>
                     </div>
                 </div>
@@ -88,8 +82,8 @@ require_once "layout/menu.php";
                                 <i class="pe-7s-plane"></i>
                             </div>
                             <div class="policy-content">
-                                <h6>Free Shipping</h6>
-                                <p>Free shipping all order</p>
+                                <h6>Giao hàng</h6>
+                                <p>Giao hàng nhanh chóng</p>
                             </div>
                         </div>
                     </div>
@@ -99,8 +93,8 @@ require_once "layout/menu.php";
                                 <i class="pe-7s-help2"></i>
                             </div>
                             <div class="policy-content">
-                                <h6>Support 24/7</h6>
-                                <p>Support 24 hours a day</p>
+                                <h6>Hỗ trợ</h6>
+                                <p>Hỗ trợ 24/7</p>
                             </div>
                         </div>
                     </div>
@@ -110,8 +104,8 @@ require_once "layout/menu.php";
                                 <i class="pe-7s-back"></i>
                             </div>
                             <div class="policy-content">
-                                <h6>Money Return</h6>
-                                <p>30 days for free return</p>
+                                <h6>Hoàn tiền</h6>
+                                <p>Hoàn tiền trong 30 ngày</p>
                             </div>
                         </div>
                     </div>
@@ -121,8 +115,8 @@ require_once "layout/menu.php";
                                 <i class="pe-7s-credit"></i>
                             </div>
                             <div class="policy-content">
-                                <h6>100% Payment Secure</h6>
-                                <p>We ensure secure payment</p>
+                                <h6>Thanh toán</h6>
+                                <p>Bảo mật thanh toán</p>
                             </div>
                         </div>
                     </div>
@@ -138,48 +132,40 @@ require_once "layout/menu.php";
                     <div class="col-sm-6">
                         <figure class="banner-statistics mt-20">
                             <a href="#">
-                                <img src="assets/img/banner/img1-top.jpg" alt="product banner">
+                                <img src="assets/img/banner/bannerSmail3.jpg" alt="product banner">
                             </a>
                             <div class="banner-content text-right">
-                                <h5 class="banner-text1">BEAUTIFUL</h5>
-                                <h2 class="banner-text2">Wedding<span>Rings</span></h2>
-                                <a href="shop.html" class="btn btn-text">Shop Now</a>
+                                <h5 class="banner-text1"  style="color: white;">BEAUTIFUL</h5>                              
                             </div>
                         </figure>
                     </div>
                     <div class="col-sm-6">
                         <figure class="banner-statistics mt-20">
                             <a href="#">
-                                <img src="assets/img/banner/img2-top.jpg" alt="product banner">
+                                <img src="assets/img/banner/bannerSmail3.jpg" alt="product banner">
                             </a>
                             <div class="banner-content text-center">
-                                <h5 class="banner-text1">EARRINGS</h5>
-                                <h2 class="banner-text2">Tangerine Floral <span>Earring</span></h2>
-                                <a href="shop.html" class="btn btn-text">Shop Now</a>
+                                <h5 class="banner-text1"  style="color: white;">EARRINGS</h5>
                             </div>
                         </figure>
                     </div>
                     <div class="col-sm-6">
                         <figure class="banner-statistics mt-20">
                             <a href="#">
-                                <img src="assets/img/banner/img3-top.jpg" alt="product banner">
+                                <img src="assets/img/banner/bannerSmail3.jpg" alt="product banner">
                             </a>
                             <div class="banner-content text-center">
-                                <h5 class="banner-text1">NEW ARRIVALLS</h5>
-                                <h2 class="banner-text2">Pearl<span>Necklaces</span></h2>
-                                <a href="shop.html" class="btn btn-text">Shop Now</a>
+                                <h5 class="banner-text1" style="color: white;">NEW ARRIVALLS</h5>
                             </div>
                         </figure>
                     </div>
                     <div class="col-sm-6">
                         <figure class="banner-statistics mt-20">
                             <a href="#">
-                                <img src="assets/img/banner/img4-top.jpg" alt="product banner">
+                                <img src="assets/img/banner/bannerSmail3.jpg" alt="product banner">
                             </a>
                             <div class="banner-content text-right">
-                                <h5 class="banner-text1">NEW DESIGN</h5>
-                                <h2 class="banner-text2">Diamond<span>Jewelry</span></h2>
-                                <a href="shop.html" class="btn btn-text">Shop Now</a>
+                                <h5 class="banner-text1"  style="color: white;">NEW DESIGN</h5>
                             </div>
                         </figure>
                     </div>
@@ -195,8 +181,8 @@ require_once "layout/menu.php";
                     <div class="col-12">
                         <!-- section title start -->
                         <div class="section-title text-center">
-                            <h2 class="title">our products</h2>
-                            <p class="sub-title">Add our products to weekly lineup</p>
+                            <h2 class="title">Sản Phẩm của chúng tôi</h2>
+                            <p class="sub-title">Thêm sản phẩm của chúng tôi vào danh sách hàng tuần</p>
                         </div>
                         <!-- section title start -->
                     </div>

@@ -47,3 +47,4 @@ match ($act) {
     // Route thanh toán , giỏ hàng
     'check-out' (new CheckOutController())->CheckOut(),
 };
+

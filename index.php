@@ -26,7 +26,9 @@ $act = $_GET['act'] ?? '/';
 
 match ($act) {
     // Trang chủ   
-    '/' => (new HomeController()) ->home(),
+    '/' => (new HomeController()) ->home(), 
+    'lien-he' =>(new HomeController())->lienhe(),
+    'gioi-thieu' =>(new HomeController())->gioithieu(),
 
 
     //San Pham
@@ -43,7 +45,5 @@ match ($act) {
 
 
     'logout' =>(new TaiKhoanControllerClient())->logoutClient()
-
-
 };
 

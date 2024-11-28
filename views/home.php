@@ -9,7 +9,7 @@ require_once "layout/menu.php";
             <div class="hero-slider-active slick-arrow-style slick-arrow-style_hero slick-dot-style">
                 <!-- single slider item start -->
                 <div class="hero-single-slide hero-overlay">
-                    <div class="hero-slider-item bg-img" data-bg="assets/img/banner/banner2.jpg">
+                    <div class="hero-slider-item bg-img" data-bg="assets/img/banner/banner6.jpg">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12">
@@ -24,7 +24,7 @@ require_once "layout/menu.php";
 
                 <!-- single slider item start -->
                 <div class="hero-single-slide hero-overlay">
-                    <div class="hero-slider-item bg-img" data-bg="assets/img/banner/banner6.jpg">
+                    <div class="hero-slider-item bg-img" data-bg="assets/img/banner/banner2.jpg">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12">

@@ -36,5 +36,13 @@ class HomeController
             exit();
         }
     }
+
+    public function lienHe()
+    {
+        require_once './views/lienhe.php';
+    }
+    public function gioithieu(){
+         require_once './views/gioithieu.php';
+    }
     
 }

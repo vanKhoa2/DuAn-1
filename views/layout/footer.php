@@ -31,7 +31,7 @@
                                     <ul style="padding-left: 50px;">
                                         <li><i class="pe-7s-home"></i>Tòa F, Số 13 Trịnh Văn Bô, Nam Từ Liêm, Hà Nội</li>
                                         <li><i class="pe-7s-mail"></i> <a href="nguyenvankhoa22052005@gmail.com">nhom2adidas@gmail.com </a></li>
-                                        <li><i class="pe-7s-call"></i> <a href="tel:0387344235">(034) 123 456 789</a></li>
+                                        <li><i class="pe-7s-call"></i> <a href="tel:0387344235">(+84) 123 456 789</a></li>
                                     </ul>
                                 </address>
                             </div>

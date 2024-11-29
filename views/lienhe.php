@@ -48,9 +48,9 @@ require_once "layout/menu.php";
                             hướng dẫn chọn size giày phù hợp,... và các vấn đề liên quan. Chúng tôi cam kết phản hồi trong thời gian sớm nhất để mang đến trải nghiệm mua sắm tốt nhất cho bạn.
                         </p>
                         <ul>
-                            <li><i class="fa fa-map-marker"></i> Địa chỉ: 13 Trịnh Văn Bô, Cao đẳng FPT  Polytechnic - Hà Nội</li>
+                            <li><i class="fa fa-map-marker"></i> Địa chỉ: Tòa F, 13 Trịnh Văn Bô, Cao đẳng FPT  Polytechnic - Hà Nội</li>
                             <li><i class="fa fa-envelope"></i> Email: nhom2adidas@gmail.com </li>
-                            <li><i class="fa fa-phone"></i> Số điện thoại:(034) 123 456 789</li>
+                            <li><i class="fa fa-phone"></i> Số điện thoại: (+84) 123 456 789</li>
                         </ul>
                         <div class="working-time">
                             <h6>Giờ làm việc</h6>

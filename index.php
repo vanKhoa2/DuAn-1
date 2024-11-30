@@ -14,6 +14,7 @@ require_once './commons/function.php'; // Hàm hỗ trợ
 // Require toàn bộ file Controllers
 require_once './controllers/HomeController.php';
 require_once './controllers/TaiKhoanController.php';
+require_once './controllers/CheckOutController.php';
 
 
 // Require toàn bộ file Models
@@ -21,6 +22,7 @@ require_once './models/SanPham.php';
 require_once './models/TaiKhoan.php';
 require_once './models/CheckOut.php';
 require_once './models/Cart.php';
+require_once './models/DonHang.php';
 // Route
 $act = $_GET['act'] ?? '/';
 
@@ -34,6 +36,14 @@ match ($act) {
     //San Pham
     'list-san-pham' => (new HomeController())->listSanPham(),
     'chi-tiet-san-pham' =>(new HomeController())->chiTietSanPham(),
+
+    'check-out'=> (new CheckOutController())->CheckOut(),
+    'post-check-out'=> (new CheckOutController())->postCheckOut(),
+    'cart'=> (new HomeController())->gioHang(),
+    'add-cart'=> (new HomeController())->addCart(),
+    'lich-su-mua-hang'=> (new HomeController())->lichSuMuaHang(),
+    'chi-tiet-mua-hang'=> (new HomeController())->chiTietMuaHang(),
+    'huy-don-hang'=> (new HomeController())->huyDonHang(),
     //route  Client
      
     'form-login' =>(new TaiKhoanControllerClient())->formLogin(),
@@ -41,10 +51,9 @@ match ($act) {
     
     'form-dang-ky' =>(new TaiKhoanControllerClient())->formDangKy(),
     'dang-ky' =>(new TaiKhoanControllerClient())->dangKy(),
-    
-    
+  
     'logout' => (new TaiKhoanControllerClient())->logoutClient(),
-    // Route thanh toán , giỏ hàng
-    'check-out' (new CheckOutController())->CheckOut(),
+    // // Route thanh toán , giỏ hàng
+   
 };
 

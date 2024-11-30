@@ -58,6 +58,9 @@ class TaiKhoan
             echo "Lỗi: " . $e->getMessage();
         }
     }
+
+
+    
     public function addTaiKhoan($ho_ten, $email, $so_dien_thoai, $gioi_tinh, $dia_chi, $mat_khau, $chuc_vu)
     {
         try {

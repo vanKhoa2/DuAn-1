@@ -11,7 +11,11 @@ class TaiKhoanControllerClient
     }
     public function formLogin()
     {
+        $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
+        $listSanPham = $this->modelSanPham->getAllSanPham(
 
+            
+        );
         if (isset($_SESSION['user_client'])) {
             header('location:' . BASE_URL);
             exit();
@@ -36,7 +40,7 @@ class TaiKhoanControllerClient
                 $id = $result['id'];
 
                 // Lưu thông tin vào session
-                $_SESSION['user_client'] = [
+                $_SESSION['user_client'] =[
                     'email' => $email,
                     'id' => $id
                 ];
@@ -56,7 +60,11 @@ class TaiKhoanControllerClient
     }
     public function formDangKy()
     {
+        $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
+        $listSanPham = $this->modelSanPham->getAllSanPham(
 
+            
+        );
 
         if (isset($_SESSION['user_client'])) {
             header('location:' . BASE_URL);

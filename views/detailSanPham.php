@@ -34,9 +34,8 @@
                                 <div class="product-large-slider">
                                     
                                         <div class="pro-large-img">
-                                            <img src="<?= BASE_URL . $anhSanPham['link_hinh_anh'] ?>" alt="product-details" />
+                                            <img src="<?= BASE_URL . $sanPham['hinh_anh'] ?>" alt="product-details" />
                                         </div>
-                                    
 
                                 </div>
                                 <div class="pro-nav slick-row-10 slick-arrow-style">
@@ -65,17 +64,21 @@
                                         <span class="price-regular"><?php echo $sanPham['gia_khuyen_mai'] ?></span>
                                         <span class="price-old"><del><?php echo $sanPham['gia_san_pham'] ?></del></span>
                                     </div>
-           
+                                    
                                     <p class="pro-desc"><?php echo $sanPham['mo_ta'] ?></p>
+                                    <form action="<?php echo BASE_URL.'?act=add-cart' ?>" method="POST" >
                                     <div class="quantity-cart-box d-flex align-items-center">
-                                        <h6 class="option-title">qty:</h6>
+                                        <h6 class="option-title">Số lượng</h6>
                                         <div class="quantity">
-                                            <div class="pro-qty"><input type="text" value="1"></div>
+                                            <input hidden type="text" name="san_pham_id" value="<?php echo $sanPham['id'] ?>" id="">
+                                            <div class="pro-qty"><input type="text" name="so_luong" value="1"></div>
                                         </div>
                                         <div class="action_link">
-                                            <a class="btn btn-cart2" href="#">Add to cart</a>
+                                            <button class="btn btn-cart2">Thêm Giỏ Hàng</button>
                                         </div>
-                                    </div>
+                                        </div>
+                                        </form>
+                                  
                                     <div class="pro-size">
                                         <h6 class="option-title">size :</h6>
                                         <select class="nice-select">
@@ -166,72 +169,36 @@
                                             </table>
                                         </div>
                                         <div class="tab-pane fade" id="tab_three">
-                                            <form action="#" class="review-form">
-                                                <h5>1 review for <span>Chaz Kangeroo</span></h5>
+                                            
+                                               <?php foreach ($listBinhLuan as $binhLuan) { ?>
+                                               
+                                      
                                                 <div class="total-reviews">
                                                     <div class="rev-avatar">
-                                                        <img src="assets/img/about/avatar.jpg" alt="">
+                                                        <img src="<?php echo BASE_URL. $binhLuan['anh_dai_dien']?>" alt="">
                                                     </div>
                                                     <div class="review-box">
-                                                        <div class="ratings">
-                                                            <span class="good"><i class="fa fa-star"></i></span>
-                                                            <span class="good"><i class="fa fa-star"></i></span>
-                                                            <span class="good"><i class="fa fa-star"></i></span>
-                                                            <span class="good"><i class="fa fa-star"></i></span>
-                                                            <span><i class="fa fa-star"></i></span>
-                                                        </div>
+
+                                                        
                                                         <div class="post-author">
-                                                            <p><span>admin -</span> 30 Mar, 2019</p>
+                                                            <p><span>Khách Hàng -</span> <?php echo $binhLuan['ngay_dang'] ?></p>
                                                         </div>
-                                                        <p>Aliquam fringilla euismod risus ac bibendum. Sed sit
-                                                            amet sem varius ante feugiat lacinia. Nunc ipsum nulla,
-                                                            vulputate ut venenatis vitae, malesuada ut mi. Quisque
-                                                            iaculis, dui congue placerat pretium, augue erat
-                                                            accumsan lacus</p>
+                                                        <p><?php echo $binhLuan['noi_dung'] ?></p>
                                                     </div>
                                                 </div>
+                                                <?php  } ?>
+                                                <form action="#" class="review-form">
                                                 <div class="form-group row">
                                                     <div class="col">
                                                         <label class="col-form-label"><span class="text-danger">*</span>
-                                                            Your Name</label>
-                                                        <input type="text" class="form-control" required>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <div class="col">
-                                                        <label class="col-form-label"><span class="text-danger">*</span>
-                                                            Your Email</label>
-                                                        <input type="email" class="form-control" required>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <div class="col">
-                                                        <label class="col-form-label"><span class="text-danger">*</span>
-                                                            Your Review</label>
+                                                            Bình Luận</label>
                                                         <textarea class="form-control" required></textarea>
-                                                        <div class="help-block pt-10"><span
-                                                                class="text-danger">Note:</span>
-                                                            HTML is not translated!
+                                                     
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="form-group row">
-                                                    <div class="col">
-                                                        <label class="col-form-label"><span class="text-danger">*</span>
-                                                            Rating</label>
-                                                        &nbsp;&nbsp;&nbsp; Bad&nbsp;
-                                                        <input type="radio" value="1" name="rating">
-                                                        &nbsp;
-                                                        <input type="radio" value="2" name="rating">
-                                                        &nbsp;
-                                                        <input type="radio" value="3" name="rating">
-                                                        &nbsp;
-                                                        <input type="radio" value="4" name="rating">
-                                                        &nbsp;
-                                                        <input type="radio" value="5" name="rating" checked>
-                                                        &nbsp;Good
-                                                    </div>
-                                                </div>
+                                               
+                                            
                                                 <div class="buttons">
                                                     <button class="btn btn-sqr" type="submit">Continue</button>
                                                 </div>

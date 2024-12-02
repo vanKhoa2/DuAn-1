@@ -38,6 +38,15 @@ class HomeController
         
         require_once './views/sanpham.php';
     }
+
+
+    public function lienHe()
+    {
+        require_once './views/lienhe.php';
+    }
+    public function gioithieu(){
+         require_once './views/gioithieu.php';
+    }
      
 
 

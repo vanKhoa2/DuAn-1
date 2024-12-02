@@ -37,7 +37,7 @@
                                             
                                                 <ul class="dropdown">
                                                 <?php foreach($listDanhMuc as $danhMuc){ ?>
-                                                    <li><a href="<?php echo 'list-san-pham&id_danh_muc='.$danhMuc['id'] ?>"><?php echo $danhMuc['ten_danh_muc'] ?></a></li>
+                                                    <li><a href="<?php echo BASE_URL.'?act=list-san-pham-danh-muc&id_danh_muc='.$danhMuc['id'] ?>"><?php echo $danhMuc['ten_danh_muc'] ?></a></li>
                                                     <?php }?> 
                                                 </ul>
                                                
@@ -57,9 +57,9 @@
                             <div class="header-right d-flex align-items-center justify-content-xl-between justify-content-lg-end">
                                 <div class="header-search-container">
                                     <button class="search-trigger d-xl-none d-lg-block"><i class="pe-7s-search"></i></button>
-                                    <form class="header-search-box d-lg-none d-xl-block">
-                                        <input type="text" placeholder="Tìm kiếm sản phẩm" class="header-search-field">
-                                        <button class="header-search-btn"><i class="pe-7s-search"></i></button>
+                                    <form action="<?php echo BASE_URL.'?act=bt-tim-kiem' ?>" method="POST" class="header-search-box d-lg-none d-xl-block">
+                                        <input type="text" name="timkiem" placeholder="Tìm kiếm sản phẩm" class="header-search-field">
+                                        <button type="submit" class="header-search-btn"><i class="pe-7s-search"></i></button>
                                     </form>
                                 </div>
                                 <div class="header-configure-area">
@@ -86,12 +86,6 @@
 
                                                 <?php } ?>
                                             </ul>
-                                        </li>
-                                        <li>
-                                            <!-- <a href="wishlist.html">
-                                                <i class="pe-7s-like"></i>
-                                                <div class="notification">0</div>
-                                            </a> -->
                                         </li>
                                         <li>
                                             <a href="#" class="minicart-btn">

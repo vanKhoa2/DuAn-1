@@ -52,6 +52,7 @@ require_once "layout/menu.php";
                                             <td><?=$phuongThucThanhToan[$donHang['phuong_thuc_thanh_toan_id']]  ?></td>
                                             <td><?=$trangThaiDonHang[$donHang['trang_thai_id']]?></td>
                                             <td>
+                                                <a  href="<?php echo BASE_URL.  '?act=chi-tiet-don-hang&id='. $donHang['id']; ?>" class="btn btn-sqr ">Chi Tiết Đơn Hàng</a>
                                                 <?php if($donHang['trang_thai_id'] == 1) { ?>
                                                     <a href="<?php echo BASE_URL.  '?act=huy-don-hang&id='. $donHang['id']; ?>" class="btn btn-sqr"
                                                      onclick="return confirm('Bạn Muốn Hủy Đơn Hàng')" >Hủy</a>

@@ -59,9 +59,9 @@ match ($act) {
     'delete-tai-khoan' => (new TaiKhoanController())->deleteTaiKhoan(),
     // Route Giỏ Hàng, Đơn Hàng
     'don-hang' => (new DonHangController())->getAllDonHang(),
-    // 'form-add-don-hang' => (new SanPhamController())->formAddDonHang(),
-    // 'post-add-don-hang' => (new SanPhamController())->postAddDonHang(),
-    // 'form-edit-don-hang' => (new SanPhamController())->formEditDonHang(),
+    'form-edit-don-hang' => (new DonHangController())->formEditDonHang(),
+    'post-edit-don-hang' => (new DonHangController())->postEditDonHang(),
+    'chi-tiet-don-hang' => (new DonHangController())->chiTietDonHang(),
     // 'post-edit-don-hang' => (new SanPhamController())->postEditDonHang(),
     // 'delete-don-hang' => (new SanPhamController())->deleteDonHang(),  
      

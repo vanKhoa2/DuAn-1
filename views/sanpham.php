@@ -37,7 +37,7 @@ require_once "layout/menu.php";
                                     
                                     <ul class="shop-categories">
                                     <?php foreach($listDanhMuc as $danhMuc){ ?>
-                                        <li><a href="<?php echo BASE_URL.'list-san-pham&ten_danh_muc='.$danhMuc['ten_danh_muc'] ?>"><?= $danhMuc['ten_danh_muc'] ?></a></li>
+                                        <li><a href="<?php echo BASE_URL.'?act=list-san-pham-danh-muc&id_danh_muc='.$danhMuc['id'] ?>"><?= $danhMuc['ten_danh_muc'] ?></a></li>
                                         <?php } ?>
                                     </ul>
                                   
@@ -98,7 +98,7 @@ require_once "layout/menu.php";
                                         <div class="top-bar-left">
                                             <div class="product-view-mode">
                                                 <a class="active" href="#" data-target="grid-view" data-bs-toggle="tooltip" title="Grid View"><i class="fa fa-th"></i></a>
-                                                <a href="#" data-target="list-view" data-bs-toggle="tooltip" title="List View"><i class="fa fa-list"></i></a>
+                                               
                                             </div>
                                             <div class="product-amount">
                                                 <p>Showing 1–16 of 21 results</p>
@@ -134,8 +134,8 @@ require_once "layout/menu.php";
                                     <div class="product-item">
                             
                                         <figure class="product-thumb">
-                                            <a href="product-details.html">
-                                                <img class="pri-img" src="<?php echo BASE_URL .$sanPham['hinh_anh'] ?>" alt="product">
+                                            <a href="<?php echo BASE_URL.'?act=chi-tiet-san-pham&id_san_pham='.$sanPham['id'] ?>">
+                                                <img class="pri-sec" src="<?php echo BASE_URL .$sanPham['hinh_anh'] ?>" alt="product">
                                             </a>
                                             <div class="product-badge">
                                                 <div class="product-label new">
@@ -151,34 +151,18 @@ require_once "layout/menu.php";
                                                 <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="pe-7s-search"></i></span></a>
                                             </div>
                                             <div class="cart-hover">
-                                                <button class="btn btn-cart">add to cart</button>
+                                                <button class="btn btn-cart">Xem chi tiết</button>
                                             </div>
                                           
                                         </figure>
                                         <div class="product-caption text-center">
-                                            <div class="product-identity">
-                                                <p class="manufacturer-name"><a href="product-details.html">Platinum</a></p>
-                                            </div>
-                                            <ul class="color-categories">
-                                                <li>
-                                                    <a class="c-lightblue" href="#" title="LightSteelblue"></a>
-                                                </li>
-                                                <li>
-                                                    <a class="c-darktan" href="#" title="Darktan"></a>
-                                                </li>
-                                                <li>
-                                                    <a class="c-grey" href="#" title="Grey"></a>
-                                                </li>
-                                                <li>
-                                                    <a class="c-brown" href="#" title="Brown"></a>
-                                                </li>
-                                            </ul>
+                                        
                                             <h6 class="product-name">
-                                                <a href="product-details.html">Perfect Diamond Jewelry</a>
+                                                <a href="product-details.html"><?php echo $sanPham['ten_san_pham']; ?></a>
                                             </h6>
                                             <div class="price-box">
-                                                <span class="price-regular">$60.00</span>
-                                                <span class="price-old"><del>$70.00</del></span>
+                                                <span class="price-regular"><?php echo $sanPham['gia_khuyen_mai']; ?></span>
+                                                <span class="price-old"><del><?php echo $sanPham['gia_san_pham']; ?></del></span>
                                             </div>
                                         </div>
                                     </div>

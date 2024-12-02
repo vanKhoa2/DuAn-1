@@ -92,4 +92,42 @@ class SanPham
         }
     }
 
+    public function getSanPhamByDanhMuc($id_danh_muc){
+        try{
+            $sql = "SELECT * FROM san_phams WHERE danh_muc_id=?";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute([$id_danh_muc]);
+            
+            return $stmt->fetchAll();
+        }catch(Exception $e){
+            echo "Lỗi: ".$e->getMessage();
+        }
+    }
+
+    public function getSanPhamByKey($key){
+        try{
+            $key = '%' . $key . '%';
+            $sql = "SELECT * FROM san_phams WHERE ten_san_pham LIKE ?";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute([$key]);
+            
+            return $stmt->fetchAll();
+        }catch(Exception $e){
+            echo "Lỗi: ".$e->getMessage();
+        }
+    }
+
+    public function addBinhLuan($id_san_pham,$tai_khoan_id,$noi_dung,$ngay_dang){
+        try{
+         
+            $sql = "INSERT INTO binh_luans (id_san_pham,tai_khoan_id,noi_dung,ngay_dang)  VALUES (?,?,?,?)";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute([$id_san_pham,$tai_khoan_id,$noi_dung,$ngay_dang]);
+            
+            return true;
+        }catch(Exception $e){
+            echo "Lỗi: ".$e->getMessage();
+        }
+    }
+
 }

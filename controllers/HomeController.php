@@ -26,12 +26,25 @@ class HomeController
     
     public function listSanPham(){
         $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
-        $listSanPham = $this->modelSanPham->getAllSanPham(
-
-            
-        );
+        $listSanPham = $this->modelSanPham->getAllSanPham();
+        
+        
         require_once './views/sanpham.php';
     }
+    public function listSanPhamByDanhMuc(){
+        $id_danh_muc = $_GET['id_danh_muc'];
+        $listSanPham = $this->modelSanPham->getSanPhamByDanhMuc($id_danh_muc);
+        $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
+        
+        require_once './views/sanpham.php';
+    }
+     
+
+
+
+
+
+
 
     public function chiTietSanPham(){
         $id = $_GET['id_san_pham'];
@@ -119,6 +132,7 @@ class HomeController
          
     }
     public function lichSuMuaHang(){
+        $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
         if(isset($_SESSION['user_client'])){
             $user = $this->modelTaiKhoan->getTaiKhoanFromEmail($_SESSION['user_client']['email']);
             $tai_khoan_id = $user['id'];
@@ -133,9 +147,31 @@ class HomeController
         }
     }
     public function chiTietMuaHang(){
-        
+        $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
+        if(isset($_SESSION['user_client'])){
+            $user = $this->modelTaiKhoan->getTaiKhoanFromEmail($_SESSION['user_client']['email']);
+            $tai_khoan_id = $user['id'];
+            $donHangId = $_GET['id'];
+            $arrTrangThaiDonHang = $this->modelDonHang->getTrangThaiDonHang();
+            $trangThaiDonHang = array_column($arrTrangThaiDonHang,'ten_trang_thai','id');
+           // Lấy ra phương thức thanh toán
+           $arrPhuongThucThanhToan = $this->modelDonHang->getPhuongThucThanhToan();
+           $phuongThucThanhToan = array_column($arrPhuongThucThanhToan,'ten_phuong_thuc','id');
+            $donHang = $this->modelDonHang->getDonHangById($donHangId);
+
+            $chiTietDonHang = $this->modelDonHang->chiTietDonHangByDonHangId($donHangId);
+            // echo "<pre>";
+            // print_r($donHang);
+            // print_r($chiTietDonHang);
+            
+            if($donHang['tai_khoan_id'] != $tai_khoan_id){
+                    echo "bạn k truy cập đc";
+            }
+            require_once './views/chitietdonhang.php';
+        }
     }
     public function huyDonHang(){
+        
         if(isset($_SESSION['user_client'])){
             $user = $this->modelTaiKhoan->getTaiKhoanFromEmail($_SESSION['user_client']['email']);
             $tai_khoan_id = $user['id'];
@@ -155,5 +191,25 @@ class HomeController
            
     }
 }
-    
+    public function search(){
+        $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
+        $key = $_POST['timkiem'];
+        $listSanPham = $this->modelSanPham->getSanPhamByKey($key);
+        require_once './views/sanpham.php';
+        
+    }
+    public function addBinhLuan(){
+        if(isset($_SESSION['user_client'])){
+           $user = $this->modelTaiKhoan->getTaiKhoanFromEmail($_SESSION['user_client']['email']);
+           $tai_khoan_id = $user['id'];
+           $id_san_pham = $_GET['id_san_pham'];
+
+           $noi_dung = $_POST['noi_dung'];
+           $ngay_dang = date('Y-m-d');
+
+           if ($this->modelSanPham->addBinhLuan($id_san_pham,$tai_khoan_id,$noi_dung,$ngay_dang)){ 
+                header('location: ./?act=chi-tiet-san-pham');
+           }
+        }
+}
 }

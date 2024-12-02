@@ -78,33 +78,6 @@
                                         </div>
                                         </div>
                                         </form>
-                                  
-                                    <div class="pro-size">
-                                        <h6 class="option-title">size :</h6>
-                                        <select class="nice-select">
-                                            <option>S</option>
-                                            <option>M</option>
-                                            <option>L</option>
-                                            <option>XL</option>
-                                        </select>
-                                    </div>
-                                    <div class="color-option">
-                                        <h6 class="option-title">color :</h6>
-                                        <ul class="color-categories">
-                                            <li>
-                                                <a class="c-lightblue" href="#" title="LightSteelblue"></a>
-                                            </li>
-                                            <li>
-                                                <a class="c-darktan" href="#" title="Darktan"></a>
-                                            </li>
-                                            <li>
-                                                <a class="c-grey" href="#" title="Grey"></a>
-                                            </li>
-                                            <li>
-                                                <a class="c-brown" href="#" title="Brown"></a>
-                                            </li>
-                                        </ul>
-                                    </div>
                                     <div class="useful-links">
                                         <a href="#" data-bs-toggle="tooltip" title="Compare"><i
                                                 class="pe-7s-refresh-2"></i>compare</a>
@@ -133,9 +106,6 @@
                                             <a class="active" data-bs-toggle="tab" href="#tab_one">description</a>
                                         </li>
                                         <li>
-                                            <a data-bs-toggle="tab" href="#tab_two">information</a>
-                                        </li>
-                                        <li>
                                             <a data-bs-toggle="tab" href="#tab_three">reviews (1)</a>
                                         </li>
                                     </ul>
@@ -153,20 +123,6 @@
                                                     senectus et netus et malesuada fames ac turpis egestas. Nam
                                                     erat mi, rutrum at sollicitudin rhoncus</p>
                                             </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="tab_two">
-                                            <table class="table table-bordered">
-                                                <tbody>
-                                                    <tr>
-                                                        <td>color</td>
-                                                        <td>black, blue, red</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>size</td>
-                                                        <td>L, M, S</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
                                         </div>
                                         <div class="tab-pane fade" id="tab_three">
                                             
@@ -187,22 +143,19 @@
                                                     </div>
                                                 </div>
                                                 <?php  } ?>
-                                                <form action="#" class="review-form">
-                                                <div class="form-group row">
+                                                <form action="<?php echo BASE_URL.'?act=post-binh-luan&id_san_pham='.$sanPham['id'] ?>" class="review-form">
+                                                    <div class="form-group row">
                                                     <div class="col">
                                                         <label class="col-form-label"><span class="text-danger">*</span>
                                                             Bình Luận</label>
-                                                        <textarea class="form-control" required></textarea>
-                                                     
+                                                        <textarea class="form-control" name="noi_dung" required></textarea>
                                                         </div>
                                                     </div>
-                                                </div>
-                                               
-                                            
-                                                <div class="buttons">
-                                                    <button class="btn btn-sqr" type="submit">Continue</button>
-                                                </div>
-                                            </form> <!-- end of review-form -->
+                                                    </div>
+                                                    <div class="buttons">
+                                                    <button class="btn btn-sqr" type="submit">Bình Luận</button>
+                                                    </div>
+                                                </form> <!-- end of review-form -->
                                         </div>
                                     </div>
                                 </div>
@@ -224,7 +177,7 @@
                 <div class="col-12">
                     <!-- section title start -->
                     <div class="section-title text-center">
-                        <h2 class="title">Related Products</h2>
+                        <h2 class="title">Sản Phẩm Liên Quan</h2>
                         <p class="sub-title">Add related products to weekly lineup</p>
                     </div>
                     <!-- section title start -->

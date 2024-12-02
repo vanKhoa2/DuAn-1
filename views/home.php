@@ -181,8 +181,7 @@ require_once "layout/menu.php";
                     <div class="col-12">
                         <!-- section title start -->
                         <div class="section-title text-center">
-                            <h2 class="title">our products</h2>
-                            <p class="sub-title">Add our products to weekly lineup</p>
+                            <h2 class="title">Các Sản Phẩm Hót</h2>
                         </div>
                         <!-- section title start -->
                     </div>
@@ -222,7 +221,7 @@ require_once "layout/menu.php";
                                                     <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="pe-7s-search"></i></span></a>
                                                 </div>
                                                 <div class="cart-hover">
-                                                    <button class="btn btn-cart">add to cart</button>
+                                                    <button class="btn btn-cart">Xem Chi Tiết</button>
                                                 </div>
                                             </figure>
                                             <div class="product-caption text-center">
@@ -244,11 +243,11 @@ require_once "layout/menu.php";
                                                     </li>
                                                 </ul>
                                                 <h6 class="product-name">
-                                                    <a href="product-details.html">Handmade Golden Necklace</a>
+                                                    <a href="product-details.html"><?php echo $sanPham['ten_san_pham'] ?></a>
                                                 </h6>
                                                 <div class="price-box">
-                                                    <span class="price-regular">$50.00</span>
-                                                    <span class="price-old"><del>$80.00</del></span>
+                                                    <span class="price-regular"><?php echo $sanPham['gia_khuyen_mai'] ?></span>
+                                                    <span class="price-old"><del><?php echo $sanPham['gia_san_pham'] ?></del></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -1354,115 +1353,7 @@ require_once "layout/menu.php";
         <!-- group product end -->
 
         <!-- latest blog area start -->
-        <section class="latest-blog-area section-padding pt-0">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <!-- section title start -->
-                        <div class="section-title text-center">
-                            <h2 class="title">latest blogs</h2>
-                            <p class="sub-title">There are latest blog posts</p>
-                        </div>
-                        <!-- section title start -->
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="blog-carousel-active slick-row-10 slick-arrow-style">
-                            <!-- blog post item start -->
-                            <div class="blog-post-item">
-                                <figure class="blog-thumb">
-                                    <a href="blog-details.html">
-                                        <img src="assets/img/blog/blog-img1.jpg" alt="blog image">
-                                    </a>
-                                </figure>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <p>25/03/2019 | <a href="#">Corano</a></p>
-                                    </div>
-                                    <h5 class="blog-title">
-                                        <a href="blog-details.html">Celebrity Daughter Opens Up About Having Her Eye Color Changed</a>
-                                    </h5>
-                                </div>
-                            </div>
-                            <!-- blog post item end -->
 
-                            <!-- blog post item start -->
-                            <div class="blog-post-item">
-                                <figure class="blog-thumb">
-                                    <a href="blog-details.html">
-                                        <img src="assets/img/blog/blog-img2.jpg" alt="blog image">
-                                    </a>
-                                </figure>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <p>25/03/2019 | <a href="#">Corano</a></p>
-                                    </div>
-                                    <h5 class="blog-title">
-                                        <a href="blog-details.html">Children Left Home Alone For 4 Days In TV series Experiment</a>
-                                    </h5>
-                                </div>
-                            </div>
-                            <!-- blog post item end -->
-
-                            <!-- blog post item start -->
-                            <div class="blog-post-item">
-                                <figure class="blog-thumb">
-                                    <a href="blog-details.html">
-                                        <img src="assets/img/blog/blog-img3.jpg" alt="blog image">
-                                    </a>
-                                </figure>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <p>25/03/2019 | <a href="#">Corano</a></p>
-                                    </div>
-                                    <h5 class="blog-title">
-                                        <a href="blog-details.html">Lotto Winner Offering Up Money To Any Man That Will Date Her</a>
-                                    </h5>
-                                </div>
-                            </div>
-                            <!-- blog post item end -->
-
-                            <!-- blog post item start -->
-                            <div class="blog-post-item">
-                                <figure class="blog-thumb">
-                                    <a href="blog-details.html">
-                                        <img src="assets/img/blog/blog-img4.jpg" alt="blog image">
-                                    </a>
-                                </figure>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <p>25/03/2019 | <a href="#">Corano</a></p>
-                                    </div>
-                                    <h5 class="blog-title">
-                                        <a href="blog-details.html">People are Willing Lie When Comes Money, According to Research</a>
-                                    </h5>
-                                </div>
-                            </div>
-                            <!-- blog post item end -->
-
-                            <!-- blog post item start -->
-                            <div class="blog-post-item">
-                                <figure class="blog-thumb">
-                                    <a href="blog-details.html">
-                                        <img src="assets/img/blog/blog-img5.jpg" alt="blog image">
-                                    </a>
-                                </figure>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <p>25/03/2019 | <a href="#">Corano</a></p>
-                                    </div>
-                                    <h5 class="blog-title">
-                                        <a href="blog-details.html">romantic Love Stories Of Hollywoodâ€™s Biggest Celebrities</a>
-                                    </h5>
-                                </div>
-                            </div>
-                            <!-- blog post item end -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <!-- latest blog area end -->
 
         <!-- brand logo area start -->

@@ -36,13 +36,13 @@ match ($act) {
     //San Pham
     'list-san-pham' => (new HomeController())->listSanPham(),
     'chi-tiet-san-pham' =>(new HomeController())->chiTietSanPham(),
-
+    'list-san-pham-danh-muc' => (new HomeController())->listSanPhamByDanhMuc(), 
     'check-out'=> (new CheckOutController())->CheckOut(),
     'post-check-out'=> (new CheckOutController())->postCheckOut(),
     'cart'=> (new HomeController())->gioHang(),
     'add-cart'=> (new HomeController())->addCart(),
     'lich-su-mua-hang'=> (new HomeController())->lichSuMuaHang(),
-    'chi-tiet-mua-hang'=> (new HomeController())->chiTietMuaHang(),
+    'chi-tiet-don-hang'=> (new HomeController())->chiTietMuaHang(),
     'huy-don-hang'=> (new HomeController())->huyDonHang(),
     //route  Client
      
@@ -54,6 +54,9 @@ match ($act) {
   
     'logout' => (new TaiKhoanControllerClient())->logoutClient(),
     // // Route thanh toán , giỏ hàng
-   
+
+    //
+    'bt-tim-kiem' => (new HomeController())->search(),
+    'post-binh-luan'=>(new HomeController())->addBinhLuan(),
 };
 

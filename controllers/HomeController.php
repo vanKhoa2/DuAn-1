@@ -217,8 +217,10 @@ class HomeController
            $ngay_dang = date('Y-m-d');
 
            if ($this->modelSanPham->addBinhLuan($id_san_pham,$tai_khoan_id,$noi_dung,$ngay_dang)){ 
-                header('location: ./?act=chi-tiet-san-pham');
+                header('location:'. BASE_URL.'?act=chi-tiet-san-pham&id_san_pham='.$id_san_pham);
            }
+            }else {
+                var_dump('lỗi');die;
+            }
+    }
         }
-}
-}

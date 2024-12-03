@@ -58,14 +58,8 @@ class DonHangController
     
     public function chiTietDonHang(){
         
-        // $id_san_pham = $_GET['id_san_pham'];
-        // $listDanhMuc = $this->modelDanhMuc->getAllDanhMuc();
-        // $sanPham = $this->modelSanPham->getDetailSanPham($id_san_pham);
-        // if ($sanPham === false) {
-        //     // Không tìm thấy sản phẩm
-        //     echo "Sản phẩm không tồn tại.";
-        //     return;
-        // }
+        $list 
+
         require_once './views/donhang/viewDonHang.php';
    
     }

@@ -77,8 +77,8 @@ class CheckOutController
                     $donGia = $item['gia_khuyen_mai'] ?? $item['gia_san_pham'];
                     $this->modelDonHang->addChiTietDonHang($donHang,$item['san_pham_id'],$donGia,$item['so_luong'],$donGia*$item['so_luong']); 
                }
-               $this->modelGioHang->clearDetailGioHang($gioHang['id']);
-               $this->modelGioHang->clearGioHang($tai_khoan_id);
+                $this->modelGioHang->clearDetailGioHang($gioHang['id']);
+                $this->modelGioHang->clearGioHang($tai_khoan_id);
                 header('location:'.BASE_URL.'?act=lich-su-mua-hang');
                 exit;
         }

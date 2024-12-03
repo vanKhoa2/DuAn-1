@@ -33,9 +33,9 @@
                             <div class="col-lg-5">
                                 <div class="product-large-slider">
                                     
-                                        <div class="pro-large-img">
-                                            <img src="<?= BASE_URL . $sanPham['hinh_anh'] ?>" alt="product-details" />
-                                        </div>
+                                <div class="pro-large-img border" style="border-color: #d3d3d3;">
+    <img src="<?= BASE_URL . $sanPham['hinh_anh'] ?>" alt="product-details" />
+</div>
 
                                 </div>
                                 <div class="pro-nav slick-row-10 slick-arrow-style">
@@ -103,33 +103,15 @@
                                 <div class="product-review-info">
                                     <ul class="nav review-tab">
                                         <li>
-                                            <a class="active" data-bs-toggle="tab" href="#tab_one">description</a>
+                                            <a class="active" data-bs-toggle="tab" href="#tab_one">Bình Luân</a>
                                         </li>
-                                        <li>
-                                            <a data-bs-toggle="tab" href="#tab_three">reviews (1)</a>
-                                        </li>
+                                      
                                     </ul>
                                     <div class="tab-content reviews-tab">
                                         <div class="tab-pane fade show active" id="tab_one">
-                                            <div class="tab-one">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                                                    fringilla augue nec est tristique auctor. Ipsum metus feugiat
-                                                    sem, quis fermentum turpis eros eget velit. Donec ac tempus
-                                                    ante. Fusce ultricies massa massa. Fusce aliquam, purus eget
-                                                    sagittis vulputate, sapien libero hendrerit est, sed commodo
-                                                    augue nisi non neque.Cras neque metus, consequat et blandit et,
-                                                    luctus a nunc. Etiam gravida vehicula tellus, in imperdiet
-                                                    ligula euismod eget. Pellentesque habitant morbi tristique
-                                                    senectus et netus et malesuada fames ac turpis egestas. Nam
-                                                    erat mi, rutrum at sollicitudin rhoncus</p>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="tab_three">
-                                            
-                                               <?php foreach ($listBinhLuan as $binhLuan) { ?>
-                                               
-                                      
+                                        <?php foreach ($listBinhLuan as $binhLuan) { ?>
                                                 <div class="total-reviews">
+                                               
                                                     <div class="rev-avatar">
                                                         <img src="<?php echo BASE_URL. $binhLuan['anh_dai_dien']?>" alt="">
                                                     </div>
@@ -141,22 +123,24 @@
                                                         </div>
                                                         <p><?php echo $binhLuan['noi_dung'] ?></p>
                                                     </div>
+                                                    
                                                 </div>
                                                 <?php  } ?>
-                                                <form action="<?php echo BASE_URL.'?act=post-binh-luan&id_san_pham='.$sanPham['id'] ?>" class="review-form">
+                                                <form action="<?php echo BASE_URL.'?act=post-binh-luan&id_san_pham='.$sanPham['id'] ?>" method="POST" class="review-form">
                                                     <div class="form-group row">
-                                                    <div class="col">
+                                                   
                                                         <label class="col-form-label"><span class="text-danger">*</span>
-                                                            Bình Luận</label>
+                                                                                                                                 Bình Luận</label>
                                                         <textarea class="form-control" name="noi_dung" required></textarea>
-                                                        </div>
-                                                    </div>
+                                                    </div>       
                                                     </div>
                                                     <div class="buttons">
                                                     <button class="btn btn-sqr" type="submit">Bình Luận</button>
                                                     </div>
                                                 </form> <!-- end of review-form -->
+                                            </div>
                                         </div>
+                                     
                                     </div>
                                 </div>
                             </div>

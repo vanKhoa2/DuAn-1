@@ -120,10 +120,9 @@ class SanPham
     public function addBinhLuan($id_san_pham,$tai_khoan_id,$noi_dung,$ngay_dang){
         try{
          
-            $sql = "INSERT INTO binh_luans (id_san_pham,tai_khoan_id,noi_dung,ngay_dang)  VALUES (?,?,?,?)";
+            $sql = "INSERT INTO binh_luans (san_pham_id,tai_khoan_id,noi_dung,ngay_dang)  VALUES (?,?,?,?)";
             $stmt = $this->conn->prepare($sql);
             $stmt->execute([$id_san_pham,$tai_khoan_id,$noi_dung,$ngay_dang]);
-            
             return true;
         }catch(Exception $e){
             echo "Lỗi: ".$e->getMessage();

@@ -149,7 +149,7 @@ require_once "layout/menu.php";
                             </div>
                         </figure>
                     </div>
-                    <div class="col-sm-6">
+                    <!-- <div class="col-sm-6">
                         <figure class="banner-statistics mt-20">
                             <a href="#">
                                 <img src="assets/img/banner/bannerSmail3.jpg" alt="product banner">
@@ -168,7 +168,7 @@ require_once "layout/menu.php";
                                 <h5 class="banner-text1"  style="color: white;">NEW DESIGN</h5>
                             </div>
                         </figure>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

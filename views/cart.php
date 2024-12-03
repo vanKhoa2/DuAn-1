@@ -80,12 +80,12 @@ require_once "layout/menu.php";
                             <div class="cart-update-option d-block d-md-flex justify-content-between">
                                 <div class="apply-coupon-wrapper">
                                     <form action="#" method="post" class=" d-block d-md-flex">
-                                        <input type="text" placeholder="Enter Your Coupon Code" required />
-                                        <button class="btn btn-sqr">Apply Coupon</button>
+                                        <input type="text" placeholder="Nhập phiếu giảm giá  của bạn" required />
+                                        <button class="btn btn-sqr">Áp dụng phiếu giảm giá</button>
                                     </form>
                                 </div>
                                 <div class="cart-update">
-                                    <a href="#" class="btn btn-sqr">Update Cart</a>
+                                    <a href="#" class="btn btn-sqr">Cập nhật giỏ hàng</a>
                                 </div>
                             </div>
                         </div>

@@ -58,7 +58,7 @@ class DonHangController
     
     public function chiTietDonHang(){
         
-        $list 
+      
 
         require_once './views/donhang/viewDonHang.php';
    
@@ -68,7 +68,8 @@ class DonHangController
 //     public function deleteSanPham(){
 //         $id = $_GET['id_san_pham'];
 //         if($this->modelSanPham->deleteSanPham($id)){
-//             header('location:'.BASE_URL_ADMIN .'./?act=san-pham');
+//    
+        //  header('location:'.BASE_URL_ADMIN .'./?act=san-pham');
 //         }
 //     }
     

@@ -60,5 +60,7 @@ match ($act) {
     //
     'bt-tim-kiem' => (new HomeController())->search(),
     'post-binh-luan'=>(new HomeController())->addBinhLuan(),
+    'delete-san-pham-gio-hang'=>(new HomeController())->deleteSanPhamGioHang(),
+    
 };
 

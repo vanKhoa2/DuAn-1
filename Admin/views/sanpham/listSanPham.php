@@ -45,10 +45,12 @@
                                         <th>STT</th>
                                         <th>Tên Sản Phẩm</th>
                                         <th>Giá Sản Phẩm</th>
+                                        <th>Giá Khuyến Mãi</th>
                                         <th>Ảnh Sản Phẩm</th>
                                         <th>Số Lượng</th>
                                         <th>Danh Mục Sản Phẩm</th>
                                         <th>Trạng Thái</th>
+                                        <th>Mô tả</th>
                                         <th>Thao Tác</th>
 
                                     </tr>
@@ -59,11 +61,13 @@
                                         <td><?php echo $key+1 ?></td>
                                         <td><?php echo $sanPham['ten_san_pham'] ;?></td>
                                         <td><?php echo $sanPham['gia_san_pham'] ;?></td>
+                                        <td><?php echo $sanPham['gia_khuyen_mai'] ;?></td>
                                         <td><img src="<?php echo BASE_URL. $sanPham['hinh_anh']; ?>" alt=""
                                                 width="100px"></td>
                                         <td><?php echo $sanPham['so_luong'] ;?></td>
                                         <td><?php echo $sanPham['ten_danh_muc'] ;?></td>
                                         <td><?php echo $sanPham['trang_thai'] == 1 ? 'Còn Hàng':'Hết Hàng' ;?></td>
+                                        <td><?php echo $sanPham['mo_ta'] ;?></td>
                                         <td>
                                             <a
                                                 href="<?= BASE_URL_ADMIN . '?act=views-san-pham&id_san_pham='.$sanPham['id'] ?>"><button

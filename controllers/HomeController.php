@@ -225,4 +225,10 @@ class HomeController
                 var_dump('lỗi');die;
             }
     }
+    public function deleteSanPhamGioHang(){
+        if(isset($_SESSION['user_client'])){
+             
+                       
         }
+    }
+}

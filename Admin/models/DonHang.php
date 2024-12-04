@@ -72,4 +72,15 @@ class DonHang
         }
         
     }
+    public function getDetailDonHangById($id_don_hang){
+        try {
+            $sql = "SELECT * FROM don_hangs WHERE id=:id";
+                $stmt = $this->conn->prepare($sql);
+                $stmt->execute([':id'=>$id_don_hang]);
+
+                return $stmt->fetch();
+        } catch (\Throwable $th) {  
+            //throw $th;
+        }
+    }
 }

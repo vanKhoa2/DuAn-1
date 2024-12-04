@@ -105,7 +105,7 @@ require_once "layout/menu.php";
                                      <tr>
                                      <tr>
                                        <th>Phương Thức Thanh Toán</th>
-                                       <td><?php $phuongThucThanhToan[$donHang['phuong_thuc_thanh_toan_id']]  ?></td>
+                                       <td><?php echo $phuongThucThanhToan[$donHang['phuong_thuc_thanh_toan_id']]  ?></td>
                                      <tr>
                                      <tr>
                                        <th>Trạng Thái Đơn Hàng</th>

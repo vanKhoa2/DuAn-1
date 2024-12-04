@@ -65,11 +65,11 @@ class DonHangController
     }
 
 
-//     public function deleteSanPham(){
-//         $id = $_GET['id_san_pham'];
-//         if($this->modelSanPham->deleteSanPham($id)){
-//             header('location:'.BASE_URL_ADMIN .'./?act=san-pham');
-//         }
-//     }
+    // public function deleteSanPham(){
+    //     $id = $_GET['id_san_pham'];
+    //     if($this->modelSanPham->deleteSanPham($id)){
+    //         header('location:'.BASE_URL_ADMIN .'./?act=san-pham');
+    //     }
+    // }
     
 }

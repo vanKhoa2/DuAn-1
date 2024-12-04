@@ -84,7 +84,7 @@ require_once "layout/menu.php";
                                 <div class="apply-coupon-wrapper">
                                 </div>
                                 <div class="cart-update">
-                                    <a href="#" class="btn btn-sqr">Update Cart</a>
+                                    <a href="#" class="btn btn-sqr">Cập nhật giỏ hàng</a>
                                 </div>
                             </div>
                         </div>

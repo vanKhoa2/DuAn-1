@@ -59,6 +59,12 @@ class DonHangController
     public function chiTietDonHang(){
        $id_don_hang = $_GET['id_don_hang'];
        $chi_tiet_don_hang = $this->modelDonHang->getChiTietDonHang($id_don_hang);
+       $arrTrangThaiDonHang = $this->modelDonHang->getTrangThaiDonHang();
+       $trangThaiDonHang = array_column($arrTrangThaiDonHang,'ten_trang_thai','id');
+      // Lấy ra phương thức thanh toán
+      $arrPhuongThucThanhToan = $this->modelDonHang->getPhuongThucThanhToan();
+      $phuongThucThanhToan = array_column($arrPhuongThucThanhToan,'ten_phuong_thuc','id');
+
        $donHang = $this->modelDonHang->getDetailDonHangById($id_don_hang);
         require_once './views/donhang/viewDonHang.php';
    

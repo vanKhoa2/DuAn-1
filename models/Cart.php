@@ -64,12 +64,12 @@ class Cart
         }
     }
 
-    public function addDetailGioHang($gio_hang_id, $san_pham_id, $so_luong)
+    public function addDetailGioHang($gio_hang_id, $san_pham_id, $so_luong,$size)
     {
         try {
-            $sql = "INSERT INTO chi_tiet_gio_hangs (gio_hang_id,san_pham_id,so_luong)VALUES (:gio_hang_id,:san_pham_id,:so_luong)";
+            $sql = "INSERT INTO chi_tiet_gio_hangs (gio_hang_id,san_pham_id,so_luong,size)VALUES (:gio_hang_id,:san_pham_id,:so_luong,:size)";
             $stmt = $this->conn->prepare($sql);
-            $stmt->execute([':gio_hang_id'=>$gio_hang_id,':san_pham_id'=> $san_pham_id,':so_luong'=> $so_luong]);
+            $stmt->execute([':gio_hang_id'=>$gio_hang_id,':san_pham_id'=> $san_pham_id,':so_luong'=> $so_luong,':size'=>$size]);
 
             return true;
         } catch (Exception $e) {
@@ -95,6 +95,18 @@ class Cart
             $sql = "DELETE FROM chi_tiet_gio_hangs WHERE tai_khoan_id = :tai_khoan_id";
             $stmt = $this->conn->prepare($sql);
             $stmt->execute([':tai_khoan_id'=>$tai_khoan_id,]);
+
+            return true;
+        } catch (Exception $e) {
+            echo "Lỗi: " . $e->getMessage();
+        }
+    }
+
+    public function deleteSanPhamGioHang($id_chi_tiet_gio_hang){
+        try {
+            $sql = "DELETE FROM chi_tiet_gio_hangs WHERE id = :id";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute([':id'=>$id_chi_tiet_gio_hang,]);
 
             return true;
         } catch (Exception $e) {

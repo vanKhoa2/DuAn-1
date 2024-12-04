@@ -32,10 +32,10 @@
                         <div class="row">
                             <div class="col-lg-5">
                                 <div class="product-large-slider">
-                                    
-                                <div class="pro-large-img border" style="border-color: #d3d3d3;">
-    <img src="<?= BASE_URL . $sanPham['hinh_anh'] ?>" alt="product-details" />
-</div>
+
+                                    <div class="pro-large-img border" style="border-color: #d3d3d3;">
+                                        <img src="<?= BASE_URL . $sanPham['hinh_anh'] ?>" alt="product-details" />
+                                    </div>
 
                                 </div>
                                 <div class="pro-nav slick-row-10 slick-arrow-style">
@@ -43,13 +43,13 @@
                                         <div class="pro-large-img">
                                             <img src="<?= BASE_URL . $anhSanPham['link_hinh_anh'] ?>" alt="product-details" />
                                         </div>
-                                    <?php } ?>                                 
+                                    <?php } ?>
                                 </div>
                             </div>
                             <div class="col-lg-7">
                                 <div class="product-details-des">
-    
-                                    <h3 class="product-name"><?=$sanPham['ten_san_pham']?></h3>
+
+                                    <h3 class="product-name"><?= $sanPham['ten_san_pham'] ?></h3>
                                     <div class="ratings d-flex">
                                         <span><i class="fa fa-star-o"></i></span>
                                         <span><i class="fa fa-star-o"></i></span>
@@ -64,20 +64,22 @@
                                         <span class="price-regular"><?php echo $sanPham['gia_khuyen_mai'] ?></span>
                                         <span class="price-old"><del><?php echo $sanPham['gia_san_pham'] ?></del></span>
                                     </div>
-                                    
+
                                     <p class="pro-desc"><?php echo $sanPham['mo_ta'] ?></p>
-                                    <form action="<?php echo BASE_URL.'?act=add-cart' ?>" method="POST" >
-                                    <div class="quantity-cart-box d-flex align-items-center">
-                                        <h6 class="option-title">Số lượng</h6>
-                                        <div class="quantity">
-                                            <input hidden type="text" name="san_pham_id" value="<?php echo $sanPham['id'] ?>" id="">
-                                            <div class="pro-qty"><input type="text" name="so_luong" value="1"></div>
+                                    <form action="<?php echo BASE_URL . '?act=add-cart' ?>" method="POST">
+                                        <div class="quantity-cart-box d-flex align-items-center">
+                                            <h6 class="option-title">Số lượng</h6>
+                                            <div class="quantity">
+                                                <input hidden type="text" name="san_pham_id" value="<?php echo $sanPham['id'] ?>" id="">
+                                                <div class="pro-qty"><input type="text" name="so_luong" value="1"></div>
+                                                <div></div>
+                                            </div>
+                                            <input type="text" name="size">
+                                            <div class="action_link">
+                                                <button class="btn btn-cart2">Thêm Giỏ Hàng</button>
+                                            </div>
                                         </div>
-                                        <div class="action_link">
-                                            <button class="btn btn-cart2">Thêm Giỏ Hàng</button>
-                                        </div>
-                                        </div>
-                                        </form>
+                                    </form>
                                     <div class="useful-links">
                                         <a href="#" data-bs-toggle="tooltip" title="Compare"><i
                                                 class="pe-7s-refresh-2"></i>compare</a>
@@ -105,52 +107,52 @@
                                         <li>
                                             <a class="active" data-bs-toggle="tab" href="#tab_one">Bình Luân</a>
                                         </li>
-                                      
+
                                     </ul>
                                     <div class="tab-content reviews-tab">
                                         <div class="tab-pane fade show active" id="tab_one">
-                                        <?php foreach ($listBinhLuan as $binhLuan) { ?>
+                                            <?php foreach ($listBinhLuan as $binhLuan) { ?>
                                                 <div class="total-reviews">
-                                               
+
                                                     <div class="rev-avatar">
-                                                        <img src="<?php echo BASE_URL. $binhLuan['anh_dai_dien']?>" alt="">
+                                                        <img src="<?php echo BASE_URL . $binhLuan['anh_dai_dien'] ?>" alt="">
                                                     </div>
                                                     <div class="review-box">
 
-                                                        
+
                                                         <div class="post-author">
                                                             <p><span>Khách Hàng -</span> <?php echo $binhLuan['ngay_dang'] ?></p>
                                                         </div>
                                                         <p><?php echo $binhLuan['noi_dung'] ?></p>
                                                     </div>
-                                                    
+
                                                 </div>
-                                                <?php  } ?>
-                                                <form action="<?php echo BASE_URL.'?act=post-binh-luan&id_san_pham='.$sanPham['id'] ?>" method="POST" class="review-form">
-                                                    <div class="form-group row">
-                                                   
-                                                        <label class="col-form-label"><span class="text-danger">*</span>
-                                                                                                                                 Bình Luận</label>
-                                                        <textarea class="form-control" name="noi_dung" required></textarea>
-                                                    </div>       
-                                                    </div>
-                                                    <div class="buttons">
-                                                    <button class="btn btn-sqr" type="submit">Bình Luận</button>
-                                                    </div>
-                                                </form> <!-- end of review-form -->
-                                            </div>
+                                            <?php  } ?>
+                                            <form action="<?php echo BASE_URL . '?act=post-binh-luan&id_san_pham=' . $sanPham['id'] ?>" method="POST" class="review-form">
+                                                <div class="form-group row">
+
+                                                    <label class="col-form-label"><span class="text-danger">*</span>
+                                                        Bình Luận</label>
+                                                    <textarea class="form-control" name="noi_dung" required></textarea>
+                                                </div>
                                         </div>
-                                     
+                                        <div class="buttons">
+                                            <button class="btn btn-sqr" type="submit">Bình Luận</button>
+                                        </div>
+                                        </form> <!-- end of review-form -->
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
-                    <!-- product details reviews end -->
                 </div>
-                <!-- product details wrapper end -->
             </div>
+            <!-- product details reviews end -->
         </div>
+        <!-- product details wrapper end -->
+    </div>
+    </div>
     </div>
     <!-- page main wrapper end -->
 

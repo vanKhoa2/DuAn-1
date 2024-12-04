@@ -37,8 +37,9 @@ require_once "layout/menu.php";
                                         <tr>
                                             <th class="pro-thumbnail">Ảnh Sản Phẩm</th>
                                             <th class="pro-title">Tên Sản Phẩm</th>
-                                            <th class="pro-price">Giá TiềnSố</th>
-                                            <th class="pro-quantity"> lượng</th>
+                                            <th>Size</th>
+                                            <th class="pro-price">Giá Tiền</th>
+                                            <th class="pro-quantity">Số lượng</th>
                                             <th class="pro-subtotal">Tổng tiền</th>
                                             <th class="pro-remove">Thao Tác</th>
                                         </tr>
@@ -49,7 +50,9 @@ require_once "layout/menu.php";
                                          foreach($chiTietGioHang as $sanPham) {?>
                                         <tr>
                                             <td class="pro-thumbnail"><a href="#"><img class="img-fluid" src="<?php echo BASE_URL. $sanPham['hinh_anh'] ?>" alt="Product" /></a></td>
-                                            <td class="pro-title"><a href="#"><?php echo $sanPham['ten_san_pham'] ?></a></td>
+                                            <td class="pro-title"><?php echo $sanPham['ten_san_pham'] ?></td>
+                                            <td class="pro-title"><?php echo $sanPham['size'] ?></td>
+                                            
                                             <td class="pro-price"><span><?php if($sanPham['gia_khuyen_mai']){
                                                 echo $sanPham['gia_khuyen_mai'];
                                             }else{
@@ -70,7 +73,7 @@ require_once "layout/menu.php";
                                                  echo formatPrice($tongTien)
                                                
                                              ?></span></td>
-                                            <td class="pro-remove"><a href="#"><i class="fa fa-trash-o"></i></a></td>
+                                            <td class="pro-remove"><a href="<?php echo BASE_URL . '?act=delete-san-pham-gio-hang&id_chi_tiet_gio_hang='.$sanPham['id'] ?>"><i class="fa fa-trash-o"></i></a></td>
                                         </tr>
                                         <?php }?>
                                     </tbody>
@@ -79,10 +82,6 @@ require_once "layout/menu.php";
                             <!-- Cart Update Option -->
                             <div class="cart-update-option d-block d-md-flex justify-content-between">
                                 <div class="apply-coupon-wrapper">
-                                    <form action="#" method="post" class=" d-block d-md-flex">
-                                        <input type="text" placeholder="Enter Your Coupon Code" required />
-                                        <button class="btn btn-sqr">Apply Coupon</button>
-                                    </form>
                                 </div>
                                 <div class="cart-update">
                                     <a href="#" class="btn btn-sqr">Update Cart</a>

@@ -83,4 +83,29 @@ class DonHang
             //throw $th;
         }
     }
+    public function getTrangThaiDonHang(){
+        try {
+            $sql = "SELECT * FROM trang_thai_don_hangs";
+                $stmt = $this->conn->prepare($sql);
+                $stmt->execute([]);
+
+                return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (\Throwable $th) {  
+            //throw $th;
+        }
+    }
+
+    public function getPhuongThucThanhToan(){
+        try {
+            $sql = "SELECT * FROM phuong_thuc_thanh_toans";
+                $stmt = $this->conn->prepare($sql);
+                $stmt->execute([]);
+
+                return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (\Throwable $th) {  
+            //throw $th;
+        }
+    }
+
+
 }

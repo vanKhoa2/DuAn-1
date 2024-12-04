@@ -35,13 +35,14 @@ require_once "layout/menu.php";
                                 <table class="table table-bordered">
                                     <thead>
                                         <tr>
-                                           <th colspan="5" >Thông Tin Sản Phẩm</th>
+                                           <th colspan="6" >Thông Tin Sản Phẩm</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                        <th>Hình Ảnh</th>
                                        <th>Tên Sản Phẩm</th>
+                                       <th>Size</th>
                                        <th>Giá </th>
                                        <th>Số Lượng</th>
                                        <th>Thành Tiền</th>
@@ -50,6 +51,7 @@ require_once "layout/menu.php";
                                        <tr>
                                         <th><img height="100px" width="100px" src="<?php echo $item['hinh_anh'] ?>" alt=""></th>
                                         <th><?php echo $item['ten_san_pham'] ?></th>
+                                        <th><?php echo $item['size'] ?></th>
                                         <th><?php echo $item['don_gia'] ?></th>
                                         <th><?php echo $item['so_luong'] ?></th>
                                         <th><?php echo $item['thanh_tien'] ?></th>

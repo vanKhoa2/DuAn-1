@@ -87,13 +87,13 @@ class HomeController
              }
              else{
                 $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
-
              }
 
             
 
             $san_pham_id = $_POST['san_pham_id'];
             $so_luong = $_POST['so_luong'];
+            $size = $_POST['size'];
             $checkSanPham = false;
             foreach($chiTietGioHang as $detail){
                  if($detail['san_pham_id']== $san_pham_id){
@@ -106,7 +106,7 @@ class HomeController
 
             }
             if(!$checkSanPham){
-                $this->modelGioHang->addDetailGioHang($gioHang['id'],$san_pham_id,$so_luong);
+                $this->modelGioHang->addDetailGioHang($gioHang['id'],$san_pham_id,$so_luong,$size);
              }
              header('Location:' . BASE_URL . '?act=cart');
             }  else {
@@ -227,8 +227,9 @@ class HomeController
     }
     public function deleteSanPhamGioHang(){
         if(isset($_SESSION['user_client'])){
-             
-                       
+            $id_chi_tiet_gio_hang = $_GET['id_chi_tiet_gio_hang'];
+            $this->modelGioHang->deleteSanPhamGioHang($id_chi_tiet_gio_hang);
+            header('location:'.BASE_URL.'?act=cart') ;       
         }
     }
 }

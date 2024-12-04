@@ -57,8 +57,8 @@ class DonHangController
 
     
     public function chiTietDonHang(){
-        
-      
+       $id_don_hang = $_GET['id_don_hang'];
+       $chi_tiet_don_hang = $this->modelDonHang->getChiTietDonHang($id_don_hang);
 
         require_once './views/donhang/viewDonHang.php';
    

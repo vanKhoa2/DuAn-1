@@ -42,9 +42,11 @@ class HomeController
 
     public function lienHe()
     {
+        $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
         require_once './views/lienhe.php';
     }
     public function gioithieu(){
+        $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
          require_once './views/gioithieu.php';
     }
      

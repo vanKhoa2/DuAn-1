@@ -20,9 +20,10 @@ class SanPhamController
     }
 
     public function viewsSanPham()
-    {
+    {    
         $id_san_pham = $_GET['id_san_pham'];
         $sanPham = $this->modelSanPham->getDetailSanPham($id_san_pham);
+        $listBinhLuan = $this->modelBinhLuan->getBinhLuanBySanPham($id_san_pham);
         require_once './views/sanpham/viewSanPham.php';
     }
 

@@ -70,4 +70,5 @@ match ($act) {
     'login-admin' => (new TaiKhoanController())->formLogin(),
     'check-login-admin' => (new TaiKhoanController())->login(),
     'logout-admin' => (new TaiKhoanController())->logout(),
+    'delete-binh-luan'=> (new BinhLuanController())->deleteBinhLuan(),
 };

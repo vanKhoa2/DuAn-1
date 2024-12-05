@@ -52,12 +52,12 @@ class DonHang
             }
         }
     }
-    public function addChiTietDonHang($donHangId,$sanPhamId,$donGia,$soLuong,$thanhTien){
+    public function addChiTietDonHang($donHangId,$sanPhamId,$donGia,$soLuong,$thanhTien,$size){
         try {
-            $sql = "INSERT INTO chi_tiet_don_hangs (don_hang_id,san_pham_id,don_gia,so_luong,thanh_tien)
-                    VALUES (?,?,?,?,?)";
+            $sql = "INSERT INTO chi_tiet_don_hangs (don_hang_id,san_pham_id,don_gia,so_luong,thanh_tien,size)
+                    VALUES (?,?,?,?,?,?)";
                 $stmt = $this->conn->prepare($sql);
-                $stmt->execute([$donHangId,$sanPhamId,$donGia,$soLuong,$thanhTien]);
+                $stmt->execute([$donHangId,$sanPhamId,$donGia,$soLuong,$thanhTien,$size]);
 
                 return $this->conn->lastInsertId();
         } catch (\Throwable $th) {  

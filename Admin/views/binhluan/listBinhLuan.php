@@ -59,8 +59,8 @@
                       <td><?php echo $BinhLuan['ngay_dang'] ;?></td>
 
                       <td>
-                        <a href="<?= BASE_URL . '?act=form-edit-binh_luan&idbinh_luanc='.$BinhLuan['id'] ?>"><button class="btn btn-warning">Sửa</button></a>
-                        <a href="<?= BASE_URL . '?act=delete-binh_luan&id_binh_luan='.$BinhLuan['id'] ?>"><button class="btn btn-danger">Xóa</button></a>
+
+                        <a href="<?= BASE_URL_ADMIN . '?act=delete-binh-luan&id_binh_luan='.$BinhLuan['id'] ?>"><button class="btn btn-danger">Xóa</button></a>
                       </td>
                     </tr>
                     <?php endforeach ?>

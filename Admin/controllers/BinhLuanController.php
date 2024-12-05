@@ -15,6 +15,11 @@ class BinhLuanController
         $listBinhLuan = $this->modelBinhLuan->getAllBinhLuan();
          require_once "./views/binhluan/listBinhLuan.php";
     }
+    public function deleteBinhLuan(){
+        $id_binh_luan = $_GET['id_binh_luan'];
+        $this->modelBinhLuan->deleteBinhLuan($id_binh_luan);
+        header('location:'.BASE_URL_ADMIN.'?act=binh-luan');
+    }
 }
 
     

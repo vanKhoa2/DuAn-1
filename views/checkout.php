@@ -88,8 +88,10 @@ require_once "layout/menu.php";
                                         <?php $tongGioHang =0; foreach($chiTietGioHang as $sanPham){ ?>
                                         <tr>
 
-                                            <td><a href=""><?php echo $sanPham['ten_san_pham'] ?> <strong>x<?php echo $sanPham['so_luong'].'('.$sanPham['size'].')'  ?></strong></a>
+                                            <td><div style="margin-left: auto;" ><?php echo $sanPham['ten_san_pham'] ?> </div>
+                                            <div style="margin-right: auto;">Size:<?php echo $sanPham['size'] ?></div>
                                             </td>
+                                            
                                             <td><?php 
                                                  $tongTien = 0;
                                                  if($sanPham['gia_khuyen_mai']){

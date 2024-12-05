@@ -75,7 +75,7 @@ class CheckOutController
                $chiTietDonHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
                foreach($chiTietDonHang as $item ){
                     $donGia = $item['gia_khuyen_mai'] ?? $item['gia_san_pham'];
-                    $this->modelDonHang->addChiTietDonHang($donHang,$item['san_pham_id'],$donGia,$item['so_luong'],$donGia*$item['so_luong']); 
+                    $this->modelDonHang->addChiTietDonHang($donHang,$item['san_pham_id'],$donGia,$item['so_luong'],$donGia*$item['so_luong'],$item['size']); 
                }
                 $this->modelGioHang->clearDetailGioHang($gioHang['id']);
                 $this->modelGioHang->clearGioHang($tai_khoan_id);

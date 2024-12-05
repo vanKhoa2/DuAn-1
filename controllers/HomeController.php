@@ -17,17 +17,48 @@ class HomeController
     public  function home()
     {   
         $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
-        $listSanPham = $this->modelSanPham->getAllSanPham(
-
-
-        );
-        require_once './views/home.php';
+        $listSanPham = $this->modelSanPham->getAllSanPham();
+        $chiTietGioHang=[];
+   
+        if(isset($_SESSION['user_client'])){
+         
+           
+                $mail = $this->modelTaiKhoan->getTaiKhoanFromEmail($_SESSION['user_client']['email']);
+           
+                $gioHang = $this->modelGioHang->getGioHangFromUser($mail['id']);
+                 if(!$gioHang){
+                    $gioHangId = $this->modelGioHang->addGioHang($mail['id']);
+                    $gioHang = ['id'=>$gioHangId];
+                    $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+                    }
+                    else{
+                        $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+                     }
     }
+    require_once './views/home.php';
+  
+}
     
     public function listSanPham(){
         $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
         $listSanPham = $this->modelSanPham->getAllSanPham();
-        
+        $chiTietGioHang=[];
+   
+        if(isset($_SESSION['user_client'])){
+         
+           
+                $mail = $this->modelTaiKhoan->getTaiKhoanFromEmail($_SESSION['user_client']['email']);
+           
+                $gioHang = $this->modelGioHang->getGioHangFromUser($mail['id']);
+                 if(!$gioHang){
+                    $gioHangId = $this->modelGioHang->addGioHang($mail['id']);
+                    $gioHang = ['id'=>$gioHangId];
+                    $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+                    }
+                    else{
+                        $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+                     }
+    }
         
         require_once './views/sanpham.php';
     }
@@ -43,10 +74,43 @@ class HomeController
     public function lienHe()
     {
         $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
+        $chiTietGioHang=[];
+        if(isset($_SESSION['user_client'])){
+         
+           
+                $mail = $this->modelTaiKhoan->getTaiKhoanFromEmail($_SESSION['user_client']['email']);
+           
+                $gioHang = $this->modelGioHang->getGioHangFromUser($mail['id']);
+                 if(!$gioHang){
+                    $gioHangId = $this->modelGioHang->addGioHang($mail['id']);
+                    $gioHang = ['id'=>$gioHangId];
+                    $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+                    }
+                    else{
+                        $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+                     }
+        }
         require_once './views/lienhe.php';
     }
     public function gioithieu(){
         $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
+        $chiTietGioHang=[];
+   
+        if(isset($_SESSION['user_client'])){
+         
+           
+                $mail = $this->modelTaiKhoan->getTaiKhoanFromEmail($_SESSION['user_client']['email']);
+           
+                $gioHang = $this->modelGioHang->getGioHangFromUser($mail['id']);
+                 if(!$gioHang){
+                    $gioHangId = $this->modelGioHang->addGioHang($mail['id']);
+                    $gioHang = ['id'=>$gioHangId];
+                    $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+                    }
+                    else{
+                        $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+                     }
+        }
          require_once './views/gioithieu.php';
     }
      
@@ -58,6 +122,21 @@ class HomeController
 
 
     public function chiTietSanPham(){
+         if(isset($_SESSION['user_client'])){
+         
+           
+                $mail = $this->modelTaiKhoan->getTaiKhoanFromEmail($_SESSION['user_client']['email']);
+           
+                $gioHang = $this->modelGioHang->getGioHangFromUser($mail['id']);
+                 if(!$gioHang){
+                    $gioHangId = $this->modelGioHang->addGioHang($mail['id']);
+                    $gioHang = ['id'=>$gioHangId];
+                    $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+                    }
+                    else{
+                        $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+                     }
+    }
         $id = $_GET['id_san_pham'];
         $sanPham = $this->modelSanPham->getDetailSanPham($id);
         $listDanhMuc = $this->modelSanPham->getAllDanhMuc();

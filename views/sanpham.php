@@ -32,7 +32,7 @@ require_once "layout/menu.php";
                         <aside class="sidebar-wrapper">
                             <!-- single sidebar start -->
                             <div class="sidebar-single">
-                                <h5 class="sidebar-title">categories</h5>
+                                <h5 class="sidebar-title">Danh mục sản phẩm</h5>
                                 <div class="sidebar-body">
                                     
                                     <ul class="shop-categories">
@@ -47,7 +47,7 @@ require_once "layout/menu.php";
 
                             <!-- single sidebar start -->
                             <div class="sidebar-single">
-                                <h5 class="sidebar-title">price</h5>
+                                <h5 class="sidebar-title">Giá</h5>
                                 <div class="sidebar-body">
                                     <div class="price-range-wrap">
                                         <div class="price-range" data-min="1" data-max="1000"></div>
@@ -93,35 +93,9 @@ require_once "layout/menu.php";
                         <div class="shop-product-wrapper">
                             <!-- shop product top wrap start -->
                             <div class="shop-top-bar">
-                                <div class="row align-items-center">
-                                    <div class="col-lg-7 col-md-6 order-2 order-md-1">
-                                        <div class="top-bar-left">
-                                            <div class="product-view-mode">
-                                                <a class="active" href="#" data-target="grid-view" data-bs-toggle="tooltip" title="Grid View"><i class="fa fa-th"></i></a>
-                                               
-                                            </div>
-                                            <div class="product-amount">
-                                                <p>Showing 1–16 of 21 results</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-5 col-md-6 order-1 order-md-2">
-                                        <div class="top-bar-right">
-                                            <div class="product-short">
-                                                <p>Sort By : </p>
-                                                <select class="nice-select" name="sortby">
-                                                    <option value="trending">Relevance</option>
-                                                    <option value="sales">Name (A - Z)</option>
-                                                    <option value="sales">Name (Z - A)</option>
-                                                    <option value="rating">Price (Low &gt; High)</option>
-                                                    <option value="date">Rating (Lowest)</option>
-                                                    <option value="price-asc">Model (A - Z)</option>
-                                                    <option value="price-asc">Model (Z - A)</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <h3>Danh Sách Sản Phẩm</h3>
+                                <hr>
+                                <br>
                             </div>
                             <!-- shop product top wrap start -->
 

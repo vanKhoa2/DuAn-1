@@ -66,7 +66,23 @@ class HomeController
         $id_danh_muc = $_GET['id_danh_muc'];
         $listSanPham = $this->modelSanPham->getSanPhamByDanhMuc($id_danh_muc);
         $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
-        
+        $chiTietGioHang=[];
+   
+        if(isset($_SESSION['user_client'])){
+         
+           
+                $mail = $this->modelTaiKhoan->getTaiKhoanFromEmail($_SESSION['user_client']['email']);
+           
+                $gioHang = $this->modelGioHang->getGioHangFromUser($mail['id']);
+                 if(!$gioHang){
+                    $gioHangId = $this->modelGioHang->addGioHang($mail['id']);
+                    $gioHang = ['id'=>$gioHangId];
+                    $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+                    }
+                    else{
+                        $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+                     }
+    }
         require_once './views/sanpham.php';
     }
 
@@ -122,7 +138,16 @@ class HomeController
 
 
     public function chiTietSanPham(){
-         if(isset($_SESSION['user_client'])){
+        $id = $_GET['id_san_pham'];
+        $sanPham = $this->modelSanPham->getDetailSanPham($id);
+        $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
+        
+        $listAnhSanPham = $this->modelSanPham->getListAnhSanPham($id);
+        $listBinhLuan = $this->modelSanPham->getBinhLuanFromSanPham($id);
+        $listSanPhamCungDanhMuc = $this->modelSanPham->getListSanPhamdDanhMuc($sanPham['id'], $sanPham['danh_muc_id']);
+        $chiTietGioHang=[];
+   
+        if(isset($_SESSION['user_client'])){
          
            
                 $mail = $this->modelTaiKhoan->getTaiKhoanFromEmail($_SESSION['user_client']['email']);
@@ -137,14 +162,6 @@ class HomeController
                         $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
                      }
     }
-        $id = $_GET['id_san_pham'];
-        $sanPham = $this->modelSanPham->getDetailSanPham($id);
-        $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
-        
-        $listAnhSanPham = $this->modelSanPham->getListAnhSanPham($id);
-        $listBinhLuan = $this->modelSanPham->getBinhLuanFromSanPham($id);
-        $listSanPhamCungDanhMuc = $this->modelSanPham->getListSanPhamdDanhMuc($sanPham['id'], $sanPham['danh_muc_id']);
-
         if (isset($sanPham)) {
             require_once './views/detailSanPham.php';
         } else {
@@ -285,6 +302,23 @@ class HomeController
         $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
         $key = $_POST['timkiem'];
         $listSanPham = $this->modelSanPham->getSanPhamByKey($key);
+        $chiTietGioHang=[];
+   
+        if(isset($_SESSION['user_client'])){
+         
+           
+                $mail = $this->modelTaiKhoan->getTaiKhoanFromEmail($_SESSION['user_client']['email']);
+           
+                $gioHang = $this->modelGioHang->getGioHangFromUser($mail['id']);
+                 if(!$gioHang){
+                    $gioHangId = $this->modelGioHang->addGioHang($mail['id']);
+                    $gioHang = ['id'=>$gioHangId];
+                    $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+                    }
+                    else{
+                        $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+                     }
+    }
         require_once './views/sanpham.php';
         
     }

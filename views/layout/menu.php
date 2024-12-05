@@ -90,7 +90,10 @@
                                         <li>
                                             <a href="#" class="minicart-btn">
                                                 <i class="pe-7s-shopbag"></i>
-                                                <div class="notification">2</div>
+                                                <div class="notification"><?php $so_luong = 0;foreach($chiTietGioHang as $item){
+                                                    $so_luong = $so_luong += $item['so_luong'];
+                    
+                                                };echo $so_luong ?></div>
                                             </a>
                                         </li>
                                     </ul>

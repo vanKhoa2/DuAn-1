@@ -72,9 +72,19 @@
                                             <div class="quantity">
                                                 <input hidden type="text" name="san_pham_id" value="<?php echo $sanPham['id'] ?>" id="">
                                                 <div class="pro-qty"><input type="text" name="so_luong" value="1"></div>
-                                                <div></div>
+                                           
                                             </div>
-                                            <input type="text" name="size">
+                                            <div class="quantity">
+                                            <div class="size-select">
+                                                    <select class="form-select" name="size" required>
+                                                        <option value="" disabled selected>Chọn size</option>
+                                                        <option value="40">Size 40</option>
+                                                        <option value="41">Size 41</option>
+                                                        <option value="42">Size 42</option>
+                                                        <option value="43">Size 43</option>
+                                                    </select>
+                                                </div>
+                                            </div>
                                             <div class="action_link">
                                                 <button class="btn btn-cart2">Thêm Giỏ Hàng</button>
                                             </div>

@@ -48,7 +48,7 @@ require_once "layout/menu.php";
                                          <tr>
                                             <td><?=$donHang['ma_don_hang']?></td>
                                             <td><?=$donHang['ngay_dat']?></td>
-                                            <td><?=$donHang['tong_tien']?></td>
+                                            <td><?=formatPrice($donHang['tong_tien'])?></td>
                                             <td><?=$phuongThucThanhToan[$donHang['phuong_thuc_thanh_toan_id']]  ?></td>
                                             <td><?=$trangThaiDonHang[$donHang['trang_thai_id']]?></td>
                                             <td>

@@ -236,9 +236,9 @@
                                       <p>
                                           <span class="cart-quantity"><?php echo $item['so_luong'] ?> <strong>&times;</strong></span>
                                           <span class="cart-price"><?php if ($item['gia_khuyen_mai']) {
-                                                                        echo $item['gia_khuyen_mai'];
+                                                                        echo formatPrice($item['gia_khuyen_mai']);
                                                                     } else {
-                                                                        echo $item['gia_san_pham'];
+                                                                        echo formatPrice($item['gia_san_pham']);
                                                                     } ?> đ</span>
                                       </p>
                                       <span> Tổng:
@@ -249,10 +249,10 @@
                                             $tongTien = $item['gia_san_pham'] * $item['so_luong'];
                                         }
                                         $tongGioHang += $tongTien;
-                                        echo formatPrice($tongTien) ?>
+                                        echo formatPrice($tongTien) ?>đ
                                         </span>
                                   </div>
-                                  <button class="minicart-remove"><i class="pe-7s-close"></i></button>
+                                  <button class="minicart-remove"><a href="<?php echo BASE_URL . '?act=delete-san-pham-gio-hang&id_chi_tiet_gio_hang='.$item['id'] ?>"><i class="pe-7s-close"></i></a></button>
                               </li>
                           <?php } ?>
                       </ul>
@@ -261,7 +261,7 @@
                       <ul>
                           <li class="total">
                               <span>Tổng Tiền Sản Phẩm</span>
-                              <span><strong><?php echo formatPrice($tongGioHang) ?></strong></span>
+                              <span><strong><?php echo formatPrice($tongGioHang) ?>đ</strong></span>
                           </li>
                       </ul>
                   </div>

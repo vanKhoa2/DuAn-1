@@ -56,10 +56,10 @@
               <h4 class="mt-3">Mô Tả:<?php echo $sanPham['mo_ta'] ?></h4>
               <div class="bg-gray py-2 px-3 mt-4">
                 <h2 class="mb-0"> Giá:
-                <?php echo $sanPham['gia_khuyen_mai'] ?> đ
+                <?php echo formatPrice($sanPham['gia_khuyen_mai']) ?> đ
                 </h2>
                 <h4 class="mt-0">
-                  <small><?php echo $sanPham['gia_san_pham'].'đ' ?></small>
+                  <small><?php echo formatPrice($sanPham['gia_san_pham']).'đ' ?></small>
                 </h4>
               </div>
             </div>

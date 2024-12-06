@@ -75,4 +75,25 @@ class TaiKhoan
             return false;
         }
     }
+    public function getTaiKhoanByChucVu(){
+        $vaitro = 2;
+        try {
+            $sql = 'SELECT * FROM tai_khoans WHERE chuc_vu_id = ?';
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute([$vaitro]);
+            return $stmt->fetchAll();
+        } catch (\Throwable $th) {
+            
+        }
+    }
+    public function updatePass($password,$email){
+        try {
+            $sql = 'UPDATE tai_khoans SET mat_khau=? WHERE email = ?';
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute([$password,$email]);
+            return true;
+        } catch (\Throwable $th) {
+            
+        }
+    }
 }

@@ -34,10 +34,19 @@
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-
-
+        
+            <li class="nav-item">
+        <a href="<?= BASE_URL_ADMIN . '?act=/' ?>" class="nav-link">
+        <i class="fas fa-tachometer-alt"></i>
+            <p>
+             Thông Kê
+      
+            </p>
+          </a>
+        </li>      
+             
         <li class="nav-item">
-          <a href="<?= BASE_URL_ADMIN . '?act=/' ?>" class="nav-link">
+          <a href="<?= BASE_URL_ADMIN . '?act=danh-muc' ?>" class="nav-link">
             <i class="nav-icon fas fa-th"></i>
             <p>
               Danh Mục Sản Phẩm
@@ -58,10 +67,20 @@
 
 
         <li class="nav-item">
-          <a href="<?= BASE_URL_ADMIN . '?act=tai-khoan' ?>" class="nav-link">
+          <a href="<?= BASE_URL_ADMIN . '?act=tai-khoan-admin' ?>" class="nav-link">
           <i class="fas fa-users"></i>
             <p>
-               Tài Khoản
+               Tài Khoản Admin
+            
+            </p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="<?= BASE_URL_ADMIN . '?act=tai-khoan-user' ?>" class="nav-link">
+          <i class="fas fa-users"></i>
+            <p>
+               Tài Khoản User
             
             </p>
           </a>

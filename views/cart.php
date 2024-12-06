@@ -54,9 +54,9 @@ require_once "layout/menu.php";
                                             <td class="pro-title"><?php echo $sanPham['size'] ?></td>
                                             
                                             <td class="pro-price"><span><?php if($sanPham['gia_khuyen_mai']){
-                                                echo $sanPham['gia_khuyen_mai'];
+                                                echo formatPrice($sanPham['gia_san_pham']);
                                             }else{
-                                                echo $sanPham['gia_san_pham'];
+                                                echo formatPrice($sanPham['gia_san_pham']);
                                             } ?></span></td>
                                             <td class="pro-quantity">
                                                 <div class="pro-qty"><input type="text" value="<?php echo $sanPham['so_luong'] ?>"></div>

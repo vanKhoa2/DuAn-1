@@ -16,34 +16,47 @@ class CheckOutController
         $this->modelTaiKhoan = new TaiKhoan();
         $this->modelDonHang = new DonHang();
     }
-    public  function CheckOut()
-    { 
-
+    public function CheckOut()
+    {
+        // Lấy danh sách các danh mục sản phẩm
         $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
-        if(isset($_SESSION['user_client'])){
-       
-        $user = $this->modelTaiKhoan->getTaiKhoanFromEmail($_SESSION['user_client']['email']);
-   
-        $gioHang = $this->modelGioHang->getGioHangFromUser($user['id']);
-         if(!$gioHang){
-            $gioHangId = $this->modelGioHang->addGioHang($user['id']);
-            $gioHang = ['id'=>$gioHangId];
-            $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+        
+        // Kiểm tra xem người dùng đã đăng nhập chưa
+        if (isset($_SESSION['user_client'])) {
+            // Lấy thông tin người dùng từ email trong session
+            $user = $this->modelTaiKhoan->getTaiKhoanFromEmail($_SESSION['user_client']['email']);
+            
+            // Lấy giỏ hàng của người dùng từ cơ sở dữ liệu
+            $gioHang = $this->modelGioHang->getGioHangFromUser($user['id']);
+            
+            // Nếu giỏ hàng chưa tồn tại, tạo mới giỏ hàng
+            if (!$gioHang) {
+                $gioHangId = $this->modelGioHang->addGioHang($user['id']);
+                $gioHang = ['id' => $gioHangId];
             }
-            else{
-                $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
-
-             }
-             require_once './views/checkout.php';
-        }  else {
+            
+            // Lấy chi tiết giỏ hàng của người dùng
+            $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+            
+            // Kiểm tra xem giỏ hàng có sản phẩm hay không
+            if (empty($chiTietGioHang)) {
+    
+   
+                // Nếu giỏ hàng không có sản phẩm
+                    
+                $_SESSION['error'] = "Giỏ hàng của bạn hiện tại không có sản phẩm. Vui lòng thêm sản phẩm trước khi tiếp tục thanh toán.";
+                header('location:'.BASE_URL.'?act=cart');
+                exit; // Dừng lại, không tiếp tục checkout
+            }
+            // Nếu giỏ hàng có sản phẩm, hiển thị trang thanh toán
+            require_once './views/checkout.php';
+        } else {
+            // Nếu người dùng chưa đăng nhập, chuyển hướng đến trang đăng nhập
             header('Location:' . BASE_URL . '?act=form-login');
-  
-
-    }
-
-     
-
-}    
+        }
+    
+}
+    
     public function postCheckOut() {
         if($_SERVER['REQUEST_METHOD']=="POST"){
             $ten_nguoi_nhan= $_POST['ten_nguoi_nhan'];

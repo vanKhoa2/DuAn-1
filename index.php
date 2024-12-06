@@ -62,6 +62,7 @@ match ($act) {
     'post-binh-luan'=>(new HomeController())->addBinhLuan(),
     'delete-san-pham-gio-hang'=>(new HomeController())->deleteSanPhamGioHang(),
     'update-pass'=> (new TaiKhoanControllerClient())->postUpdatePass(),
+    'bt-price'=>(new HomeController())->searchPrice(),
     
 };
 

@@ -32,7 +32,7 @@ class SanPhamController
     {
         $listDanhMuc = $this->modelDanhMuc->getAllDanhMuc();
         require_once './views/sanpham/addSanPham.php';
-        deleteSessionError();
+
     }
 
     public function postAddSanPham()
@@ -74,14 +74,11 @@ class SanPhamController
             if ($hinh_anh['error'] !== 0) {
                 $error['trang_thai'] = "Ảnh phẩm không được bỏ trống";
             }
-            $_SESSION['Error'] = $error;
-
             if (empty($error)) {
                 $this->modelSanPham->insertSanPham($ten_san_pham, $gia_san_pham, $gia_khuyen_mai, $so_luong, $ngay_nhap, $danh_muc_id, $trang_thai, $mo_ta, $file_anh);
                 header("location:" . BASE_URL_ADMIN . '/?act=san-pham');
             } else {
-                $_SESSION['flash'] = true;
-                header('location:' . BASE_URL_ADMIN . '?act=form-add-san-pham');
+                require_once './views/sanpham/addSanPham.php';
             }
         }
     }

@@ -66,7 +66,7 @@
                       <td><?php echo $donHang['sdt_nguoi_nhan'] ;?></td>
                       <td><?php echo $donHang['dia_chi_nguoi_nhan'] ;?></td>
                       <td><?php echo $donHang['ngay_dat'] ;?></td>
-                      <td><?php echo $donHang['tong_tien'] ;?></td>
+                      <td><?php echo formatPrice($donHang['tong_tien']) ;?></td>
                       <td><?php echo $donHang['ghi_chu'] ;?></td>
 
                       <td><?php echo $donHang['ten_trang_thai']?></td>

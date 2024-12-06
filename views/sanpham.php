@@ -108,7 +108,7 @@ require_once "layout/menu.php";
 
                         <!-- product item list wrapper start -->
                         <div class="shop-product-wrap grid-view row mbn-30">
-                            <?php foreach ($listSanPham as $sanPham) { ?>
+                            <?php $phan_tram =0; foreach ($listSanPham as $sanPham) { ?>
                                 <div class="col-md-4 col-sm-6">
                                     <!-- product grid start -->
 
@@ -123,7 +123,7 @@ require_once "layout/menu.php";
                                                     <span>new</span>
                                                 </div>
                                                 <div class="product-label discount">
-                                                    <span>10%</span>
+                                                    <span><?php echo formatPrice($phan_tram = $sanPham['gia_san_pham']*$sanPham['gia_khuyen_mai']/100 );?>%</span>
                                                 </div>
                                             </div>
                                             <div class="button-group">
@@ -142,8 +142,8 @@ require_once "layout/menu.php";
                                                 <a href="product-details.html"><?php echo $sanPham['ten_san_pham']; ?></a>
                                             </h6>
                                             <div class="price-box">
-                                                <span class="price-regular"><?php echo $sanPham['gia_khuyen_mai']; ?></span>
-                                                <span class="price-old"><del><?php echo $sanPham['gia_san_pham']; ?></del></span>
+                                                <span class="price-regular"><?php echo formatPrice($sanPham['gia_khuyen_mai']); ?></span>
+                                                <span class="price-old"><del><?php echo formatPrice($sanPham['gia_san_pham']); ?></del></span>
                                             </div>
                                         </div>
                                     </div>

@@ -60,8 +60,8 @@
                                     <tr>
                                         <td><?php echo $key+1 ?></td>
                                         <td><?php echo $sanPham['ten_san_pham'] ;?></td>
-                                        <td><?php echo $sanPham['gia_san_pham'] ;?></td>
-                                        <td><?php echo $sanPham['gia_khuyen_mai'] ;?></td>
+                                        <td><?php echo formatPrice($sanPham['gia_san_pham'] );?></td>
+                                        <td><?php echo formatPrice($sanPham['gia_khuyen_mai']) ;?></td>
                                         <td><img src="<?php echo BASE_URL. $sanPham['hinh_anh']; ?>" alt=""
                                                 width="100px"></td>
                                         <td><?php echo $sanPham['so_luong'] ;?></td>

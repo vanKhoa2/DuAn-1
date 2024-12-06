@@ -64,9 +64,9 @@
                         <td><img width="60" src="<?php echo  BASE_URL . $item['hinh_anh'] ?>" alt=""></td>
                         <td><?php echo $item['ten_san_pham'] ?></td>
                         <td><?php echo $item['size'] ?></td>
-                        <td> <span class="badge bg-danger"><?php echo $item['don_gia'] ?></span></td>
+                        <td> <span class="badge bg-danger"><?php echo formatPrice($item['don_gia'] )?></span></td>
                         <td><?php echo $item['so_luong'] ?></td>
-                        <td><?php echo $item['thanh_tien'] ?></td>
+                        <td><?php echo formatPrice($item['thanh_tien']) ?></td>
                       </tr>
                     <?php } ?>
                   </tbody>

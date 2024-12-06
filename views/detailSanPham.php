@@ -61,8 +61,8 @@
                                         </div>
                                     </div>
                                     <div class="price-box">
-                                        <span class="price-regular"><?php echo $sanPham['gia_khuyen_mai'] ?></span>
-                                        <span class="price-old"><del><?php echo $sanPham['gia_san_pham'] ?></del></span>
+                                        <span class="price-regular"><?php echo formatPrice($sanPham['gia_khuyen_mai']) ?></span>
+                                        <span class="price-old"><del><?php echo formatPrice($sanPham['gia_san_pham']) ?></del></span>
                                     </div>
 
                                     <p class="pro-desc"><?php echo $sanPham['mo_ta'] ?></p>

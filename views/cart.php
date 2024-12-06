@@ -81,11 +81,7 @@ require_once "layout/menu.php";
                             </div>
                             <!-- Cart Update Option -->
                             <div class="cart-update-option d-block d-md-flex justify-content-between">
-                                <div class="apply-coupon-wrapper">
-                                </div>
-                                <div class="cart-update">
-                                    <a href="#" class="btn btn-sqr">Cập nhật giỏ hàng</a>
-                                </div>
+                           
                             </div>
                         </div>
                     </div>
@@ -121,5 +117,11 @@ require_once "layout/menu.php";
         </div>
         <!-- cart main wrapper end -->
     </main>
-
+<?php if (isset($_SESSION['error'])) {
+    
+ 
+echo "<script>alert('" . $_SESSION['error'] . "');</script>";
+ 
+unset($_SESSION['error']); // Clear the session message after it's displayed
+}?>
 <?php require_once "layout/footer.php" ?>

@@ -204,8 +204,8 @@ require_once "layout/menu.php";
                                             <figure class="product-thumb">
                                                 
                                                 <a href="<?php echo BASE_URL.'?act=chi-tiet-san-pham&id_san_pham='.$sanPham['id'] ?>">
-                                                    <img class="pri-img" src="<?php echo BASE_URL. $sanPham['hinh_anh'] ?>" alt="product">
-                                                    <img class="sec-img" src="<?php echo BASE_URL. $sanPham['hinh_anh'] ?>" alt="product">
+                                                <img style="width: 300px; height: 200px;" class="pri-img" src="<?php echo BASE_URL. $sanPham['hinh_anh'] ?>" alt="product">
+                                                    <img style="width: 300px; height: 200px;" class="sec-img" src="<?php echo BASE_URL. $sanPham['hinh_anh'] ?>" alt="product">
                                                 </a>
                                                 <div class="product-badge">
                                                     <div class="product-label new">
@@ -351,8 +351,8 @@ require_once "layout/menu.php";
                             <div class="product-item">
                                 <figure class="product-thumb">
                                     <a href="<?php echo BASE_URL.'?act=chi-tiet-san-pham&id_san_pham='.$sanPham['id'] ?>">
-                                        <img class="pri-img" src="<?php echo BASE_URL.$sanPham['hinh_anh'] ?>" alt="product">
-                                        <img class="sec-img" src="<?php echo BASE_URL.$sanPham['hinh_anh'] ?>" alt="product">
+                                    <img style="width: 300px; height: 200px;" class="pri-img" src="<?php echo BASE_URL. $sanPham['hinh_anh'] ?>" alt="product">
+                                    <img style="width: 300px; height: 200px;" class="sec-img" src="<?php echo BASE_URL. $sanPham['hinh_anh'] ?>" alt="product">
                                     </a>
                                     <div class="product-badge">
                                         <div class="product-label new">

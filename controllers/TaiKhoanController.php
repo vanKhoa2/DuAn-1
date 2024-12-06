@@ -130,9 +130,9 @@ class TaiKhoanControllerClient
                      $this->modelTaiKhoan->addTaiKhoan($ho_ten, $email, $so_dien_thoai, $gioi_tinh, $dia_chi, $mat_khau, $chuc_vu);
                       
                     $_SESSION['thongBao'] = 'Đăng kí thành công. Vui lòng đăng nhập để mua hàng và bình luận';
-
-                    header("Location: " . BASE_URL . '?act=form-dang-ky');
-
+                    
+                    header("Location: " . BASE_URL . '?act=form-login');
+         
 
                     exit();
                 } else {
@@ -155,6 +155,48 @@ class TaiKhoanControllerClient
             header('Location:' . BASE_URL . '?act=form-login');
         }
     }
+    public function quenPass(){
 
+        require_once './views/auth/quenPass.php';
+    }
+
+    public function checkQuenPass(){
+        $email = $_POST['email'];
+        $so_dien_thoai = $_POST['sdt'];
+        $listTaiKhoanUser = $this->modelTaiKhoan->getTaiKhoanByChucVu();
+        foreach($listTaiKhoanUser as $taiKhoan){
+            if($email == $taiKhoan['email'] && $so_dien_thoai == $taiKhoan['so_dien_thoai']){
+                header('location:'. BASE_URL . '?act=form-re-pass&emailUser='.$email);
+                exit;
+            }
+
+        }
+        $_SESSION['error'] = 'Thông tin không chính xác. Vui lòng thử lại!';
+        header('location:' . BASE_URL . '?act=quen-pass');
+        exit;
+  
+    }
+
+    public function formQuenPass(){
+           $email = $_GET['emailUser'];
+           require_once './views/auth/formUpdatePass.php';
+    }
+
+
+    public function postUpdatePass(){
+       $email = $_GET['email'];
+       $password = $_POST['password'];
+       $repass = $_POST['re-password'];
+       if($password == $repass){
+          $this->modelTaiKhoan->updatePass($password,$email);
+          header('location:'.BASE_URL.'?act=form-login');
+          exit;
+       }
+       else{
+        $_SESSION['error'] = 'Hãy Nhập lại';
+        header('location:'.BASE_URL.'?act=form-re-pass');
+        exit;
+       }
+    }
 }
 

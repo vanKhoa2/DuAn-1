@@ -47,13 +47,13 @@ match ($act) {
     'chi-tiet-don-hang'=> (new HomeController())->chiTietMuaHang(),
     'huy-don-hang'=> (new HomeController())->huyDonHang(),
     //route  Client
-     
+     'form-re-pass'=>(new TaiKhoanControllerClient())->formQuenPass(),
     'form-login' =>(new TaiKhoanControllerClient())->formLogin(),
     'check-login' =>(new TaiKhoanControllerClient())->postLogin(),
-    
+    'check-quen-pass'=>(new TaiKhoanControllerClient())->checkQuenPass(),
     'form-dang-ky' =>(new TaiKhoanControllerClient())->formDangKy(),
     'dang-ky' =>(new TaiKhoanControllerClient())->dangKy(),
-  
+     'quen-pass'=>(new TaiKhoanControllerClient())->quenPass(),
     'logout' => (new TaiKhoanControllerClient())->logoutClient(),
     // // Route thanh toán , giỏ hàng
 
@@ -61,6 +61,7 @@ match ($act) {
     'bt-tim-kiem' => (new HomeController())->search(),
     'post-binh-luan'=>(new HomeController())->addBinhLuan(),
     'delete-san-pham-gio-hang'=>(new HomeController())->deleteSanPhamGioHang(),
+    'update-pass'=> (new TaiKhoanControllerClient())->postUpdatePass(),
     
 };
 

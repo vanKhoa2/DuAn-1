@@ -29,28 +29,17 @@
                     <!-- Login Content Start -->
                     <div class="col-lg-12">
                         <div class="login-reg-form-wrap">
-                            <h5 class="text-center">Đăng nhập</h5>
+                            <h5 class="text-center">Nhập Lại Mật Khẩu</h5>
                        
-                            <form action="<?= BASE_URL . '?act=check-login' ?>" method="post">
+                            <form action="<?= BASE_URL . '?act=update-pass&email='.$email ?>" method="post">
                                 <div class="single-input-item">
-                                    <input type="email"name="email" placeholder="Email or Username" required />
+                                    <input type="password" name="password" placeholder="Nhập Mật Khẩu Mới" required />
                                 </div>
                                 <div class="single-input-item">
-                                    <input type="password" name="password" placeholder="Enter your Password" required />
+                                    <input type="password" name="re-password" placeholder="Nhập Lại Mật Khẩu" required />
                                 </div>
                                 <div class="single-input-item">
-                                    <div class="login-reg-form-meta d-flex align-items-center justify-content-between">
-                                        <div class="remember-meta">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="rememberMe">
-                                                <label class="custom-control-label" for="rememberMe">Remember Me</label>
-                                            </div>
-                                        </div>
-                                        <a href="<?php echo BASE_URL.'?act=quen-pass'?>" class="forget-pwd">Quên mật khẩu</a>
-                                    </div>
-                                </div>
-                                <div class="single-input-item">
-                                    <button class="btn btn-sqr">Đăng nhập</button>
+                                    <button class="btn btn-sqr">Lưu Mật Khẩu</button>
                                 </div>
                             </form>
                         </div>

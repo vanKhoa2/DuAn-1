@@ -29,28 +29,17 @@
                     <!-- Login Content Start -->
                     <div class="col-lg-12">
                         <div class="login-reg-form-wrap">
-                            <h5 class="text-center">Đăng nhập</h5>
+                            <h5 class="text-center">Hãy Nhập Thông Tin Của Bạn</h5>
                        
-                            <form action="<?= BASE_URL . '?act=check-login' ?>" method="post">
+                            <form action="<?= BASE_URL . '?act=check-quen-pass' ?>" method="post">
                                 <div class="single-input-item">
-                                    <input type="email"name="email" placeholder="Email or Username" required />
+                                    <input type="email"name="email" placeholder="Hãy  Nhập Email Của Bạn" required />
                                 </div>
                                 <div class="single-input-item">
-                                    <input type="password" name="password" placeholder="Enter your Password" required />
+                                    <input type="text" name="sdt" placeholder="Nhập Số Điện Thoại Của Bạn" required />
                                 </div>
                                 <div class="single-input-item">
-                                    <div class="login-reg-form-meta d-flex align-items-center justify-content-between">
-                                        <div class="remember-meta">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="rememberMe">
-                                                <label class="custom-control-label" for="rememberMe">Remember Me</label>
-                                            </div>
-                                        </div>
-                                        <a href="<?php echo BASE_URL.'?act=quen-pass'?>" class="forget-pwd">Quên mật khẩu</a>
-                                    </div>
-                                </div>
-                                <div class="single-input-item">
-                                    <button class="btn btn-sqr">Đăng nhập</button>
+                                    <button type="submit" class="btn btn-sqr">Quên Mật Khẩu</button>
                                 </div>
                             </form>
                         </div>
@@ -71,8 +60,8 @@
 
 <?php require_once './views/layout/footer.php'  ?>
 <?php
-if (isset($_SESSION['thongBao'])) {
-    echo "<script>alert('" . $_SESSION['thongBao'] . "');</script>";
-    unset($_SESSION['thongBao']); // Xóa thông báo để tránh hiển thị lại khi refresh trang
+if (isset($_SESSION['error'])) {
+    echo "<script>alert('" . $_SESSION['error'] . "');</script>";
+    unset($_SESSION['error']); // Xóa thông báo sau khi hiển thị để tránh lặp lại
 }
 ?>

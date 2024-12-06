@@ -231,6 +231,22 @@ class HomeController
     public function lichSuMuaHang()
     {
         $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
+        $chiTietGioHang = [];
+
+        if (isset($_SESSION['user_client'])) {
+
+
+            $mail = $this->modelTaiKhoan->getTaiKhoanFromEmail($_SESSION['user_client']['email']);
+
+            $gioHang = $this->modelGioHang->getGioHangFromUser($mail['id']);
+            if (!$gioHang) {
+                $gioHangId = $this->modelGioHang->addGioHang($mail['id']);
+                $gioHang = ['id' => $gioHangId];
+                $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+            } else {
+                $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+            }
+        }
         if (isset($_SESSION['user_client'])) {
             $user = $this->modelTaiKhoan->getTaiKhoanFromEmail($_SESSION['user_client']['email']);
             $tai_khoan_id = $user['id'];

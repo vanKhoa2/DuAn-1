@@ -107,5 +107,17 @@ class DonHang
         }
     }
 
+    public function getAllDonHangByTT($trang_thai_id){
+        try {
+            $sql = "SELECT * FROM don_hangs WHERE trang_thai_id = ?";
+                $stmt = $this->conn->prepare($sql);
+                $stmt->execute([$trang_thai_id]);
+
+                return $stmt->fetchAll();
+        } catch (\Throwable $th) {  
+            //throw $th;
+        }
+    }
+
 
 }

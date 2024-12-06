@@ -52,18 +52,14 @@
 
                   <div class="form-group">
                     <label >Giá Sản Phẩm</label>
-                    <input type="text" class="form-control" name="gia_san_pham" value="<?php echo $sanPham['gia_san_pham'] ?>">
-                    <?php if(isset($error['gia_san_pham'])){ ?>
-                     <p class="text-danger"><?= $error['gia_san_pham']?></p>
-                   <?php } ?>
+                    <input required="" type="text" class="form-control" name="gia_san_pham" value="<?php echo $sanPham['gia_san_pham'] ?>">
+                 
                   </div>
                   
                   <div class="form-group">
                     <label >Giá Khuyến Mãi</label>
-                    <input type="text" class="form-control" name="gia_khuyen_mai" value="<?php echo $sanPham['gia_khuyen_mai'] ?>">
-                    <?php if(isset($error['gia_khuyen_mai'])){ ?>
-                     <p class="text-danger"><?= $error['gia_khuyen_mai']?></p>
-                   <?php } ?>
+                    <input type="text" class="form-control" name="gia_khuyen_mai" value="<?php echo $sanPham['gia_khuyen_mai'] ?>" required="">
+                  
                   </div>
 
                   <div class="form-group">
@@ -75,17 +71,13 @@
                   <div class="form-group">
                     <label >Số Lượng</label>
                     <input type="number" class="form-control" name="so_luong" value="<?php echo $sanPham['so_luong'] ?>">
-                    <?php if(isset($error['so_luong'])){ ?>
-                     <p class="text-danger"><?= $error['so_luong']?></p>
-                   <?php } ?>
+             
                   </div>
 
                   <div class="form-group">
                     <label >Ngày Nhập</label>
-                    <input type="date" class="form-control" name="ngay_nhap"  value="<?php echo $sanPham['ngay_nhap'] ?>">
-                    <?php if(isset($error['ngay_nhap'])){ ?>
-                     <p class="text-danger"><?= $error['ngay_nhap']?></p>
-                   <?php } ?>
+                    <input type="date" class="form-control" name="ngay_nhap"  value="<?php echo $sanPham['ngay_nhap'] ?>" required="">
+             
                   </div>
 
                   <div class="form-group">
@@ -96,10 +88,6 @@
                         <?php endforeach; ?>
                 
                     </select>
-
-                    <?php if(isset($error['danh_muc_id'])){ ?>
-                     <p class="text-danger"><?= $error['danh_muc_id']?></p>
-                   <?php } ?>
                   </div>
 
                   <div class="form-group">

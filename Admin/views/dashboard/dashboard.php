@@ -37,13 +37,16 @@
             <div class="small-box bg-info">
               <div class="inner">
                 <h3>Doanh Thu</h3>
-
-                <p>New Orders</p>
+                <?php $doanhthu =0; foreach( $listDonHang as $donHang){
+                      $doanhthu += $donHang['tong_tien'];
+                
+             } ?>
+             <h5><?php echo formatPrice($doanhthu) ?></h5>
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              
             </div>
           </div>
           <!-- ./col -->
@@ -53,12 +56,15 @@
               <div class="inner">
                 <h3>Tổng Số Đơn<sup style="font-size: 1px">%</sup></h3>
 
-                <p>Bounce Rate</p>
+                <?php $tongdon = count($listDonHang); ?>
+                
+    
+             <h5><?php echo formatPrice($tongdon) ?></h5>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+             
             </div>
           </div>
           <!-- ./col -->

@@ -50,34 +50,10 @@ class SanPhamController
             $hinh_anh = $_FILES['hinh_anh'];
             $file_anh = uploadFile($hinh_anh, './images/');
             $error = [];
-            if (empty($ten_san_pham)) {
-                $error['ten_san_pham'] = "Tên sản phẩm không được bỏ trống";
-            }
-            if (empty($gia_khuyen_mai)) {
-                $error['gia_khuyen_mai'] = "Giá khuyến mãi sản phẩm không được bỏ trống";
-            }
-            if (empty($so_luong)) {
-                $error['so_luong'] = "Số lượng sản phẩm không được bỏ trống";
-            }
-            if (empty($ngay_nhap)) {
-                $error['ngay_nhap'] = "Ngày nhập sản phẩm không được bỏ trống";
-            }
-            if (empty($danh_muc_id)) {
-                $error['danh_muc_id'] = "Danh mục sản phẩm không được bỏ trống";
-            }
-            if (empty($trang_thai)) {
-                $error['trang_thai'] = "Tên sản phẩm không được bỏ trống";
-            }
-            if ($hinh_anh['error'] !== 0) {
-                $error['trang_thai'] = "Ảnh phẩm không được bỏ trống";
-            }
             if (empty($error)) {
                 $this->modelSanPham->insertSanPham($ten_san_pham, $gia_san_pham, $gia_khuyen_mai, $so_luong, $ngay_nhap, $danh_muc_id, $trang_thai, $mo_ta, $file_anh);
                 header("location:" . BASE_URL_ADMIN . '/?act=san-pham');
-            } else {
-                $listDanhMuc = $this->modelDanhMuc->getAllDanhMuc();
-                require_once './views/sanpham/addSanPham.php';
-            }
+            } 
         }
     }
 

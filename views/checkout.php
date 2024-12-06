@@ -52,12 +52,12 @@ require_once "layout/menu.php";
 
                                 <div class="single-input-item">
                                     <label for="com-name">Số điện thoại</label>
-                                    <input type="text" name="sdt_nguoi_nhan" id="com-name" value="<?php echo $user['so_dien_thoai'] ?>" placeholder="Hãy nhập số điện thoại">
+                                    <input type="text" name="sdt_nguoi_nhan" id="com-name" value="<?php echo $user['so_dien_thoai'] ?>" required="" placeholder="Hãy nhập số điện thoại">
                                 </div>
 
                                 <div class="single-input-item">
                                     <label for="street-address" class="required mt-20">Địa Chỉ</label>
-                                    <input type="text" name="dia_chi_nguoi_nhan" id="street-address" value="<?php echo $user['dia_chi'] ?>" placeholder="Hãy nhập địa chỉ" required="">
+                                    <input type="text" name="dia_chi_nguoi_nhan" id="street-address" value="<?php echo $user['dia_chi'] ?>" required="" placeholder="Hãy nhập địa chỉ" required="">
                                 </div>
 
 

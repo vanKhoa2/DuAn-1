@@ -42,60 +42,48 @@
                 <div class=" card-body">
                   <div class="form-group">
                     <label >Tên Sản Phẩm</label>
-                    <input type="text" class="form-control" name="ten_san_pham" placeholder="Hãy nhập tên sản phẩm">
-                    <?php if(isset($error['ten_san_pham'])){ ?>
-                     <p class="text-danger"><?= $error['ten_san_pham']?></p>
-                   <?php } ?>
+                    <input type="text" class="form-control" name="ten_san_pham" placeholder="Hãy nhập tên sản phẩm" required="">
+                 
                   </div>
 
                   <div class="form-group">
                     <label >Giá Sản Phẩm</label>
-                    <input type="text" class="form-control" name="gia_san_pham" placeholder="Hãy nhập tên sản phẩm">
-                    <?php if(isset($error['gia_san_pham'])){ ?>
-                     <p class="text-danger"><?= $error['gia_san_pham']?></p>
-                   <?php } ?>
+                    <input type="text" class="form-control" name="gia_san_pham" placeholder="Hãy nhập tên sản phẩm" required="">
+              
                   </div>
                   
                   <div class="form-group">
                     <label >Giá Khuyến Mãi</label>
-                    <input type="text" class="form-control" name="gia_khuyen_mai" placeholder="Hãy nhập tên sản phẩm">
+                    <input type="text" class="form-control" name="gia_khuyen_mai" placeholder="Hãy nhập tên sản phẩm" required="">
                   </div>
 
                   <div class="form-group">
                     <label >Hình Ảnh</label>
-                    <input type="file" class="form-control" name="hinh_anh">
+                    <input type="file" class="form-control" name="hinh_anh" required="">
                   </div>
                   
 
                   <div class="form-group">
                     <label >Số Lượng</label>
-                    <input type="number" class="form-control" name="so_luong" placeholder="Hãy nhập tên sản phẩm">
-                    <?php if(isset($error['so_luong'])){ ?>
-                     <p class="text-danger"><?= $error['so_luong']?></p>
-                   <?php } ?>
+                    <input type="number" class="form-control" name="so_luong" placeholder="Hãy nhập tên sản phẩm" required="">
+                 
                   </div>
 
                   <div class="form-group">
                     <label >Ngày Nhập</label>
-                    <input type="date" class="form-control" name="ngay_nhap" placeholder="Hãy nhập tên sản phẩm">
-                    <?php if(isset($error['ngay_nhap'])){ ?>
-                     <p class="text-danger"><?= $error['ngay_nhap']?></p>
-                   <?php } ?>
+                    <input type="date" class="form-control" name="ngay_nhap" placeholder="Hãy nhập tên sản phẩm" required="" >
+                
                   </div>
 
                   <div class="form-group">
                     <label >Danh Mục</label>
-                    <select class="form-control" name="danh_muc_id" id="exampleFormControlSelect1">
+                    <select class="form-control" name="danh_muc_id" id="exampleFormControlSelect1" >
                       <option>Chọn Danh Mục Sản Phẩm</option>
                       <?php foreach ($listDanhMuc as $danhMuc): ?>
                         <option value="<?php echo $danhMuc['id']?>"><?php echo $danhMuc['ten_danh_muc']?></option>
                         <?php endforeach; ?>
                 
                     </select>
-
-                    <?php if(isset($error['danh_muc_id'])){ ?>
-                     <p class="text-danger"><?= $error['danh_muc_id']?></p>
-                   <?php } ?>
                   </div>
 
                   <div class="form-group">

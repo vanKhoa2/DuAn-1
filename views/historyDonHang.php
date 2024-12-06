@@ -73,9 +73,4 @@ require_once "layout/menu.php";
         </div>
         <!-- cart main wrapper end -->
     </main>
-<?php
-  if (isset($_SESSION['success_message'])) {
-    
-    
-    echo "<script>alert('" . $_SESSION['success_message'] . "');</script>";} ?>
 <?php require_once "layout/footer.php" ?>

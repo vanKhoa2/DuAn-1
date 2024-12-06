@@ -82,18 +82,18 @@ class SanPham
             echo "Lỗi: " . $e->getMessage();
         }
     }
-    public function getListSanPhamdDanhMuc($id, $danh_muc_id)
+    public function getListSanPhamdDanhMuc($danh_muc_id)
     {
         try {
-            $sql = "SELECT san_phams.*, danh_mucs.ten_danh_muc FROM san_phams
-            INNER JOIN danh_mucs ON san_phams.danh_muc_id = danh_mucs.id
-            WHERE san_phams.danh_muc_id = " . $danh_muc_id . " AND san_phams.id <> " . $id;
+            $sql = 'SELECT san_phams.*, 
+                    danh_mucs.ten_danh_muc
+                    FROM san_phams
+                INNER JOIN danh_mucs ON san_phams.danh_muc_id = danh_mucs.id WHERE san_phams.danh_muc_id = ?;';
             $stmt = $this->conn->prepare($sql);
-            $stmt->execute();
-
+            $stmt->execute([$danh_muc_id]);
             return $stmt->fetchAll();
         } catch (Exception $e) {
-            echo "Lỗi: " . $e->getMessage();
+            echo "Loi" . $e->getMessage();
         }
     }
 

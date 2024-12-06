@@ -252,7 +252,7 @@
                                         echo formatPrice($tongTien) ?>đ
                                         </span>
                                   </div>
-                                  <button class="minicart-remove"><i class="pe-7s-close"></i></button>
+                                  <button class="minicart-remove"><a href="<?php echo BASE_URL . '?act=delete-san-pham-gio-hang&id_chi_tiet_gio_hang='.$item['id'] ?>"><i class="pe-7s-close"></i></a></button>
                               </li>
                           <?php } ?>
                       </ul>

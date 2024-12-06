@@ -34,7 +34,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <a href="<?= BASE_URL_ADMIN . '?act=form-add-don-hang' ?>"><button class="btn btn-success">Thêm Đơn Hàng</button></a>
+          
               </div>
               <!-- /.card-header -->
               <div class="card-body">

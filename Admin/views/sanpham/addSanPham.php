@@ -59,9 +59,6 @@
                   <div class="form-group">
                     <label >Giá Khuyến Mãi</label>
                     <input type="text" class="form-control" name="gia_khuyen_mai" placeholder="Hãy nhập tên sản phẩm">
-                    <?php if(isset($error['gia_khuyen_mai'])){ ?>
-                     <p class="text-danger"><?= $error['gia_khuyen_mai']?></p>
-                   <?php } ?>
                   </div>
 
                   <div class="form-group">

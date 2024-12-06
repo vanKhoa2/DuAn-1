@@ -10,7 +10,7 @@ require_once './controllers/DanhMucController.php';
 require_once './controllers/TaiKhoanController.php';
 require_once './controllers/DonHangController.php';
 require_once './controllers/BinhLuanController.php';
-
+require_once './controllers/DashboardController.php';
 
 // Require toàn bộ file Models
 require_once './models/SanPham.php';
@@ -31,8 +31,8 @@ if ($act !== 'login-admin' && $act !== 'check-login-admin' && $act !== 'logout-a
 match ($act) {
      
     // Trang chủ
-    '/' => (new DanhMucController())->getAllDanhMuc(), 
-    
+    '/' => (new DashboardController())->Home(), 
+    'danh-muc'=> (new DanhMucController())->getAllDanhMuc(),
     // Route Sản Phẩm
     'san-pham' => (new SanPhamController())->getAllSanPham(),
     'form-add-san-pham' => (new SanPhamController())->formAddSanPham(),

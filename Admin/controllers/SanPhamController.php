@@ -53,9 +53,6 @@ class SanPhamController
             if (empty($ten_san_pham)) {
                 $error['ten_san_pham'] = "Tên sản phẩm không được bỏ trống";
             }
-            if (empty($gia_san_pham)) {
-                $error['gia_san_pham'] = "Giá sản phẩm không được bỏ trống";
-            }
             if (empty($gia_khuyen_mai)) {
                 $error['gia_khuyen_mai'] = "Giá khuyến mãi sản phẩm không được bỏ trống";
             }
@@ -78,6 +75,7 @@ class SanPhamController
                 $this->modelSanPham->insertSanPham($ten_san_pham, $gia_san_pham, $gia_khuyen_mai, $so_luong, $ngay_nhap, $danh_muc_id, $trang_thai, $mo_ta, $file_anh);
                 header("location:" . BASE_URL_ADMIN . '/?act=san-pham');
             } else {
+                $listDanhMuc = $this->modelDanhMuc->getAllDanhMuc();
                 require_once './views/sanpham/addSanPham.php';
             }
         }

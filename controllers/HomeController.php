@@ -138,11 +138,13 @@ class HomeController
     {
         $id = $_GET['id_san_pham'];
         $sanPham = $this->modelSanPham->getDetailSanPham($id);
+        $danh_muc_id = $sanPham['danh_muc_id'];
+     
         $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
-
+      
         $listAnhSanPham = $this->modelSanPham->getListAnhSanPham($id);
         $listBinhLuan = $this->modelSanPham->getBinhLuanFromSanPham($id);
-        $listSanPhamCungDanhMuc = $this->modelSanPham->getListSanPhamdDanhMuc($sanPham['id'], $sanPham['danh_muc_id']);
+        $listSanPhamCungDanhMuc = $this->modelSanPham->getListSanPhamdDanhMuc($danh_muc_id);
         $chiTietGioHang = [];
 
         if (isset($_SESSION['user_client'])) {
@@ -290,7 +292,10 @@ class HomeController
     public function search()
     {
         $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
-        $key = $_POST['timkiem'];
+        if(isset($_POST['timkiem'])){
+            $key = $_POST['timkiem'];
+        }
+    
         $listSanPham = $this->modelSanPham->getSanPhamByKey($key);
         $chiTietGioHang = [];
 

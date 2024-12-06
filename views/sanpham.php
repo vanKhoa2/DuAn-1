@@ -108,7 +108,8 @@ require_once "layout/menu.php";
 
                         <!-- product item list wrapper start -->
                         <div class="shop-product-wrap grid-view row mbn-30">
-                            <?php $phan_tram =0; foreach ($listSanPham as $sanPham) { ?>
+                            <?php $phan_tram = 0;
+                            foreach ($listSanPham as $sanPham) { ?>
                                 <div class="col-md-4 col-sm-6">
                                     <!-- product grid start -->
 
@@ -123,7 +124,8 @@ require_once "layout/menu.php";
                                                     <span>new</span>
                                                 </div>
                                                 <div class="product-label discount">
-                                                    <span><?php echo formatPrice($phan_tram = $sanPham['gia_san_pham']*$sanPham['gia_khuyen_mai']/100 );?>%</span>
+                                                    <span><?php $phan_tram =( 100 - ($sanPham['gia_khuyen_mai'] / $sanPham['gia_san_pham']) * 100);
+                                                            echo round($phan_tram) ?>%</span>
                                                 </div>
                                             </div>
                                             <div class="button-group">
@@ -132,7 +134,7 @@ require_once "layout/menu.php";
                                                 <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="pe-7s-search"></i></span></a>
                                             </div>
                                             <div class="cart-hover">
-                                                <button class="btn btn-cart">Xem chi tiết</button>
+                                                <a class="btn btn-cart" href="<?php echo BASE_URL . '?act=chi-tiet-san-pham&id_san_pham=' . $sanPham['id'] ?>"></a>
                                             </div>
 
                                         </figure>

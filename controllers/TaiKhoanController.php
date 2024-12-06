@@ -3,19 +3,39 @@ class TaiKhoanControllerClient
 {
     public $modelSanPham;
     public $modelTaiKhoan;
+    public $modelGioHang;
+    public $modelDonHang;
 
     public function __construct()
     {
         $this->modelSanPham = new SanPham();
         $this->modelTaiKhoan = new TaiKhoan();
+        $this->modelGioHang = new Cart();
+        $this->modelDonHang = new DonHang();
     }
     public function formLogin()
     {
         $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
-        $listSanPham = $this->modelSanPham->getAllSanPham(
-
-            
-        );
+        $listSanPham = $this->modelSanPham->getAllSanPham();
+        $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
+        $listSanPham = $this->modelSanPham->getAllSanPham();
+        $chiTietGioHang=[];
+   
+        if(isset($_SESSION['user_client'])){
+         
+           
+                $mail = $this->modelTaiKhoan->getTaiKhoanFromEmail($_SESSION['user_client']['email']);
+           
+                $gioHang = $this->modelGioHang->getGioHangFromUser($mail['id']);
+                 if(!$gioHang){
+                    $gioHangId = $this->modelGioHang->addGioHang($mail['id']);
+                    $gioHang = ['id'=>$gioHangId];
+                    $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+                    }
+                    else{
+                        $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+                     }
+    }
         if (isset($_SESSION['user_client'])) {
             header('location:' . BASE_URL);
             exit();
@@ -61,10 +81,26 @@ class TaiKhoanControllerClient
     public function formDangKy()
     {
         $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
-        $listSanPham = $this->modelSanPham->getAllSanPham(
-
-            
-        );
+        $listSanPham = $this->modelSanPham->getAllSanPham();
+        $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
+        $listSanPham = $this->modelSanPham->getAllSanPham();
+        $chiTietGioHang=[];
+   
+        if(isset($_SESSION['user_client'])){
+         
+           
+                $mail = $this->modelTaiKhoan->getTaiKhoanFromEmail($_SESSION['user_client']['email']);
+           
+                $gioHang = $this->modelGioHang->getGioHangFromUser($mail['id']);
+                 if(!$gioHang){
+                    $gioHangId = $this->modelGioHang->addGioHang($mail['id']);
+                    $gioHang = ['id'=>$gioHangId];
+                    $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+                    }
+                    else{
+                        $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+                     }
+    }
 
         if (isset($_SESSION['user_client'])) {
             header('location:' . BASE_URL);
@@ -75,7 +111,26 @@ class TaiKhoanControllerClient
         deleteSessionError();
     }
     public function dangKy()
-    { {
+    { 
+        $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
+        $listSanPham = $this->modelSanPham->getAllSanPham();
+        $chiTietGioHang=[];
+   
+        if(isset($_SESSION['user_client'])){
+         
+           
+                $mail = $this->modelTaiKhoan->getTaiKhoanFromEmail($_SESSION['user_client']['email']);
+           
+                $gioHang = $this->modelGioHang->getGioHangFromUser($mail['id']);
+                 if(!$gioHang){
+                    $gioHangId = $this->modelGioHang->addGioHang($mail['id']);
+                    $gioHang = ['id'=>$gioHangId];
+                    $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+                    }
+                    else{
+                        $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+                     }
+    }{
 
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $ho_ten = $_POST['ho_ten'] ?? '';
@@ -156,11 +211,30 @@ class TaiKhoanControllerClient
         }
     }
     public function quenPass(){
-
+        $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
+        $listSanPham = $this->modelSanPham->getAllSanPham();
+        $chiTietGioHang=[];
+   
+        if(isset($_SESSION['user_client'])){
+         
+           
+                $mail = $this->modelTaiKhoan->getTaiKhoanFromEmail($_SESSION['user_client']['email']);
+           
+                $gioHang = $this->modelGioHang->getGioHangFromUser($mail['id']);
+                 if(!$gioHang){
+                    $gioHangId = $this->modelGioHang->addGioHang($mail['id']);
+                    $gioHang = ['id'=>$gioHangId];
+                    $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+                    }
+                    else{
+                        $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+                     }
+    }
         require_once './views/auth/quenPass.php';
     }
 
     public function checkQuenPass(){
+        
         $email = $_POST['email'];
         $so_dien_thoai = $_POST['sdt'];
         $listTaiKhoanUser = $this->modelTaiKhoan->getTaiKhoanByChucVu();
@@ -178,6 +252,25 @@ class TaiKhoanControllerClient
     }
 
     public function formQuenPass(){
+        $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
+        $listSanPham = $this->modelSanPham->getAllSanPham();
+        $chiTietGioHang=[];
+   
+        if(isset($_SESSION['user_client'])){
+         
+           
+                $mail = $this->modelTaiKhoan->getTaiKhoanFromEmail($_SESSION['user_client']['email']);
+           
+                $gioHang = $this->modelGioHang->getGioHangFromUser($mail['id']);
+                 if(!$gioHang){
+                    $gioHangId = $this->modelGioHang->addGioHang($mail['id']);
+                    $gioHang = ['id'=>$gioHangId];
+                    $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+                    }
+                    else{
+                        $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+                     }
+    }
            $email = $_GET['emailUser'];
            require_once './views/auth/formUpdatePass.php';
     }

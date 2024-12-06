@@ -51,10 +51,10 @@ match ($act) {
     // Route Bình Luận
     'binh-luan' => (new BinhLuanController())->getAllBinhLuan(),
     // Route Tài Khoản
-    'tai-khoan' => (new TaiKhoanController())->getAllTaiKhoan(),
+    'tai-khoan-admin' => (new TaiKhoanController())->getAllTaiKhoanAdmin(),
     'form-add-tai-khoan' => (new TaiKhoanController())->formAddTaiKhoan(),
     'post-add-tai-khoan' => (new TaiKhoanController())->postAddTaiKhoan(),
-    // 'form-edit-tai-khoan' => (new TaiKhoanController())->formEdidTaiKhoan(),
+    'tai-khoan-user' => (new TaiKhoanController())->getAllTaiKhoanUser(),
     // 'post-edit-tai-khoan' => (new TaiKhoanController())->postEdidTaiKhoan(),
     'delete-tai-khoan' => (new TaiKhoanController())->deleteTaiKhoan(),
     // Route Giỏ Hàng, Đơn Hàng

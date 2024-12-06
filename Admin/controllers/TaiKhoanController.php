@@ -9,11 +9,18 @@ class TaiKhoanController
         $this->modelTaiKhoan = new TaiKhoan();
     }
     
-    public function getAllTaiKhoan(){
+    public function getAllTaiKhoanAdmin(){
 
-        $listTaiKhoan = $this->modelTaiKhoan->getAllTaiKhoan();
+        $listTaiKhoan = $this->modelTaiKhoan->getAllTaiKhoanAdmin();
        
-         require_once './views/taikhoan/listTaiKhoan.php';
+         require_once './views/taikhoanadmin/listTaiKhoan.php';
+    }
+      
+    public function getAllTaiKhoanUser(){
+
+        $listTaiKhoan = $this->modelTaiKhoan->getAllTaiKhoanUser();
+       
+         require_once './views/taikhoanuser/listTaiKhoan.php';
     }
 
     

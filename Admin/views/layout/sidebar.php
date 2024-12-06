@@ -58,10 +58,20 @@
 
 
         <li class="nav-item">
-          <a href="<?= BASE_URL_ADMIN . '?act=tai-khoan' ?>" class="nav-link">
+          <a href="<?= BASE_URL_ADMIN . '?act=tai-khoan-admin' ?>" class="nav-link">
           <i class="fas fa-users"></i>
             <p>
-               Tài Khoản
+               Tài Khoản Admin
+            
+            </p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="<?= BASE_URL_ADMIN . '?act=tai-khoan-user' ?>" class="nav-link">
+          <i class="fas fa-users"></i>
+            <p>
+               Tài Khoản User
             
             </p>
           </a>

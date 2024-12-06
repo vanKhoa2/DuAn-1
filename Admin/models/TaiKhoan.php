@@ -10,14 +10,15 @@ class TaiKhoan
         $this->conn = connectDB();
     }
 
-    public function getAllTaiKhoan()
-    {
+    public function getAllTaiKhoanAdmin()
+    {   
+        $vaitro = 1;
         try {
             $sql = 'SELECT tai_khoans.*, chuc_vus.ten_chuc_vu
                     FROM tai_khoans
-                    INNER JOIN chuc_vus ON tai_khoans.chuc_vu_id = chuc_vus.id';
+                    INNER JOIN chuc_vus ON tai_khoans.chuc_vu_id = chuc_vus.id WHERE tai_khoans.chuc_vu_id = ?';
             $stmt = $this->conn->prepare($sql);
-            $stmt->execute();
+            $stmt->execute([$vaitro]);
             return $stmt->fetchAll();
         } catch (\Throwable $th) {
             // Xử lý lỗi
@@ -128,6 +129,21 @@ class TaiKhoan
         } catch (Exception $e) {
             echo "Lỗi: " . $e->getMessage();
             return false;
+        }
+    }
+    public function getAllTaiKhoanUser()
+    {    
+        $vaitro = 2;
+        try {
+            $sql = 'SELECT tai_khoans.*, chuc_vus.ten_chuc_vu
+                    FROM tai_khoans
+                    INNER JOIN chuc_vus ON tai_khoans.chuc_vu_id = chuc_vus.id WHERE tai_khoans.chuc_vu_id = ?';
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute([$vaitro]);
+            return $stmt->fetchAll();
+        } catch (\Throwable $th) {
+            // Xử lý lỗi
+            return [];
         }
     }
 }

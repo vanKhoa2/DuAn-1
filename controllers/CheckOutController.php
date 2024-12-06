@@ -79,9 +79,12 @@ class CheckOutController
                }
                 $this->modelGioHang->clearDetailGioHang($gioHang['id']);
                 $this->modelGioHang->clearGioHang($tai_khoan_id);
-                header('location:'.BASE_URL.'?act=lich-su-mua-hang');
-                exit;
+               
         }
+        $_SESSION['success_message'] = 'Đặt Hàng Thành Công! Nhấn Xem Chi Tiết Đơn Hàng Để Xem Thông Tin Của Bạn';
+        header('location:'.BASE_URL.'?act=lich-su-mua-hang');
+        exit;
     }
+  
 }
 }

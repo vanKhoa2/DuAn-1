@@ -120,6 +120,7 @@
                 <a href="<?= BASE_URL ?>" class="h1">SHOP BÁN GIÀY</a>
             </div>
             <div class="card-body">
+             
                 <?php if (isset($_SESSION['errors'])) { ?>
                     <p class="text-danger text-center"><?= $_SESSION['errors'] ?></p>
                 <?php } else { ?>

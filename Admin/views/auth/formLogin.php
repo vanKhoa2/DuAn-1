@@ -120,16 +120,20 @@
                 <a href="<?= BASE_URL ?>" class="h1">SHOP BÁN GIÀY</a>
             </div>
             <div class="card-body">
+<<<<<<< HEAD
              
                 <?php if (isset($_SESSION['errors'])) { ?>
                     <p class="text-danger text-center"><?= $_SESSION['errors'] ?></p>
                 <?php } else { ?>
+=======
+            
+>>>>>>> e88b6c1 (final)
                     <p class="login-box-msg">Vui lòng đăng nhập</p>
-                <?php } ?>
+       
 
                 <form action="<?= BASE_URL_ADMIN . '?act=check-login-admin'  ?>" method="POST">
                     <div class="input-group mb-3">
-                        <input type="email" name="email" class="form-control" placeholder="Email">
+                        <input type="email" name="email" class="form-control" placeholder="Email"  required="" >
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
@@ -137,7 +141,7 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="password" name="password" class="form-control" placeholder="Password">
+                        <input type="password" name="password" class="form-control" placeholder="Password" required="" >
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-lock"></span>

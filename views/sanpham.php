@@ -117,7 +117,7 @@ require_once "layout/menu.php";
 
                                         <figure class="product-thumb">
                                             <a href="<?php echo BASE_URL . '?act=chi-tiet-san-pham&id_san_pham=' . $sanPham['id'] ?>">
-                                                <img class="pri-sec" src="<?php echo BASE_URL . $sanPham['hinh_anh'] ?>" alt="product">
+                                                <img style="width: 300px; height: 200px;" st class="pri-sec" src="<?php echo BASE_URL . $sanPham['hinh_anh'] ?>" alt="product">
                                             </a>
                                             <div class="product-badge">
                                                 <div class="product-label new">
@@ -134,7 +134,7 @@ require_once "layout/menu.php";
                                                 <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="pe-7s-search"></i></span></a>
                                             </div>
                                             <div class="cart-hover">
-                                                <a class="btn btn-cart" href="<?php echo BASE_URL . '?act=chi-tiet-san-pham&id_san_pham=' . $sanPham['id'] ?>"></a>
+                                                <a class="btn btn-cart" href="<?php echo BASE_URL . '?act=chi-tiet-san-pham&id_san_pham=' . $sanPham['id'] ?>">Xem Chi Tiết</a>
                                             </div>
 
                                         </figure>

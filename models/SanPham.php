@@ -137,16 +137,19 @@ class SanPham
         }
     }
     public function getSanPhamByKeyPrice($minPrice,$maxPrice)
-    {
-        try {
-            $sql = "SELECT * FROM san_phams WHERE (gia_san_pham BETWEEN ? AND ? OR gia_khuyen_mai BETWEEN ? AND ?)";
-            $stmt = $this->conn->prepare($sql);
-            $stmt->execute([$minPrice,$maxPrice,$minPrice,$maxPrice]);
+{
+    try {
 
-            return $stmt->fetchAll();
-        } catch (Exception $e) {
-            echo "Lỗi: " . $e->getMessage();
-            return [];
-        }
+        $sql = "SELECT * FROM san_phams 
+                WHERE gia_san_pham BETWEEN ? AND ?  ";
+            
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute([$minPrice, $maxPrice]);
+
+        return $stmt->fetchAll();
+    } catch (Exception $e) {
+        echo "Lỗi: " . $e->getMessage();
+        return [];
     }
+}
 }

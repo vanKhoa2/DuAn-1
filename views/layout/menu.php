@@ -15,7 +15,7 @@
                         <!-- start logo area -->
                         <div class="col-lg-2">
                             <div class="logo">
-                                <a href="index.html">
+                                <a href="<?php echo BASE_URL .'?act=/' ?>">
                                     <img src="assets/img/logo/logo-adidas.webp" alt="Brand Logo">
                                 </a>
                             </div>

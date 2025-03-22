@@ -36,12 +36,12 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>Doanh Thu</h3>
+                <h3>Doanh Thu:</h3>
                 <?php $doanhthu =0; foreach( $listDonHang as $donHang){
                       $doanhthu += $donHang['tong_tien'];
                 
              } ?>
-             <h5><?php echo formatPrice($doanhthu) ?></h5>
+             <h3><?php echo formatPrice($doanhthu) ?> Đ</h3>
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>
@@ -59,7 +59,7 @@
                 <?php $tongdon = count($listDonHang); ?>
                 
     
-             <h5><?php echo formatPrice($tongdon) ?></h5>
+             <h3><?php echo formatPrice($tongdon) ?></h3>
               </div>
             
              
@@ -70,9 +70,9 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>Đơn Bị Hủy</h3>
+                <h3>Tổng Đơn</h3>
 
-                <p>User Registrations</p>
+                <h3><?php echo count($fullDonHang) ?></h3>
               </div>
              
               
@@ -83,9 +83,9 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>65</h3>
+                <h3>Tổng Người Dùng</h3>
 
-                h
+                <h3><?php echo count($listNguoiDung) ?></h3>
               </div>
             
               

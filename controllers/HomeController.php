@@ -139,9 +139,9 @@ class HomeController
         $id = $_GET['id_san_pham'];
         $sanPham = $this->modelSanPham->getDetailSanPham($id);
         $danh_muc_id = $sanPham['danh_muc_id'];
-     
+
         $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
-      
+
         $listAnhSanPham = $this->modelSanPham->getListAnhSanPham($id);
         $listBinhLuan = $this->modelSanPham->getBinhLuanFromSanPham($id);
         $listSanPhamCungDanhMuc = $this->modelSanPham->getListSanPhamdDanhMuc($danh_muc_id);
@@ -324,10 +324,10 @@ class HomeController
     public function search()
     {
         $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
-        if(isset($_POST['timkiem'])){
+        if (isset($_POST['timkiem'])) {
             $key = $_POST['timkiem'];
         }
-    
+
         $listSanPham = $this->modelSanPham->getSanPhamByKey($key);
         $chiTietGioHang = [];
 
@@ -377,8 +377,8 @@ class HomeController
     {
         $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
         $minPrice = (float)$_POST['min-price'];
-    $maxPrice = (float)$_POST['max-price'];
-        $listSanPham = $this->modelSanPham->getSanPhamByKeyPrice($minPrice,$maxPrice);
+        $maxPrice = (float)$_POST['max-price'];
+        $listSanPham = $this->modelSanPham->getSanPhamByKeyPrice($minPrice, $maxPrice);
         $chiTietGioHang = [];
 
         if (isset($_SESSION['user_client'])) {
